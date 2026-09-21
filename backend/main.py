@@ -40,7 +40,7 @@ app = FastAPI(
     title="دیار AI API",
     description=(
         "بک‌اند MVP پلتفرم دیار — جست‌وجوی ملک، ارزیابی قیمت و مشاور ویزا برای دبی. "
-        "داده‌ی این نسخه نمونه است (۱۸ ملک نماینده)؛ خط لوله‌ی داده‌ی واقعی DLD طبق سند معماری در فاز ۲ وصل می‌شود."
+        "۱۸ تراکنش واقعیِ ثبت‌شده در DLD (چند ماه اخیر) — قیمت، متراژ و بازده هرکدوم از داده‌ی رسمی استخراج شده، نه نمونه‌ی ساختگی."
     ),
     version="0.1.0",
 )
@@ -223,7 +223,7 @@ def get_valuation(property_id: int):
         confidence_pct=confidence,
         trend_aed=trend,
         forecast_3m_aed=forecast,
-        note="رگرسیون خطی روی داده‌ی نمونه — جایگزین با مدل آموزش‌دیده روی DLD در فاز ۲",
+        note="رگرسیون خطی روی روند واقعیِ قیمت هر فوت مربع (منبع: DLD)، اعمال‌شده روی متراژ این ملک — جایگزین با مدل آموزش‌دیده‌ی کامل در فاز ۲",
     )
 
 
@@ -243,9 +243,9 @@ def lifestyle_match(
         raise HTTPException(404, "ملکی با این شناسه پیدا نشد")
 
     area = p["area"]
-    school_areas = {"Dubai Hills Estate", "Arabian Ranches 3", "Town Square", "Al Furjan"}
-    beach_areas = {"Palm Jumeirah", "Bluewaters Island", "Dubai Marina", "City Walk"}
-    metro_areas = {"Downtown Dubai", "Business Bay", "Dubai Marina", "Jumeirah Lake Towers"}
+    school_areas = {"Jumeirah Village Circle", "Jumeirah Village Triangle", "Damac Hills", "Majan", "Al Furjan"}
+    beach_areas = {"Dubai Marina", "Palm Deira"}
+    metro_areas = {"Business Bay", "Dubai Marina", "Burj Khalifa", "Al Furjan"}
 
     score = 60
     reasons = []

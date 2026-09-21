@@ -586,8 +586,8 @@
     </section>
   </main>
 
-  <footer data-en="Diyar AI — concept demo. All prices, yields and visa paths are sample and approximate, and are not a substitute for licensed legal or financial advice.">
-    دیار AI — دموی مفهومی. تمام قیمت‌ها، بازده‌ها و مسیرهای ویزا نمونه و تقریبی هستن و جایگزین مشاوره‌ی حقوقی یا مالی رسمی نیستن.
+  <footer data-en="Diyar AI — concept demo. Property prices and yields come from real, recently registered DLD transactions, not live for-sale listings; visa thresholds are approximate. None of this is a substitute for licensed legal or financial advice.">
+    دیار AI — دموی مفهومی. قیمت‌ها و بازده‌های ملک از روی تراکنش‌های واقعیِ به‌تازگی ثبت‌شده در DLD می‌آن (نه لیستینگ زنده‌ی فروش)؛ آستانه‌های ویزا تقریبی‌ان. هیچ‌کدوم جایگزین مشاوره‌ی حقوقی یا مالی رسمی نیست.
   </footer>
 </div>
 
@@ -602,51 +602,35 @@
   // ---------- language state ----------
   var currentLang = 'fa';
 
-  var NAME_EN = {
-    'برج‌های دبی مارینا': 'Dubai Marina Towers',
-    'داون‌تاون دبی': 'Downtown Dubai',
-    'جمیرا ویلج سیرکل': 'Jumeirah Village Circle',
-    'النخله جمیرا': 'Palm Jumeirah',
-    'بیزینس‌بی': 'Business Bay',
-    'دبی هیلز استیت': 'Dubai Hills Estate',
-    'الفرجان': 'Al Furjan',
-    'دبی کریک هاربر': 'Dubai Creek Harbour',
-    'عربین رنچز ۳': 'Arabian Ranches 3',
-    'دبی ساوث': 'Dubai South',
-    'المرابع العربیه': 'Al Barari',
-    'میدان (Meydan)': 'Meydan',
-    'جمیرا لیک تاورز (JLT)': 'Jumeirah Lake Towers',
-    'دبی مارینا (پنت‌هاوس)': 'Dubai Marina (Penthouse)',
-    'سیتی واک': 'City Walk',
-    'بلوواتر': 'Bluewaters Island',
-    'تاون‌اسکوئر': 'Town Square',
-    'المدینه الجمیریه': 'Madinat Jumeirah Living'
-  };
+  // Real DLD project/area names are already presentable as-is in either language — no
+  // translation table needed, unlike the fixed Persian type labels below.
+  function displayName(name){ return name; }
   var TYPE_EN = {
     'آپارتمان دو خواب': '2BR Apartment',
     'آپارتمان یک خواب': '1BR Apartment',
+    'آپارتمان سه خواب': '3BR Apartment',
+    'آپارتمان چهار خواب': '4BR Apartment',
     'استودیو': 'Studio',
     'ویلا': 'Villa',
     'تاون‌هاوس': 'Townhouse',
     'پنت‌هاوس': 'Penthouse'
   };
-  function displayName(name){ return currentLang === 'en' ? (NAME_EN[name] || name) : name; }
   function displayType(type){ return currentLang === 'en' ? (TYPE_EN[type] || type) : type; }
 
   var chatRulesFa = [
     { kws:['ویزای طلایی','طلایی','golden'], reply:'ویزای طلایی امارات ۱۰ ساله‌ست و از طریق سرمایه‌گذاری ملکی (حداقل ۲ میلیون درهم) یا تایید یک انکوباتور معتبر برای کارآفرینان قابل دریافته — بدون نیاز به کفیل.' },
-    { kws:['بودجه'], reply:'با بودجه‌ای که گفتی، بهترین گزینه یکی از این محله‌هاست: بیزینس‌بی، جمیرا ویلج سیرکل یا دبی مارینا. برای دیدن مسیر ویزای دقیق، محاسبه‌گر پایین صفحه رو امتحان کن.' },
-    { kws:['مارینا','marina'], reply:'در دبی مارینا، آپارتمان دو خوابه به‌طور میانگین حدود ۱٬۴۵۰٬۰۰۰ درهم قیمت داره و بازده اجاره‌ی تقریبی ۶٫۸٪ در ساله.' },
-    { kws:['قیمت','ارزش','price'], reply:'قیمت بستگی به محله داره — از ۶۲۰٬۰۰۰ درهم برای استودیو در JVC تا بیش از ۷ میلیون درهم برای ویلا در النخله. روی هر کارت ملک کلیک کن تا روند ۶ ماهه‌ی قیمتش رو ببینی.' },
-    { kws:['مدرسه','مدارس','school'], reply:'محله‌های دبی هیلز و جمیرا ویلج سیرکل به مدارس بین‌المللی معتبر نزدیک‌ترن و بین خانواده‌های ایرانی محبوبن.' },
+    { kws:['بودجه'], reply:'با بودجه‌ای که گفتی، بهترین گزینه یکی از این محله‌هاست: بیزینس‌بی، جمیرا ویلج سیرکل یا آرجان. برای دیدن مسیر ویزای دقیق، محاسبه‌گر پایین صفحه رو امتحان کن.' },
+    { kws:['مارینا','marina'], reply:'در دبی مارینا، قیمت آپارتمان‌ها بسته به پروژه معمولاً بین ۱.۷ تا ۲.۴ میلیون درهمه و بازده اجاره‌ی تقریبی ۶٪ در ساله — این عدد از تراکنش‌های واقعیِ ثبت‌شده در DLD می‌آد.' },
+    { kws:['قیمت','ارزش','price'], reply:'قیمت بستگی به محله داره — از حدود ۴۷۰٬۰۰۰ درهم تو International City تا نزدیک ۲.۹ میلیون درهم تو برج خلیفه. روی هر کارت ملک کلیک کن تا روند ۶ ماهه‌ی واقعی قیمتش رو ببینی.' },
+    { kws:['مدرسه','مدارس','school'], reply:'جمیرا ویلج سیرکل، جمیرا ویلج ترایانگل و داماک هیلز به مدارس و مسیرهای خانوادگی نزدیک‌تر و بین خانواده‌ها محبوب‌ترن.' },
     { kws:['اقامت','ملکی','residency'], reply:'با سرمایه‌گذاری ملکی ۷۵۰٬۰۰۰ درهم به بالا، ویزای اقامتی ۲ ساله می‌گیری؛ از ۲ میلیون درهم به بالا وارد مسیر ویزای طلایی ۱۰ ساله می‌شی.' }
   ];
   var chatRulesEn = [
     { kws:['golden visa','golden','طلایی'], reply:'The UAE Golden Visa runs 10 years, through either property investment (AED 2M+) or an approved incubator endorsement for entrepreneurs — no sponsor required.' },
-    { kws:['budget'], reply:"With that budget, a strong fit would be Business Bay, Jumeirah Village Circle or Dubai Marina. Try the calculator below for the exact visa path." },
-    { kws:['marina'], reply:'In Dubai Marina, a 2BR apartment averages around AED 1,450,000 with a rental yield near 6.8% a year.' },
-    { kws:['price','value'], reply:'Prices vary a lot by area — from AED 620,000 for a JVC studio to over AED 7M for a Palm Jumeirah villa. Click any property card to see its 6-month price trend.' },
-    { kws:['school'], reply:'Dubai Hills Estate and Jumeirah Village Circle sit closest to well-regarded international schools and are popular with expat families.' },
+    { kws:['budget'], reply:"With that budget, a strong fit would be Business Bay, Jumeirah Village Circle or Arjan. Try the calculator below for the exact visa path." },
+    { kws:['marina'], reply:'In Dubai Marina, apartment prices typically run AED 1.7M–2.4M depending on the project, with a rental yield near 6% a year — pulled from real registered DLD transactions.' },
+    { kws:['price','value'], reply:'Prices vary a lot by area — from around AED 470,000 in International City to near AED 2.9M near Burj Khalifa. Click any property card to see its real 6-month price trend.' },
+    { kws:['school'], reply:'Jumeirah Village Circle, Jumeirah Village Triangle and Damac Hills sit closest to schools and family-friendly routes, and are popular with families.' },
     { kws:['residency','property visa'], reply:'From AED 750,000 in property you get a 2-year residency visa; from AED 2,000,000 you move into the 10-year Golden Visa route.' }
   ];
 
@@ -769,14 +753,16 @@
   var API_BASE = (window.DIYAR_API_BASE || 'https://diyar-ai-backend.onrender.com');
   var HUES = ['210,55%','38,60%','165,40%','340,45%','265,45%','20,55%'];
 
-  // ---------- mock property data (fallback when the API is unreachable) ----------
+  // ---------- fallback property data (used only when the live API is unreachable) ----------
+  // A snapshot of 6 real DLD transactions (same source as the backend's dataset), so the
+  // demo never shows invented numbers even offline. Source date: 2026-09-21.
   var properties = [
-    { id:1, name:'برج‌های دبی مارینا', type:'آپارتمان دو خواب', price:1450000, roi:6.8, yieldPct:6.8, match:94, hue:'210,55%', trend:[1180000,1220000,1260000,1310000,1380000,1450000] },
-    { id:2, name:'داون‌تاون دبی', type:'آپارتمان یک خواب', price:1890000, roi:5.9, yieldPct:5.9, match:88, hue:'38,60%', trend:[1620000,1680000,1720000,1790000,1840000,1890000] },
-    { id:3, name:'جمیرا ویلج سیرکل', type:'استودیو', price:620000, roi:8.1, yieldPct:8.1, match:82, hue:'165,40%', trend:[540000,555000,570000,590000,605000,620000] },
-    { id:4, name:'النخله جمیرا', type:'ویلا', price:7200000, roi:4.5, yieldPct:4.5, match:76, hue:'340,45%', trend:[6400000,6550000,6700000,6900000,7050000,7200000] },
-    { id:5, name:'بیزینس‌بی', type:'آپارتمان دو خواب', price:1150000, roi:7.2, yieldPct:7.2, match:91, hue:'265,45%', trend:[960000,1000000,1040000,1080000,1120000,1150000] },
-    { id:6, name:'دبی هیلز استیت', type:'تاون‌هاوس', price:2650000, roi:6.1, yieldPct:6.1, match:85, hue:'20,55%', trend:[2280000,2360000,2440000,2520000,2590000,2650000] }
+    { id:1, name:'Serenz by Danube', type:'استودیو', price:967000, roi:7.0, yieldPct:7.0, match:91, hue:'210,55%', trend:[602884, 602884, 579898, 500379, 578826, 967000] },
+    { id:2, name:'77S', type:'آپارتمان یک خواب', price:1700000, roi:6.0, yieldPct:6.0, match:88, hue:'38,60%', trend:[2263572, 1855829, 2011498, 1828084, 1769258, 1700000] },
+    { id:3, name:'Marina Gate Residence', type:'آپارتمان یک خواب', price:2419548, roi:6.0, yieldPct:6.0, match:88, hue:'165,40%', trend:[1345450, 1294361, 1249942, 1532221, 1840727, 2419548] },
+    { id:4, name:'Burj Khalifa Towers', type:'آپارتمان یک خواب', price:2850000, roi:5.4, yieldPct:5.4, match:86, hue:'340,45%', trend:[2790921, 2717240, 2664186, 2772501, 2629883, 2850000] },
+    { id:5, name:'Samana Imperial Garden', type:'آپارتمان یک خواب', price:875423, roi:6.0, yieldPct:6.0, match:88, hue:'265,45%', trend:[1111996, 1157372, 1186937, 1192042, 1021314, 875423] },
+    { id:6, name:'Voxa Residences', type:'آپارتمان یک خواب', price:1088901, roi:6.3, yieldPct:6.3, match:89, hue:'20,55%', trend:[1085803, 1092443, 1095763, 1027083, 1031640, 1088901] }
   ];
 
   function fmtAED(n){ return Number(n).toLocaleString('en-US'); }
