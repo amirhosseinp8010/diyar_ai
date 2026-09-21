@@ -273,8 +273,29 @@
   .listings-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px;}
   .listings-head h3{font-size:16.5px;}
   .listings-head span{font-size:12.5px;color:var(--text-faint);}
+  .listing-filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px;align-items:center;}
+  .filter-pill{
+    font-size:12.5px;font-weight:600;border:1.5px solid var(--border-strong);background:var(--bg-elevated);
+    color:var(--text-muted);padding:7px 13px;border-radius:999px;cursor:pointer;white-space:nowrap;
+  }
+  .filter-pill .n{font-family:'JetBrains Mono',monospace;color:var(--text-faint);margin-inline-start:4px;}
+  .filter-pill:hover{border-color:var(--accent);}
+  .filter-pill.on{background:var(--accent);border-color:var(--accent);color:#241804;}
+  .filter-pill.on .n{color:#4a3712;}
+  .area-search{
+    flex:1;min-width:140px;border:1.5px solid var(--border-strong);background:var(--bg-elevated);color:var(--text);
+    border-radius:999px;padding:7px 14px;font-size:12.5px;font-family:inherit;
+  }
+  .area-search:focus-visible{outline:2px solid var(--teal);}
   .listing-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;}
   @media (max-width:640px){.listing-grid{grid-template-columns:1fr;}}
+  .load-more-row{display:flex;justify-content:center;margin-top:16px;}
+  .load-more-btn{
+    background:var(--bg-elevated);border:1.5px solid var(--border-strong);color:var(--text);
+    padding:10px 22px;border-radius:999px;font-size:13px;font-weight:700;cursor:pointer;
+  }
+  .load-more-btn:hover{border-color:var(--accent);}
+  .empty-state{padding:30px 10px;text-align:center;color:var(--text-faint);font-size:13px;}
 
   .prop-card{
     background:var(--bg-elevated);border:1px solid var(--border);border-radius:var(--radius-md);
@@ -579,7 +600,13 @@
             <h3 data-en="AI-matched properties">ملک‌های منطبق با AI</h3>
             <span id="listingCount">۱۸ مورد <span class="chat-live-badge" id="apiLiveBadge" hidden data-en="API Live" style="margin-inline-start:8px;">API زنده</span></span>
           </div>
+          <div class="listing-filters" id="listingFilters">
+            <input type="text" class="area-search" id="areaSearch" placeholder="جستجوی منطقه…" data-en-placeholder="Search area…">
+          </div>
           <div class="listing-grid" id="listingGrid"></div>
+          <div class="load-more-row" id="loadMoreRow" hidden>
+            <button class="load-more-btn" id="loadMoreBtn" data-en="Show more">نمایش بیشتر</button>
+          </div>
 
           <div class="calc-card">
             <h3 data-en="Visa path calculator">محاسبه‌گر مسیر ویزا</h3>
@@ -655,6 +682,8 @@
       matchSuffix: '٪ تطابق',
       aedWord: 'AED',
       itemsSuffix: 'مورد',
+      filterLabels: { all:'همه', studio:'استودیو', '1br':'۱ خواب', '2br':'۲ خواب', '3br':'۳ خواب+', villa:'ویلا/تاون‌هاوس' },
+      noResults: 'با این فیلترها ملکی پیدا نشد.',
       goldBadge: 'واجد شرایط ویزای طلایی',
       residencyBadge: 'واجد شرایط اقامت ملکی',
       roiPrefix: 'ROI ',
@@ -707,6 +736,8 @@
       matchSuffix: '% match',
       aedWord: 'AED',
       itemsSuffix: 'listed',
+      filterLabels: { all:'All', studio:'Studio', '1br':'1BR', '2br':'2BR', '3br':'3BR+', villa:'Villa/Townhouse' },
+      noResults: 'No properties match these filters.',
       goldBadge: 'Golden Visa eligible',
       residencyBadge: 'Residency visa eligible',
       roiPrefix: 'ROI ',
@@ -793,12 +824,12 @@
   // A snapshot of 6 real DLD transactions (same source as the backend's dataset), so the
   // demo never shows invented numbers even offline. Source date: 2026-09-21.
   var properties = [
-    { id:1, name:'Serenz by Danube', type:'استودیو', price:967000, roi:7.0, yieldPct:7.0, match:91, hue:'210,55%', trend:[602884, 602884, 579898, 500379, 578826, 967000] },
-    { id:2, name:'77S', type:'آپارتمان یک خواب', price:1700000, roi:6.0, yieldPct:6.0, match:88, hue:'38,60%', trend:[2263572, 1855829, 2011498, 1828084, 1769258, 1700000] },
-    { id:3, name:'Marina Gate Residence', type:'آپارتمان یک خواب', price:2419548, roi:6.0, yieldPct:6.0, match:88, hue:'165,40%', trend:[1345450, 1294361, 1249942, 1532221, 1840727, 2419548] },
-    { id:4, name:'Burj Khalifa Towers', type:'آپارتمان یک خواب', price:2850000, roi:5.4, yieldPct:5.4, match:86, hue:'340,45%', trend:[2790921, 2717240, 2664186, 2772501, 2629883, 2850000] },
-    { id:5, name:'Samana Imperial Garden', type:'آپارتمان یک خواب', price:875423, roi:6.0, yieldPct:6.0, match:88, hue:'265,45%', trend:[1111996, 1157372, 1186937, 1192042, 1021314, 875423] },
-    { id:6, name:'Voxa Residences', type:'آپارتمان یک خواب', price:1088901, roi:6.3, yieldPct:6.3, match:89, hue:'20,55%', trend:[1085803, 1092443, 1095763, 1027083, 1031640, 1088901] }
+    { id:1, name:'Serenz by Danube', area:'Jumeirah Village Circle', type:'استودیو', price:967000, roi:7.0, yieldPct:7.0, match:91, hue:'210,55%', trend:[602884, 602884, 579898, 500379, 578826, 967000] },
+    { id:2, name:'77S', area:'Business Bay', type:'آپارتمان یک خواب', price:1700000, roi:6.0, yieldPct:6.0, match:88, hue:'38,60%', trend:[2263572, 1855829, 2011498, 1828084, 1769258, 1700000] },
+    { id:3, name:'Marina Gate Residence', area:'Dubai Marina', type:'آپارتمان یک خواب', price:2419548, roi:6.0, yieldPct:6.0, match:88, hue:'165,40%', trend:[1345450, 1294361, 1249942, 1532221, 1840727, 2419548] },
+    { id:4, name:'Burj Khalifa Towers', area:'Burj Khalifa', type:'آپارتمان یک خواب', price:2850000, roi:5.4, yieldPct:5.4, match:86, hue:'340,45%', trend:[2790921, 2717240, 2664186, 2772501, 2629883, 2850000] },
+    { id:5, name:'Samana Imperial Garden', area:'Arjan', type:'آپارتمان یک خواب', price:875423, roi:6.0, yieldPct:6.0, match:88, hue:'265,45%', trend:[1111996, 1157372, 1186937, 1192042, 1021314, 875423] },
+    { id:6, name:'Voxa Residences', area:'Jumeirah Village Triangle', type:'آپارتمان یک خواب', price:1088901, roi:6.3, yieldPct:6.3, match:89, hue:'20,55%', trend:[1085803, 1092443, 1095763, 1027083, 1031640, 1088901] }
   ];
 
   function fmtAED(n){ return Number(n).toLocaleString('en-US'); }
@@ -826,21 +857,84 @@
       '</svg>';
   }
 
+  // ---------- listing filters + pagination ----------
+  var typeFilter = 'all';
+  var areaQuery = '';
+  var visibleCount = 12;
+  var PAGE_SIZE = 12;
+
+  function typeBucket(type){
+    if (type === 'استودیو') return 'studio';
+    if (type === 'آپارتمان یک خواب') return '1br';
+    if (type === 'آپارتمان دو خواب') return '2br';
+    if (type === 'ویلا' || type === 'تاون‌هاوس') return 'villa';
+    return '3br'; // 3BR, 4BR, penthouse
+  }
+
+  function filteredProperties(){
+    var q = areaQuery.trim().toLowerCase();
+    return properties.filter(function(p){
+      if (typeFilter !== 'all' && typeBucket(p.type) !== typeFilter) return false;
+      if (q){
+        var hay = (displayName(p.name) + ' ' + (p.area||'') + ' ' + displayType(p.type)).toLowerCase();
+        if (hay.indexOf(q) === -1) return false;
+      }
+      return true;
+    });
+  }
+
+  function renderFilterPills(){
+    var box = document.getElementById('listingFilters');
+    var search = document.getElementById('areaSearch');
+    var counts = { all: properties.length, studio:0, '1br':0, '2br':0, '3br':0, villa:0 };
+    properties.forEach(function(p){ counts[typeBucket(p.type)]++; });
+    var labels = L[currentLang].filterLabels;
+    var pillsHtml = ['all','studio','1br','2br','3br','villa'].map(function(key){
+      var n = currentLang === 'fa' ? toPersianDigits(counts[key]) : counts[key];
+      return '<button type="button" class="filter-pill'+(typeFilter===key?' on':'')+'" data-filter="'+key+'">'+
+        labels[key]+' <span class="n">'+n+'</span></button>';
+    }).join('');
+    // rebuild pills, keep the existing search input node (preserve focus/caret)
+    var existing = box.querySelectorAll('.filter-pill');
+    existing.forEach(function(el){ el.remove(); });
+    box.insertAdjacentHTML('afterbegin', pillsHtml);
+    box.querySelectorAll('.filter-pill').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        typeFilter = btn.getAttribute('data-filter');
+        visibleCount = PAGE_SIZE;
+        renderFilterPills();
+        renderListings();
+      });
+    });
+    if (search && search.value !== areaQuery) search.value = areaQuery;
+  }
+
   function renderListings(){
     var grid = document.getElementById('listingGrid');
     var countLabel = document.getElementById('listingCount');
+    var loadMoreRow = document.getElementById('loadMoreRow');
+    var all = filteredProperties();
+    var shown = all.slice(0, visibleCount);
+
     if (countLabel){
       var badge = document.getElementById('apiLiveBadge');
-      var countNum = currentLang === 'fa' ? toPersianDigits(properties.length) : properties.length;
+      var countNum = currentLang === 'fa' ? toPersianDigits(all.length) : all.length;
       countLabel.childNodes[0].textContent = countNum + ' ' + L[currentLang].itemsSuffix + ' ';
       if (badge) countLabel.appendChild(badge);
     }
-    grid.innerHTML = properties.map(function(p){
+
+    if (!shown.length){
+      grid.innerHTML = '<div class="empty-state">'+L[currentLang].noResults+'</div>';
+      loadMoreRow.hidden = true;
+      return;
+    }
+
+    grid.innerHTML = shown.map(function(p){
       return '<div class="prop-card" tabindex="0" data-id="'+p.id+'">'+
         '<div class="prop-photo">'+ photoSVG(p.hue) +'<span class="match num">'+p.match+L[currentLang].matchSuffix+'</span></div>'+
         '<div class="prop-body">'+
           '<h4>'+displayName(p.name)+'</h4>'+
-          '<div class="loc">'+displayType(p.type)+'</div>'+
+          '<div class="loc">'+(p.area ? p.area+' · ' : '')+displayType(p.type)+'</div>'+
           '<div class="prop-stats">'+
             '<div class="prop-price"><span class="num">'+fmtAED(p.price)+'</span><br><small>'+L[currentLang].aedWord+'</small></div>'+
             '<div class="prop-roi num">'+L[currentLang].roiPrefix+p.roi+'%</div>'+
@@ -853,7 +947,22 @@
       card.addEventListener('click', function(){ openModal(Number(card.getAttribute('data-id'))); });
       card.addEventListener('keydown', function(e){ if(e.key==='Enter') openModal(Number(card.getAttribute('data-id'))); });
     });
+
+    loadMoreRow.hidden = visibleCount >= all.length;
   }
+
+  document.getElementById('loadMoreBtn').addEventListener('click', function(){
+    visibleCount += PAGE_SIZE;
+    renderListings();
+  });
+  var areaSearchTimer;
+  document.getElementById('areaSearch').addEventListener('input', function(e){
+    clearTimeout(areaSearchTimer);
+    var val = e.target.value;
+    areaSearchTimer = setTimeout(function(){
+      areaQuery = val; visibleCount = PAGE_SIZE; renderListings();
+    }, 200);
+  });
 
   // ---------- charts ----------
   function trendSVG(data){
@@ -909,7 +1018,7 @@
       '<div class="modal-photo">'+ photoSVG(p.hue) +'<button class="modal-close" id="modalCloseBtn">✕</button></div>'+
       '<div class="modal-body">'+
         '<h3>'+displayName(p.name)+'</h3>'+
-        '<div class="modal-loc">'+displayType(p.type)+' · '+t.dubaiUAE+'</div>'+
+        '<div class="modal-loc">'+(p.area ? p.area+' · ' : '')+displayType(p.type)+' · '+t.dubaiUAE+'</div>'+
         '<div class="modal-stat-row">'+
           '<div class="modal-stat"><div class="v">'+fmtAED(p.price)+'</div><div class="l">'+t.priceLabel+'</div></div>'+
           '<div class="modal-stat"><div class="v">'+p.match+'%</div><div class="l">'+t.matchStatLabel+'</div></div>'+
@@ -918,7 +1027,7 @@
         '<div class="modal-section">'+
           '<h5>'+t.trendTitle+'</h5>'+
           '<div class="chart-row">'+
-            '<div class="chart-box">'+ trendSVG(p.trend) +'</div>'+
+            '<div class="chart-box" id="modalTrendBox">'+ (p.trend ? trendSVG(p.trend) : '<div class="empty-state" style="padding:30px 6px;">'+t.chatThinking+'</div>') +'</div>'+
             '<div class="chart-box">'+ donutSVG(p.yieldPct) +'</div>'+
           '</div>'+
         '</div>'+
@@ -945,6 +1054,22 @@
       e.preventDefault();
       submitLead(p.id);
     });
+
+    if (!p.trend){
+      // capture the box reference now — if the viewer opens a different property before this
+      // resolves, this node is already detached and writing to it is a harmless no-op
+      var trendBox = document.getElementById('modalTrendBox');
+      fetch(API_BASE + '/v1/properties/' + p.id + '/valuation')
+        .then(function(r){ return r.ok ? r.json() : null; })
+        .then(function(val){
+          p.trend = (val && val.trend_aed && val.trend_aed.length) ? val.trend_aed : [p.price];
+          if (trendBox) trendBox.innerHTML = trendSVG(p.trend);
+        })
+        .catch(function(){
+          p.trend = [p.price];
+          if (trendBox) trendBox.innerHTML = trendSVG(p.trend);
+        });
+    }
   }
   function closeModal(){ document.getElementById('modalBackdrop').hidden = true; }
 
@@ -1139,29 +1264,24 @@
   slider.addEventListener('change', refineCalcFromAPI);
 
   // ---------- load real data from the backend when reachable; sample data otherwise ----------
-  function mapApiProperty(p, trend){
+  // trend is loaded lazily (only when a card is opened), not eagerly for every listing —
+  // with ~300 real properties, fetching every valuation up front would be 300 requests.
+  function mapApiProperty(p){
     return {
-      id: p.id, name: p.name, type: p.type, price: p.price_aed,
+      id: p.id, name: p.name, area: p.area, type: p.type, price: p.price_aed,
       roi: p.roi_pct, yieldPct: p.roi_pct,
       match: Math.max(70, Math.min(97, Math.round(70 + p.roi_pct * 3))),
       hue: HUES[(p.id - 1) % HUES.length],
-      trend: (trend && trend.length) ? trend : [p.price_aed]
+      trend: null
     };
   }
 
   function loadPropertiesFromAPI(){
     var ctl = new AbortController();
     var timer = setTimeout(function(){ ctl.abort(); }, 4000);
-    return fetch(API_BASE + '/v1/properties/search?limit=20', { signal: ctl.signal })
+    return fetch(API_BASE + '/v1/properties/search?limit=300', { signal: ctl.signal })
       .then(function(res){ if(!res.ok) throw new Error('bad status'); return res.json(); })
-      .then(function(list){
-        return Promise.all(list.map(function(p){
-          return fetch(API_BASE + '/v1/properties/' + p.id + '/valuation')
-            .then(function(r){ return r.ok ? r.json() : null; })
-            .then(function(val){ return mapApiProperty(p, val && val.trend_aed); })
-            .catch(function(){ return mapApiProperty(p, null); });
-        }));
-      })
+      .then(function(list){ return list.map(mapApiProperty); })
       .then(function(mapped){
         if (mapped.length){
           properties = mapped;
@@ -1208,6 +1328,7 @@
     });
 
     resetChat();
+    renderFilterPills();
     renderListings();
     updateCalc();
   }
@@ -1218,9 +1339,12 @@
 
   // ---------- init ----------
   resetChat();
+  renderFilterPills();
   renderListings();
   updateCalc();
   loadPropertiesFromAPI().then(function(){
+    visibleCount = PAGE_SIZE;
+    renderFilterPills();
     renderListings();
     updateCalc();
   });

@@ -44,7 +44,7 @@ app = FastAPI(
     title="دیار AI API",
     description=(
         "بک‌اند MVP پلتفرم دیار — جست‌وجوی ملک، ارزیابی قیمت و مشاور ویزا برای دبی. "
-        "۱۸ تراکنش واقعیِ ثبت‌شده در DLD (چند ماه اخیر) — قیمت، متراژ و بازده هرکدوم از داده‌ی رسمی استخراج شده، نه نمونه‌ی ساختگی."
+        "۲۹۹ تراکنش واقعیِ ثبت‌شده در DLD در ۶۰ منطقه‌ی دبی (چند ماه اخیر) — قیمت، متراژ و بازده هرکدوم از داده‌ی رسمی استخراج شده، نه نمونه‌ی ساختگی."
     ),
     version="0.1.0",
 )
@@ -198,7 +198,7 @@ def search_properties(
     min_price: Optional[int] = Query(None, ge=0),
     max_price: Optional[int] = Query(None, ge=0),
     sort: Literal["price_asc", "price_desc", "roi_desc"] = "price_asc",
-    limit: int = Query(20, ge=1, le=100),
+    limit: int = Query(24, ge=1, le=500),
 ):
     results = PROPERTIES
     if area:
@@ -282,7 +282,7 @@ def lifestyle_match(
 
     area = p["area"]
     school_areas = {"Jumeirah Village Circle", "Jumeirah Village Triangle", "Damac Hills", "Majan", "Al Furjan"}
-    beach_areas = {"Dubai Marina", "Palm Deira"}
+    beach_areas = {"Dubai Marina", "Palm Jumeirah", "Palm Jabal Ali"}
     metro_areas = {"Business Bay", "Dubai Marina", "Burj Khalifa", "Al Furjan"}
 
     score = 60

@@ -34,8 +34,11 @@ def test_search_all():
     r = client.get("/v1/properties/search")
     assert r.status_code == 200
     body = r.json()
-    assert len(body) == 18
+    assert len(body) == 24  # default page size
     assert body[0]["price_aed"] <= body[1]["price_aed"]  # default sort: price_asc
+
+    r = client.get("/v1/properties/search", params={"limit": 500})
+    assert len(r.json()) == len(main.PROPERTIES) == 299
 
 
 def test_search_filters_area_and_price():
@@ -80,8 +83,9 @@ def test_visa_rules_are_ordered_by_investment():
 
 
 def test_lifestyle_match_school():
-    # property 1 sits in Jumeirah Village Circle, which is in the school-proximity whitelist
-    r = client.get("/v1/properties/1/lifestyle-match", params={"near_school": True})
+    # any property in Jumeirah Village Circle should sit in the school-proximity whitelist
+    jvc_property = next(p for p in main.PROPERTIES if p["area"] == "Jumeirah Village Circle")
+    r = client.get(f"/v1/properties/{jvc_property['id']}/lifestyle-match", params={"near_school": True})
     assert r.status_code == 200
     body = r.json()
     assert body["match_score"] > 60

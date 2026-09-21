@@ -1,197 +1,248 @@
 [
   {
     "id": 1,
-    "name": "Serenz by Danube",
-    "area": "Jumeirah Village Circle",
-    "type": "استودیو",
-    "price_aed": 967000,
-    "size_sqft": 397,
-    "roi_pct": 7.0,
+    "name": "Azizi Venice 13",
+    "area": "Madinat Al Mataar",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 1200000,
+    "size_sqft": 826,
+    "roi_pct": 5.0,
     "trend_aed": [
-      602884,
-      602884,
-      579898,
-      500379,
-      578826,
-      967000
+      1406017,
+      1456734,
+      1470115,
+      1467472,
+      1516619,
+      1200000
     ]
   },
   {
     "id": 2,
-    "name": "77S",
-    "area": "Business Bay",
-    "type": "آپارتمان یک خواب",
-    "price_aed": 1700000,
-    "size_sqft": 878,
-    "roi_pct": 6.0,
+    "name": "Golf Fields",
+    "area": "Madinat Al Mataar",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 2288532,
+    "size_sqft": 1178,
+    "roi_pct": 5.0,
     "trend_aed": [
-      2263572,
-      1855829,
-      2011498,
-      1828084,
-      1769258,
-      1700000
+      2005192,
+      2077521,
+      2096604,
+      2092835,
+      2162926,
+      2288532
     ]
   },
   {
     "id": 3,
-    "name": "Marina Gate Residence",
-    "area": "Dubai Marina",
-    "type": "آپارتمان یک خواب",
-    "price_aed": 2419548,
-    "size_sqft": 758,
-    "roi_pct": 6.0,
+    "name": "Azizi Venice 7",
+    "area": "Madinat Al Mataar",
+    "type": "استودیو",
+    "price_aed": 720000,
+    "size_sqft": 351,
+    "roi_pct": 5.0,
     "trend_aed": [
-      1345450,
-      1294361,
-      1249942,
-      1532221,
-      1840727,
-      2419548
+      597472,
+      619024,
+      624710,
+      623587,
+      644471,
+      720000
     ]
   },
   {
     "id": 4,
-    "name": "Burj Khalifa Towers",
-    "area": "Burj Khalifa",
-    "type": "آپارتمان یک خواب",
-    "price_aed": 2850000,
-    "size_sqft": 1103,
-    "roi_pct": 5.4,
+    "name": "Azizi Venice 13",
+    "area": "Madinat Al Mataar",
+    "type": "استودیو",
+    "price_aed": 655000,
+    "size_sqft": 381,
+    "roi_pct": 5.0,
     "trend_aed": [
-      2790921,
-      2717240,
-      2664186,
-      2772501,
-      2629883,
-      2850000
+      648538,
+      671932,
+      678104,
+      676885,
+      699554,
+      655000
     ]
   },
   {
     "id": 5,
-    "name": "Samana Imperial Garden",
-    "area": "Arjan",
-    "type": "آپارتمان یک خواب",
-    "price_aed": 875423,
-    "size_sqft": 709,
-    "roi_pct": 6.0,
+    "name": "Expo City Sidr Residences",
+    "area": "Madinat Al Mataar",
+    "type": "آپارتمان چهار خواب",
+    "price_aed": 8767000,
+    "size_sqft": 4116,
+    "roi_pct": 5.0,
     "trend_aed": [
-      1111996,
-      1157372,
-      1186937,
-      1192042,
-      1021314,
-      875423
+      7006255,
+      7258978,
+      7325657,
+      7312486,
+      7557388,
+      8767000
     ]
   },
   {
     "id": 6,
-    "name": "Voxa Residences",
-    "area": "Jumeirah Village Triangle",
-    "type": "آپارتمان یک خواب",
-    "price_aed": 1088901,
-    "size_sqft": 651,
-    "roi_pct": 6.3,
+    "name": "Binghatti Apex",
+    "area": "Jumeirah Village Circle",
+    "type": "استودیو",
+    "price_aed": 680000,
+    "size_sqft": 421,
+    "roi_pct": 7.0,
     "trend_aed": [
-      1085803,
-      1092443,
-      1095763,
-      1027083,
-      1031640,
-      1088901
+      639331,
+      639331,
+      614955,
+      530628,
+      613818,
+      680000
     ]
   },
   {
     "id": 7,
-    "name": "Damac District",
-    "area": "Damac Hills",
-    "type": "آپارتمان یک خواب",
-    "price_aed": 1166000,
-    "size_sqft": 636,
-    "roi_pct": 6.2,
+    "name": "Serenz By Danube",
+    "area": "Jumeirah Village Circle",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 1884000,
+    "size_sqft": 863,
+    "roi_pct": 7.0,
     "trend_aed": [
-      1037062,
-      959788,
-      992033,
-      1166933,
-      1144927,
-      1166000
+      1310552,
+      1310552,
+      1260584,
+      1087725,
+      1258254,
+      1884000
     ]
   },
   {
     "id": 8,
-    "name": "Dubai South Residences",
-    "area": "Dubai South",
-    "type": "آپارتمان دو خواب",
-    "price_aed": 1100000,
-    "size_sqft": 1269,
-    "roi_pct": 6.7,
+    "name": "Serenz By Danube",
+    "area": "Jumeirah Village Circle",
+    "type": "آپارتمان سه خواب",
+    "price_aed": 2417000,
+    "size_sqft": 1307,
+    "roi_pct": 7.0,
     "trend_aed": [
-      1887130,
-      1782057,
-      1676603,
-      1629904,
-      1615056,
-      1100000
+      1984810,
+      1984810,
+      1909135,
+      1647343,
+      1905606,
+      2417000
     ]
   },
   {
     "id": 9,
-    "name": "Gate Royale Residences",
-    "area": "Al Furjan",
-    "type": "آپارتمان دو خواب",
-    "price_aed": 1489000,
-    "size_sqft": 985,
-    "roi_pct": 6.0,
+    "name": "Shamal Terraces 2",
+    "area": "Jumeirah Village Circle",
+    "type": "تاون‌هاوس",
+    "price_aed": 3100000,
+    "size_sqft": 2333,
+    "roi_pct": 5.9,
     "trend_aed": [
-      1495427,
-      1186826,
-      1289759,
-      1271044,
-      1219528,
-      1489000
+      4609775,
+      4541184,
+      3743532,
+      3654411,
+      3945336,
+      3100000
     ]
   },
   {
     "id": 10,
-    "name": "Aura Elegance",
-    "area": "Silicon Oasis",
-    "type": "آپارتمان یک خواب",
-    "price_aed": 970000,
-    "size_sqft": 795,
-    "roi_pct": 6.0,
+    "name": "Elitz 2 By Danube",
+    "area": "Jumeirah Village Circle",
+    "type": "آپارتمان سه خواب",
+    "price_aed": 2275020,
+    "size_sqft": 1495,
+    "roi_pct": 7.0,
     "trend_aed": [
-      802234,
-      815352,
-      882609,
-      818612,
-      829026,
-      970000
+      2270307,
+      2270307,
+      2183746,
+      1884298,
+      2179710,
+      2275020
     ]
   },
   {
     "id": 11,
-    "name": "Azizi Riviera 50",
-    "area": "Meydan",
-    "type": "استودیو",
-    "price_aed": 1014300,
-    "size_sqft": 453,
+    "name": "Arancia Yards 2 By Beyond",
+    "area": "City Of Arabia",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 2435000,
+    "size_sqft": 1096,
     "roi_pct": 6.0,
     "trend_aed": [
-      888061,
-      946951,
-      937665,
-      962625,
-      858344,
-      1014300
+      1849500,
+      1894436,
+      1901450,
+      1906930,
+      1869995,
+      2435000
     ]
   },
   {
     "id": 12,
+    "name": "Arancia Yards By Beyond",
+    "area": "City Of Arabia",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 1160000,
+    "size_sqft": 738,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      1245375,
+      1275633,
+      1280356,
+      1284046,
+      1259176,
+      1160000
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Arancia Yards By Beyond",
+    "area": "City Of Arabia",
+    "type": "آپارتمان سه خواب",
+    "price_aed": 3643000,
+    "size_sqft": 1745,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      2944688,
+      3016232,
+      3027400,
+      3036126,
+      2977319,
+      3643000
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Arancia Yards 2 By Beyond",
+    "area": "City Of Arabia",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 1313000,
+    "size_sqft": 748,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      1262250,
+      1292918,
+      1297705,
+      1301445,
+      1276238,
+      1313000
+    ]
+  },
+  {
+    "id": 15,
     "name": "Azizi Milan Heights",
-    "area": "City of Arabia",
+    "area": "City Of Arabia",
     "type": "استودیو",
-    "price_aed": 614000,
+    "price_aed": 608580,
     "size_sqft": 340,
     "roi_pct": 6.0,
     "trend_aed": [
@@ -200,109 +251,4835 @@
       589866,
       591566,
       580108,
-      614000
-    ]
-  },
-  {
-    "id": 13,
-    "name": "Bararigate by Ade",
-    "area": "Majan",
-    "type": "استودیو",
-    "price_aed": 726000,
-    "size_sqft": 442,
-    "roi_pct": 6.0,
-    "trend_aed": [
-      601916,
-      606380,
-      761389,
-      730361,
-      627331,
-      726000
-    ]
-  },
-  {
-    "id": 14,
-    "name": "Condor Golf Links 18",
-    "area": "Dubai Sports City",
-    "type": "آپارتمان یک خواب",
-    "price_aed": 816451,
-    "size_sqft": 650,
-    "roi_pct": 6.3,
-    "trend_aed": [
-      892450,
-      866840,
-      849355,
-      846885,
-      638430,
-      816451
-    ]
-  },
-  {
-    "id": 15,
-    "name": "Midtown - Afnan",
-    "area": "Dubai Production City",
-    "type": "آپارتمان یک خواب",
-    "price_aed": 810000,
-    "size_sqft": 637,
-    "roi_pct": 6.0,
-    "trend_aed": [
-      820201,
-      841413,
-      799244,
-      920784,
-      909827,
-      810000
+      608580
     ]
   },
   {
     "id": 16,
-    "name": "International City — Phase 1",
-    "area": "International City",
-    "type": "آپارتمان یک خواب",
-    "price_aed": 470000,
-    "size_sqft": 732,
-    "roi_pct": 6.0,
+    "name": "Raw District 2 By Imtiaz",
+    "area": "Jabal Ali Industrial Second",
+    "type": "آپارتمان سه خواب",
+    "price_aed": 1985910,
+    "size_sqft": 1524,
+    "roi_pct": 5.7,
     "trend_aed": [
-      624030,
-      498712,
-      430050,
-      453840,
-      478435,
-      470000
+      2650541,
+      2619604,
+      2626766,
+      2668067,
+      2699461,
+      1985910
     ]
   },
   {
     "id": 17,
-    "name": "The Meriva Collection",
-    "area": "Palm Deira",
-    "type": "آپارتمان یک خواب",
-    "price_aed": 2731828,
-    "size_sqft": 831,
-    "roi_pct": 2.0,
+    "name": "Raw District 2 By Imtiaz",
+    "area": "Jabal Ali Industrial Second",
+    "type": "استودیو",
+    "price_aed": 722923,
+    "size_sqft": 395,
+    "roi_pct": 5.7,
     "trend_aed": [
-      2444636,
-      2535713,
-      2271206,
-      2188272,
-      1909389,
-      2731828
+      686984,
+      678966,
+      680822,
+      691526,
+      699664,
+      722923
     ]
   },
   {
     "id": 18,
-    "name": "Samana Santorini",
+    "name": "Raw District By Imtiaz R",
+    "area": "Jabal Ali Industrial Second",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 1685069,
+    "size_sqft": 1133,
+    "roi_pct": 5.7,
+    "trend_aed": [
+      1970514,
+      1947514,
+      1952839,
+      1983543,
+      2006883,
+      1685069
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Raw District 2 By Imtiaz",
+    "area": "Jabal Ali Industrial Second",
+    "type": "آپارتمان سه خواب",
+    "price_aed": 1963653,
+    "size_sqft": 1507,
+    "roi_pct": 5.7,
+    "trend_aed": [
+      2620974,
+      2590382,
+      2597465,
+      2638305,
+      2669349,
+      1963653
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Raw District By Imtiaz R",
+    "area": "Jabal Ali Industrial Second",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 1147845,
+    "size_sqft": 702,
+    "roi_pct": 5.7,
+    "trend_aed": [
+      1220918,
+      1206668,
+      1209967,
+      1228991,
+      1243453,
+      1147845
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Bliss Tower",
+    "area": "Dubai Land Residence Complex",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 1146803,
+    "size_sqft": 797,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      1056025,
+      1069335,
+      1061923,
+      1029883,
+      1127436,
+      1146803
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Nuve By Zoya",
+    "area": "Dubai Land Residence Complex",
+    "type": "استودیو",
+    "price_aed": 729810,
+    "size_sqft": 546,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      723450,
+      732568,
+      727490,
+      705541,
+      772372,
+      729810
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Izel By Zoya",
+    "area": "Dubai Land Residence Complex",
+    "type": "استودیو",
+    "price_aed": 660480,
+    "size_sqft": 376,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      498200,
+      504479,
+      500982,
+      485867,
+      531890,
+      660480
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Reef 998",
+    "area": "Dubai Land Residence Complex",
+    "type": "آپارتمان سه خواب",
+    "price_aed": 2006188,
+    "size_sqft": 1397,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      1851025,
+      1874355,
+      1861363,
+      1805203,
+      1976196,
+      2006188
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Nuve By Zoya",
+    "area": "Dubai Land Residence Complex",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 1449000,
+    "size_sqft": 1128,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      1494600,
+      1513438,
+      1502947,
+      1457602,
+      1595669,
+      1449000
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Forest City Tower",
+    "area": "Majan",
+    "type": "پنت‌هاوس",
+    "price_aed": 2396308,
+    "size_sqft": 3611,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      4917460,
+      4953931,
+      6220309,
+      5966816,
+      5125092,
+      2396308
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Bararigate By Ade",
+    "area": "Majan",
+    "type": "آپارتمان سه خواب",
+    "price_aed": 2710000,
+    "size_sqft": 2527,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      3441269,
+      3466791,
+      4353010,
+      4175615,
+      3586571,
+      2710000
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Binghatti Skyflame 1",
+    "area": "Majan",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 1176999,
+    "size_sqft": 725,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      987305,
+      994628,
+      1248885,
+      1197990,
+      1028992,
+      1176999
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Tulip Oasis 10",
+    "area": "Majan",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 1950000,
+    "size_sqft": 1526,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      2078107,
+      2093519,
+      2628688,
+      2521562,
+      2165852,
+      1950000
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Binghatti Titania",
+    "area": "Majan",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 1109599,
+    "size_sqft": 837,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      1139827,
+      1148280,
+      1441816,
+      1383059,
+      1187954,
+      1109599
+    ]
+  },
+  {
+    "id": 31,
+    "name": "Urban Oasis",
+    "area": "Business Bay",
+    "type": "آپارتمان سه خواب",
+    "price_aed": 4900000,
+    "size_sqft": 1902,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      4903546,
+      4020257,
+      4357482,
+      3960154,
+      3832720,
+      4900000
+    ]
+  },
+  {
+    "id": 32,
+    "name": "One River Point",
+    "area": "Business Bay",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 3197828,
+    "size_sqft": 1478,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      3810432,
+      3124049,
+      3386098,
+      3077344,
+      2978318,
+      3197828
+    ]
+  },
+  {
+    "id": 33,
+    "name": "Business Bay — آپارتمان دو خواب",
+    "area": "Business Bay",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 2475000,
+    "size_sqft": 1578,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      4068242,
+      3335419,
+      3615198,
+      3285554,
+      3179828,
+      2475000
+    ]
+  },
+  {
+    "id": 34,
+    "name": "Prive By Damac",
+    "area": "Business Bay",
+    "type": "استودیو",
+    "price_aed": 1050000,
+    "size_sqft": 442,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      1139520,
+      934255,
+      1012622,
+      920288,
+      890674,
+      1050000
+    ]
+  },
+  {
+    "id": 35,
+    "name": "Al Habtoor City",
+    "area": "Business Bay",
+    "type": "آپارتمان چهار خواب",
+    "price_aed": 5550000,
+    "size_sqft": 3010,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      7760081,
+      6362237,
+      6895910,
+      6267121,
+      6065451,
+      5550000
+    ]
+  },
+  {
+    "id": 36,
+    "name": "Adhara Star",
+    "area": "Arjan",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 1175000,
+    "size_sqft": 854,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      1339414,
+      1394070,
+      1429681,
+      1435830,
+      1230187,
+      1175000
+    ]
+  },
+  {
+    "id": 37,
+    "name": "Bond Enclave",
+    "area": "Arjan",
+    "type": "آپارتمان سه خواب",
+    "price_aed": 3156777,
+    "size_sqft": 2631,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      4126460,
+      4294844,
+      4404557,
+      4423500,
+      3789956,
+      3156777
+    ]
+  },
+  {
+    "id": 38,
+    "name": "Oxford Gardens",
+    "area": "Arjan",
+    "type": "آپارتمان چهار خواب",
+    "price_aed": 2025000,
+    "size_sqft": 2406,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      3773570,
+      3927554,
+      4027885,
+      4045208,
+      3465843,
+      2025000
+    ]
+  },
+  {
+    "id": 39,
+    "name": "Binghatti Hillcrest",
+    "area": "Arjan",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 1322109,
+    "size_sqft": 681,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      1068080,
+      1111664,
+      1140062,
+      1144965,
+      980980,
+      1322109
+    ]
+  },
+  {
+    "id": 40,
+    "name": "Enchante By Grid",
+    "area": "Arjan",
+    "type": "استودیو",
+    "price_aed": 691000,
+    "size_sqft": 392,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      614813,
+      639901,
+      656247,
+      659070,
+      564676,
+      691000
+    ]
+  },
+  {
+    "id": 41,
+    "name": "Ember At Park Five",
+    "area": "Dubai Production City",
+    "type": "آپارتمان سه خواب",
+    "price_aed": 2344070,
+    "size_sqft": 1777,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      2288065,
+      2347239,
+      2229602,
+      2568654,
+      2538089,
+      2344070
+    ]
+  },
+  {
+    "id": 42,
+    "name": "Jannat",
+    "area": "Dubai Production City",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 1010000,
+    "size_sqft": 765,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      985014,
+      1010489,
+      959846,
+      1105808,
+      1092650,
+      1010000
+    ]
+  },
+  {
+    "id": 43,
+    "name": "Neem At Park Five",
+    "area": "Dubai Production City",
+    "type": "آپارتمان سه خواب",
+    "price_aed": 2185306,
+    "size_sqft": 1665,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      2143854,
+      2199298,
+      2089076,
+      2406758,
+      2378120,
+      2185306
+    ]
+  },
+  {
+    "id": 44,
+    "name": "Reef 996",
+    "area": "Dubai Production City",
+    "type": "استودیو",
+    "price_aed": 711918,
+    "size_sqft": 412,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      530491,
+      544211,
+      516936,
+      595546,
+      588460,
+      711918
+    ]
+  },
+  {
+    "id": 45,
+    "name": "Sera Gardens By Vision",
+    "area": "Dubai Production City",
+    "type": "استودیو",
+    "price_aed": 649800,
+    "size_sqft": 424,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      545942,
+      560062,
+      531993,
+      612892,
+      605599,
+      649800
+    ]
+  },
+  {
+    "id": 46,
+    "name": "Boulevard Park 1",
+    "area": "Jabal Ali First",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 2168000,
+    "size_sqft": 1285,
+    "roi_pct": 4.9,
+    "trend_aed": [
+      4041325,
+      3855000,
+      2209686,
+      2250549,
+      2217139,
+      2168000
+    ]
+  },
+  {
+    "id": 47,
+    "name": "Boulevard Park 1",
+    "area": "Jabal Ali First",
+    "type": "آپارتمان سه خواب",
+    "price_aed": 3095000,
+    "size_sqft": 1795,
+    "roi_pct": 4.9,
+    "trend_aed": [
+      5645275,
+      5385000,
+      3086682,
+      3143763,
+      3097093,
+      3095000
+    ]
+  },
+  {
+    "id": 48,
+    "name": "Hills View At Wasl Gate",
+    "area": "Jabal Ali First",
+    "type": "استودیو",
+    "price_aed": 711060,
+    "size_sqft": 474,
+    "roi_pct": 4.9,
+    "trend_aed": [
+      1490730,
+      1422000,
+      815090,
+      830164,
+      817840,
+      711060
+    ]
+  },
+  {
+    "id": 49,
+    "name": "Boulevard Park 1",
+    "area": "Jabal Ali First",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 2348000,
+    "size_sqft": 1343,
+    "roi_pct": 4.9,
+    "trend_aed": [
+      4223735,
+      4029000,
+      2309423,
+      2352130,
+      2317212,
+      2348000
+    ]
+  },
+  {
+    "id": 50,
+    "name": "Omya Residences",
+    "area": "Jabal Ali First",
+    "type": "استودیو",
+    "price_aed": 669203,
+    "size_sqft": 364,
+    "roi_pct": 4.9,
+    "trend_aed": [
+      1144780,
+      1092000,
+      625934,
+      637510,
+      628046,
+      669203
+    ]
+  },
+  {
+    "id": 51,
+    "name": "Raw District By Imtiaz Cr",
+    "area": "Downtown Jabal Ali",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 1119352,
+    "size_sqft": 651,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      888615,
+      1051430,
+      1173167,
+      1159040,
+      1162035,
+      1119352
+    ]
+  },
+  {
+    "id": 52,
+    "name": "Raw District By Imtiaz Cr",
+    "area": "Downtown Jabal Ali",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 1186777,
+    "size_sqft": 674,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      920010,
+      1088577,
+      1214615,
+      1199990,
+      1203090,
+      1186777
+    ]
+  },
+  {
+    "id": 53,
+    "name": "Raw District By Imtiaz Cr",
+    "area": "Downtown Jabal Ali",
+    "type": "استودیو",
+    "price_aed": 708922,
+    "size_sqft": 457,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      623805,
+      738101,
+      823560,
+      813643,
+      815745,
+      708922
+    ]
+  },
+  {
+    "id": 54,
+    "name": "Raw District By Imtiaz Cr",
+    "area": "Downtown Jabal Ali",
+    "type": "آپارتمان سه خواب",
+    "price_aed": 2177478,
+    "size_sqft": 1460,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      1992900,
+      2358046,
+      2631066,
+      2599384,
+      2606100,
+      2177478
+    ]
+  },
+  {
+    "id": 55,
+    "name": "Raw District By Imtiaz Cr",
+    "area": "Downtown Jabal Ali",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 1638320,
+    "size_sqft": 1132,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      1545180,
+      1828293,
+      2039977,
+      2015413,
+      2020620,
+      1638320
+    ]
+  },
+  {
+    "id": 56,
+    "name": "Verdana 3",
+    "area": "Dubai Investment Park First",
+    "type": "تاون‌هاوس",
+    "price_aed": 1363530,
+    "size_sqft": 1066,
+    "roi_pct": 3.7,
+    "trend_aed": [
+      1345932,
+      1318855,
+      1421298,
+      1254789,
+      1393688,
+      1363530
+    ]
+  },
+  {
+    "id": 57,
+    "name": "Verdana 6",
+    "area": "Dubai Investment Park First",
+    "type": "تاون‌هاوس",
+    "price_aed": 1912960,
+    "size_sqft": 1723,
+    "roi_pct": 3.7,
+    "trend_aed": [
+      2175460,
+      2131696,
+      2297276,
+      2028143,
+      2252650,
+      1912960
+    ]
+  },
+  {
+    "id": 58,
+    "name": "Verdana 2",
+    "area": "Dubai Investment Park First",
+    "type": "تاون‌هاوس",
+    "price_aed": 660000,
+    "size_sqft": 999,
+    "roi_pct": 3.7,
+    "trend_aed": [
+      1261337,
+      1235963,
+      1331967,
+      1175923,
+      1306093,
+      660000
+    ]
+  },
+  {
+    "id": 59,
+    "name": "Verdana Residence 2",
+    "area": "Dubai Investment Park First",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 707745,
+    "size_sqft": 793,
+    "roi_pct": 7.5,
+    "trend_aed": [
+      983796,
+      963019,
+      641061,
+      761597,
+      762866,
+      707745
+    ]
+  },
+  {
+    "id": 60,
+    "name": "Verdana Residence 9",
+    "area": "Dubai Investment Park First",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 890605,
+    "size_sqft": 739,
+    "roi_pct": 7.5,
+    "trend_aed": [
+      916803,
+      897442,
+      597408,
+      709736,
+      710918,
+      890605
+    ]
+  },
+  {
+    "id": 61,
+    "name": "Reportage Hills",
+    "area": "Al Hebiah Fifth",
+    "type": "تاون‌هاوس",
+    "price_aed": 2804100,
+    "size_sqft": 1894,
+    "roi_pct": 6.5,
+    "trend_aed": [
+      2594401,
+      2676980,
+      2719405,
+      3220747,
+      3408821,
+      2804100
+    ]
+  },
+  {
+    "id": 62,
+    "name": "Reportage Hills",
+    "area": "Al Hebiah Fifth",
+    "type": "تاون‌هاوس",
+    "price_aed": 1737000,
+    "size_sqft": 1137,
+    "roi_pct": 6.5,
+    "trend_aed": [
+      1557463,
+      1607036,
+      1632505,
+      1933468,
+      2046373,
+      1737000
+    ]
+  },
+  {
+    "id": 63,
+    "name": "Damac Lagoons - Lagoon Views 13",
+    "area": "Al Hebiah Fifth",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 1746000,
+    "size_sqft": 1159,
+    "roi_pct": 4.6,
+    "trend_aed": [
+      2227250,
+      2204302,
+      2195726,
+      1902614,
+      1875262,
+      1746000
+    ]
+  },
+  {
+    "id": 64,
+    "name": "Reportage Hills",
+    "area": "Al Hebiah Fifth",
+    "type": "تاون‌هاوس",
+    "price_aed": 2416050,
+    "size_sqft": 1705,
+    "roi_pct": 6.5,
+    "trend_aed": [
+      2335509,
+      2409847,
+      2448039,
+      2899352,
+      3068659,
+      2416050
+    ]
+  },
+  {
+    "id": 65,
+    "name": "Damac Lagoons - Lagoon Views 13",
+    "area": "Al Hebiah Fifth",
+    "type": "استودیو",
+    "price_aed": 757570,
+    "size_sqft": 405,
+    "roi_pct": 4.6,
+    "trend_aed": [
+      778288,
+      770270,
+      767272,
+      664848,
+      655290,
+      757570
+    ]
+  },
+  {
+    "id": 66,
+    "name": "Azizi Grand",
+    "area": "Dubai Sports City",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 969600,
+    "size_sqft": 755,
+    "roi_pct": 6.3,
+    "trend_aed": [
+      1036615,
+      1006868,
+      986558,
+      983690,
+      741561,
+      969600
+    ]
+  },
+  {
+    "id": 67,
+    "name": "Antalya By Karma",
+    "area": "Dubai Sports City",
+    "type": "آپارتمان سه خواب",
+    "price_aed": 2497606,
+    "size_sqft": 1594,
+    "roi_pct": 6.3,
+    "trend_aed": [
+      2188562,
+      2125758,
+      2082880,
+      2076823,
+      1565627,
+      2497606
+    ]
+  },
+  {
+    "id": 68,
+    "name": "Aurelia Residence",
+    "area": "Dubai Sports City",
+    "type": "آپارتمان سه خواب",
+    "price_aed": 2230148,
+    "size_sqft": 1704,
+    "roi_pct": 6.3,
+    "trend_aed": [
+      2339592,
+      2272454,
+      2226617,
+      2220142,
+      1673669,
+      2230148
+    ]
+  },
+  {
+    "id": 69,
+    "name": "Binghatti Haven",
+    "area": "Dubai Sports City",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 1450000,
+    "size_sqft": 1189,
+    "roi_pct": 6.3,
+    "trend_aed": [
+      1632497,
+      1585650,
+      1553666,
+      1549148,
+      1167836,
+      1450000
+    ]
+  },
+  {
+    "id": 70,
+    "name": "Canal Residence West 2",
+    "area": "Dubai Sports City",
+    "type": "استودیو",
+    "price_aed": 660000,
+    "size_sqft": 759,
+    "roi_pct": 6.3,
+    "trend_aed": [
+      1042107,
+      1012202,
+      991785,
+      988901,
+      745490,
+      660000
+    ]
+  },
+  {
+    "id": 71,
+    "name": "Damac Heights",
+    "area": "Dubai Marina",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 2700000,
+    "size_sqft": 1425,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      2529375,
+      2433330,
+      2349825,
+      2880495,
+      3460470,
+      2700000
+    ]
+  },
+  {
+    "id": 72,
+    "name": "Dubai Marina — آپارتمان سه خواب",
+    "area": "Dubai Marina",
+    "type": "آپارتمان سه خواب",
+    "price_aed": 5189548,
+    "size_sqft": 1743,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      3093825,
+      2976347,
+      2874207,
+      3523300,
+      4232701,
+      5189548
+    ]
+  },
+  {
+    "id": 73,
+    "name": "Dubai Marina — آپارتمان چهار خواب",
+    "area": "Dubai Marina",
+    "type": "آپارتمان چهار خواب",
+    "price_aed": 5400000,
+    "size_sqft": 2901,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      5149275,
+      4953748,
+      4783749,
+      5864081,
+      7044788,
+      5400000
+    ]
+  },
+  {
+    "id": 74,
+    "name": "Dubai Marina — آپارتمان چهار خواب",
+    "area": "Dubai Marina",
+    "type": "آپارتمان چهار خواب",
+    "price_aed": 4900000,
+    "size_sqft": 3070,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      5449250,
+      5242332,
+      5062430,
+      6205698,
+      7455188,
+      4900000
+    ]
+  },
+  {
+    "id": 75,
+    "name": "Dubai Marina — آپارتمان یک خواب",
+    "area": "Dubai Marina",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 2509548,
+    "size_sqft": 809,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      1435975,
+      1381448,
+      1334041,
+      1635313,
+      1964576,
+      2509548
+    ]
+  },
+  {
+    "id": 76,
+    "name": "Mercer House",
+    "area": "Al Thanyah Fifth",
+    "type": "استودیو",
+    "price_aed": 1603828,
+    "size_sqft": 519,
+    "roi_pct": 4.3,
+    "trend_aed": [
+      1360558,
+      1392269,
+      1380696,
+      1204599,
+      1222712,
+      1603828
+    ]
+  },
+  {
+    "id": 77,
+    "name": "Eltiera Views",
+    "area": "Al Thanyah Fifth",
+    "type": "آپارتمان سه خواب",
+    "price_aed": 3838828,
+    "size_sqft": 1672,
+    "roi_pct": 4.3,
+    "trend_aed": [
+      4383148,
+      4485307,
+      4448022,
+      3880712,
+      3939065,
+      3838828
+    ]
+  },
+  {
+    "id": 78,
+    "name": "Eltiera Views",
+    "area": "Al Thanyah Fifth",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 3068828,
+    "size_sqft": 1284,
+    "roi_pct": 4.3,
+    "trend_aed": [
+      3366006,
+      3444458,
+      3415825,
+      2980164,
+      3024976,
+      3068828
+    ]
+  },
+  {
+    "id": 79,
+    "name": "Eltiera Views",
+    "area": "Al Thanyah Fifth",
+    "type": "آپارتمان سه خواب",
+    "price_aed": 4261828,
+    "size_sqft": 1672,
+    "roi_pct": 4.3,
+    "trend_aed": [
+      4383148,
+      4485307,
+      4448022,
+      3880712,
+      3939065,
+      4261828
+    ]
+  },
+  {
+    "id": 80,
+    "name": "Serenia District - East",
+    "area": "Al Thanyah Fifth",
+    "type": "آپارتمان چهار خواب",
+    "price_aed": 9549000,
+    "size_sqft": 2850,
+    "roi_pct": 4.3,
+    "trend_aed": [
+      7471275,
+      7645410,
+      7581855,
+      6614850,
+      6714315,
+      9549000
+    ]
+  },
+  {
+    "id": 81,
+    "name": "Valia",
+    "area": "Al Khairan First",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 2222888,
+    "size_sqft": 817,
+    "roi_pct": 4.6,
+    "trend_aed": [
+      2152795,
+      2157288,
+      2396996,
+      2447569,
+      2097729,
+      2222888
+    ]
+  },
+  {
+    "id": 82,
+    "name": "Valo",
+    "area": "Al Khairan First",
+    "type": "آپارتمان سه خواب",
+    "price_aed": 5200000,
+    "size_sqft": 2046,
+    "roi_pct": 4.6,
+    "trend_aed": [
+      5391210,
+      5402463,
+      6002759,
+      6129407,
+      5253310,
+      5200000
+    ]
+  },
+  {
+    "id": 83,
+    "name": "Valia",
+    "area": "Al Khairan First",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 2128888,
+    "size_sqft": 826,
+    "roi_pct": 4.6,
+    "trend_aed": [
+      2176510,
+      2181053,
+      2423401,
+      2474531,
+      2120838,
+      2128888
+    ]
+  },
+  {
+    "id": 84,
+    "name": "Creek Bay",
+    "area": "Al Khairan First",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 3403888,
+    "size_sqft": 1449,
+    "roi_pct": 4.6,
+    "trend_aed": [
+      3818115,
+      3826084,
+      4251221,
+      4340914,
+      3720452,
+      3403888
+    ]
+  },
+  {
+    "id": 85,
+    "name": "Valia",
+    "area": "Al Khairan First",
+    "type": "آپارتمان چهار خواب",
+    "price_aed": 7103888,
+    "size_sqft": 2561,
+    "roi_pct": 4.6,
+    "trend_aed": [
+      6748235,
+      6762320,
+      7513718,
+      7672244,
+      6575624,
+      7103888
+    ]
+  },
+  {
+    "id": 86,
+    "name": "Opera Grand",
+    "area": "Burj Khalifa",
+    "type": "پنت‌هاوس",
+    "price_aed": 11500000,
+    "size_sqft": 3978,
+    "roi_pct": 5.4,
+    "trend_aed": [
+      10065533,
+      9799803,
+      9608461,
+      9999101,
+      9484745,
+      11500000
+    ]
+  },
+  {
+    "id": 87,
+    "name": "Imperial  Avenue",
+    "area": "Burj Khalifa",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 3600000,
+    "size_sqft": 1720,
+    "roi_pct": 5.4,
+    "trend_aed": [
+      4352116,
+      4237220,
+      4154488,
+      4323392,
+      4100996,
+      3600000
+    ]
+  },
+  {
+    "id": 88,
+    "name": "Burj Khalifa Towers",
+    "area": "Burj Khalifa",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 4450000,
+    "size_sqft": 1639,
+    "roi_pct": 5.4,
+    "trend_aed": [
+      4147162,
+      4037676,
+      3958841,
+      4119790,
+      3907868,
+      4450000
+    ]
+  },
+  {
+    "id": 89,
+    "name": "Imperial  Avenue",
+    "area": "Burj Khalifa",
+    "type": "آپارتمان چهار خواب",
+    "price_aed": 9050000,
+    "size_sqft": 3059,
+    "roi_pct": 5.4,
+    "trend_aed": [
+      7740188,
+      7535846,
+      7388709,
+      7689102,
+      7293574,
+      9050000
+    ]
+  },
+  {
+    "id": 90,
+    "name": "Burj Khalifa Towers",
+    "area": "Burj Khalifa",
+    "type": "آپارتمان سه خواب",
+    "price_aed": 9600000,
+    "size_sqft": 2663,
+    "roi_pct": 5.4,
+    "trend_aed": [
+      6738189,
+      6560300,
+      6432210,
+      6693717,
+      6349391,
+      9600000
+    ]
+  },
+  {
+    "id": 91,
+    "name": "Fh Residency",
+    "area": "Jumeirah Village Triangle",
+    "type": "آپارتمان سه خواب",
+    "price_aed": 3007000,
+    "size_sqft": 2889,
+    "roi_pct": 6.3,
+    "trend_aed": [
+      4818563,
+      4848031,
+      4862765,
+      4557975,
+      4578198,
+      3007000
+    ]
+  },
+  {
+    "id": 92,
+    "name": "Volga Tower",
+    "area": "Jumeirah Village Triangle",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 1288646,
+    "size_sqft": 784,
+    "roi_pct": 6.3,
+    "trend_aed": [
+      1307634,
+      1315630,
+      1319629,
+      1236917,
+      1242405,
+      1288646
+    ]
+  },
+  {
+    "id": 93,
+    "name": "Voxa Residences",
+    "area": "Jumeirah Village Triangle",
+    "type": "استودیو",
+    "price_aed": 819900,
+    "size_sqft": 389,
+    "roi_pct": 6.3,
+    "trend_aed": [
+      648813,
+      652781,
+      654765,
+      613725,
+      616448,
+      819900
+    ]
+  },
+  {
+    "id": 94,
+    "name": "Voxa Residences",
+    "area": "Jumeirah Village Triangle",
+    "type": "استودیو",
+    "price_aed": 759900,
+    "size_sqft": 388,
+    "roi_pct": 6.3,
+    "trend_aed": [
+      647145,
+      651103,
+      653082,
+      612148,
+      614864,
+      759900
+    ]
+  },
+  {
+    "id": 95,
+    "name": "Voxa Residences",
+    "area": "Jumeirah Village Triangle",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 1169900,
+    "size_sqft": 673,
+    "roi_pct": 6.3,
+    "trend_aed": [
+      1122497,
+      1129361,
+      1132794,
+      1061792,
+      1066503,
+      1169900
+    ]
+  },
+  {
+    "id": 96,
+    "name": "Damac District",
+    "area": "Damac Hills",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 1275550,
+    "size_sqft": 704,
+    "roi_pct": 6.2,
+    "trend_aed": [
+      1147942,
+      1062406,
+      1098099,
+      1291699,
+      1267341,
+      1275550
+    ]
+  },
+  {
+    "id": 97,
+    "name": "Damac Hills - Orchid",
+    "area": "Damac Hills",
+    "type": "آپارتمان سه خواب",
+    "price_aed": 3000000,
+    "size_sqft": 2837,
+    "roi_pct": 6.2,
+    "trend_aed": [
+      4626012,
+      4281317,
+      4425153,
+      5205328,
+      5107167,
+      3000000
+    ]
+  },
+  {
+    "id": 98,
+    "name": "Damac District",
+    "area": "Damac Hills",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 1207680,
+    "size_sqft": 672,
+    "roi_pct": 6.2,
+    "trend_aed": [
+      1095763,
+      1014115,
+      1048186,
+      1232986,
+      1209734,
+      1207680
+    ]
+  },
+  {
+    "id": 99,
+    "name": "Damac District",
+    "area": "Damac Hills",
+    "type": "استودیو",
+    "price_aed": 821240,
+    "size_sqft": 446,
+    "roi_pct": 6.2,
+    "trend_aed": [
+      727248,
+      673059,
+      695671,
+      818321,
+      802889,
+      821240
+    ]
+  },
+  {
+    "id": 100,
+    "name": "Damac District",
+    "area": "Damac Hills",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 2009980,
+    "size_sqft": 1218,
+    "roi_pct": 6.2,
+    "trend_aed": [
+      1986071,
+      1838084,
+      1899836,
+      2234786,
+      2192644,
+      2009980
+    ]
+  },
+  {
+    "id": 101,
+    "name": "Binghatti Skyterraces",
+    "area": "Al Hebiah First",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 1100000,
+    "size_sqft": 778,
+    "roi_pct": 3.7,
+    "trend_aed": [
+      1410514,
+      1620029,
+      1588987,
+      1612249,
+      1147161,
+      1100000
+    ]
+  },
+  {
+    "id": 102,
+    "name": "Binghatti Skyterraces",
+    "area": "Al Hebiah First",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 1200000,
+    "size_sqft": 732,
+    "roi_pct": 3.7,
+    "trend_aed": [
+      1327116,
+      1524244,
+      1495037,
+      1516924,
+      1079334,
+      1200000
+    ]
+  },
+  {
+    "id": 103,
+    "name": "Binghatti Skyterraces",
+    "area": "Al Hebiah First",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 1950000,
+    "size_sqft": 1278,
+    "roi_pct": 3.7,
+    "trend_aed": [
+      2317014,
+      2661179,
+      2610187,
+      2648399,
+      1884411,
+      1950000
+    ]
+  },
+  {
+    "id": 104,
+    "name": "Binghatti Skyterraces",
+    "area": "Al Hebiah First",
+    "type": "استودیو",
+    "price_aed": 849999,
+    "size_sqft": 497,
+    "roi_pct": 3.7,
+    "trend_aed": [
+      901061,
+      1034903,
+      1015073,
+      1029933,
+      732826,
+      849999
+    ]
+  },
+  {
+    "id": 105,
+    "name": "Binghatti Skyterraces",
+    "area": "Al Hebiah First",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 1700000,
+    "size_sqft": 1142,
+    "roi_pct": 3.7,
+    "trend_aed": [
+      2070446,
+      2377987,
+      2332421,
+      2366567,
+      1683879,
+      1700000
+    ]
+  },
+  {
+    "id": 106,
+    "name": "Villa Del Brunello Residences",
+    "area": "Palm Deira",
+    "type": "آپارتمان چهار خواب",
+    "price_aed": 10689000,
+    "size_sqft": 2517,
+    "roi_pct": 2.0,
+    "trend_aed": [
+      7404511,
+      7680374,
+      6879213,
+      6628016,
+      5783311,
+      10689000
+    ]
+  },
+  {
+    "id": 107,
+    "name": "Allegro Park By Mill Hill Riviera Development",
+    "area": "Palm Deira",
+    "type": "آپارتمان سه خواب",
+    "price_aed": 4264356,
+    "size_sqft": 2295,
+    "roi_pct": 2.0,
+    "trend_aed": [
+      6751431,
+      7002963,
+      6272464,
+      6043424,
+      5273222,
+      4264356
+    ]
+  },
+  {
+    "id": 108,
+    "name": "Seacliff By Imtiaz",
+    "area": "Palm Deira",
+    "type": "آپارتمان چهار خواب",
+    "price_aed": 7994116,
+    "size_sqft": 4359,
+    "roi_pct": 2.0,
+    "trend_aed": [
+      12823306,
+      13301053,
+      11913583,
+      11478555,
+      10015674,
+      7994116
+    ]
+  },
+  {
+    "id": 109,
+    "name": "Arya Residences By Citi Developers",
+    "area": "Palm Deira",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 2564304,
+    "size_sqft": 941,
+    "roi_pct": 2.0,
+    "trend_aed": [
+      2768234,
+      2871367,
+      2571847,
+      2477935,
+      2162136,
+      2564304
+    ]
+  },
+  {
+    "id": 110,
+    "name": "Flora Isle",
+    "area": "Palm Deira",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 4100000,
+    "size_sqft": 1652,
+    "roi_pct": 2.0,
+    "trend_aed": [
+      4859854,
+      5040913,
+      4515081,
+      4350212,
+      3795800,
+      4100000
+    ]
+  },
+  {
+    "id": 111,
+    "name": "Stories By Mirfa",
+    "area": "Dubai South",
+    "type": "استودیو",
+    "price_aed": 579780,
+    "size_sqft": 381,
+    "roi_pct": 6.7,
+    "trend_aed": [
+      566585,
+      535038,
+      503377,
+      489356,
+      484899,
+      579780
+    ]
+  },
+  {
+    "id": 112,
+    "name": "Divine Elements",
+    "area": "Dubai South",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 1015388,
+    "size_sqft": 718,
+    "roi_pct": 6.7,
+    "trend_aed": [
+      1067738,
+      1008287,
+      948622,
+      922199,
+      913799,
+      1015388
+    ]
+  },
+  {
+    "id": 113,
+    "name": "Lincoln Star Residence Ii",
+    "area": "Dubai South",
+    "type": "آپارتمان سه خواب",
+    "price_aed": 2100000,
+    "size_sqft": 2030,
+    "roi_pct": 6.7,
+    "trend_aed": [
+      3018813,
+      2850729,
+      2682036,
+      2607332,
+      2583581,
+      2100000
+    ]
+  },
+  {
+    "id": 114,
+    "name": "Celestia",
+    "area": "Dubai South",
+    "type": "استودیو",
+    "price_aed": 495000,
+    "size_sqft": 443,
+    "roi_pct": 6.7,
+    "trend_aed": [
+      658785,
+      622105,
+      585292,
+      568989,
+      563806,
+      495000
+    ]
+  },
+  {
+    "id": 115,
+    "name": "The Pulse Villas",
+    "area": "Dubai South",
+    "type": "تاون‌هاوس",
+    "price_aed": 3050000,
+    "size_sqft": 1603,
+    "roi_pct": 3.4,
+    "trend_aed": [
+      2940543,
+      2940543,
+      2940543,
+      2940543,
+      2940543,
+      3050000
+    ]
+  },
+  {
+    "id": 116,
+    "name": "Selicon Star 2",
+    "area": "Silicon Oasis",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 1680540,
+    "size_sqft": 1445,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      1458150,
+      1481992,
+      1604239,
+      1487916,
+      1506846,
+      1680540
+    ]
+  },
+  {
+    "id": 117,
+    "name": "Silicon Oasis — استودیو",
+    "area": "Silicon Oasis",
+    "type": "استودیو",
+    "price_aed": 643261,
+    "size_sqft": 495,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      499504,
+      507672,
+      549549,
+      509702,
+      516186,
+      643261
+    ]
+  },
+  {
+    "id": 118,
+    "name": "Silicon Oasis — آپارتمان سه خواب",
+    "area": "Silicon Oasis",
+    "type": "آپارتمان سه خواب",
+    "price_aed": 2290000,
+    "size_sqft": 2738,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      2762916,
+      2808093,
+      3039728,
+      2819319,
+      2855186,
+      2290000
+    ]
+  },
+  {
+    "id": 119,
+    "name": "Belle Vie By Zimaya",
+    "area": "Silicon Oasis",
+    "type": "آپارتمان سه خواب",
+    "price_aed": 2531750,
+    "size_sqft": 2250,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      2270475,
+      2307600,
+      2497950,
+      2316825,
+      2346300,
+      2531750
+    ]
+  },
+  {
+    "id": 120,
+    "name": "Silicon Gate 1",
+    "area": "Silicon Oasis",
+    "type": "استودیو",
+    "price_aed": 515000,
+    "size_sqft": 418,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      421804,
+      428701,
+      464064,
+      430415,
+      435890,
+      515000
+    ]
+  },
+  {
+    "id": 121,
+    "name": "Azizi Riviera Reve",
+    "area": "Meydan One",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 3125265,
+    "size_sqft": 1210,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      2372084,
+      2529384,
+      2504579,
+      2571250,
+      2292708,
+      3125265
+    ]
+  },
+  {
+    "id": 122,
+    "name": "Azizi Riviera 69",
+    "area": "Meydan One",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 2567650,
+    "size_sqft": 1250,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      2450500,
+      2613000,
+      2587375,
+      2656250,
+      2368500,
+      2567650
+    ]
+  },
+  {
+    "id": 123,
+    "name": "Azizi Riviera 68",
+    "area": "Meydan One",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 1539850,
+    "size_sqft": 777,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      1523231,
+      1624241,
+      1608312,
+      1651125,
+      1472260,
+      1539850
+    ]
+  },
+  {
+    "id": 124,
+    "name": "Azizi Riviera 65",
+    "area": "Meydan One",
+    "type": "استودیو",
+    "price_aed": 988680,
+    "size_sqft": 383,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      750833,
+      800623,
+      792772,
+      813875,
+      725708,
+      988680
+    ]
+  },
+  {
+    "id": 125,
+    "name": "Azizi Riviera Reve",
+    "area": "Meydan One",
+    "type": "آپارتمان سه خواب",
+    "price_aed": 4755400,
+    "size_sqft": 1693,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      3318957,
+      3539047,
+      3504341,
+      3597625,
+      3207896,
+      4755400
+    ]
+  },
+  {
+    "id": 126,
+    "name": "The Valley - Alana",
+    "area": "Al Yufrah 1",
+    "type": "ویلا",
+    "price_aed": 5944524,
+    "size_sqft": 6297,
+    "roi_pct": 4.6,
+    "trend_aed": [
+      7269257,
+      8741495,
+      7393308,
+      9077755,
+      7740272,
+      5944524
+    ]
+  },
+  {
+    "id": 127,
+    "name": "The Woods",
+    "area": "Al Yufrah 1",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 1714921,
+    "size_sqft": 888,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      1665000,
+      1665000,
+      1665000,
+      1665000,
+      1665000,
+      1714921
+    ]
+  },
+  {
+    "id": 128,
+    "name": "The Valley - Orania",
+    "area": "Al Yufrah 1",
+    "type": "تاون‌هاوس",
+    "price_aed": 2600000,
+    "size_sqft": 1873,
+    "roi_pct": 4.6,
+    "trend_aed": [
+      2162191,
+      2600099,
+      2199089,
+      2700117,
+      2302292,
+      2600000
+    ]
+  },
+  {
+    "id": 129,
+    "name": "The Valley - Rivana",
+    "area": "Al Yufrah 1",
+    "type": "ویلا",
+    "price_aed": 4000000,
+    "size_sqft": 3634,
+    "roi_pct": 4.6,
+    "trend_aed": [
+      4195090,
+      5044719,
+      4266679,
+      5238774,
+      4466913,
+      4000000
+    ]
+  },
+  {
+    "id": 130,
+    "name": "The Valley - Elora",
+    "area": "Al Yufrah 1",
+    "type": "تاون‌هاوس",
+    "price_aed": 3450000,
+    "size_sqft": 2485,
+    "roi_pct": 4.6,
+    "trend_aed": [
+      2868684,
+      3449677,
+      2917638,
+      3582376,
+      3054562,
+      3450000
+    ]
+  },
+  {
+    "id": 131,
+    "name": "Dreamz",
+    "area": "Al Furjan",
+    "type": "تاون‌هاوس",
+    "price_aed": 3750000,
+    "size_sqft": 2426,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      5215657,
+      3614740,
+      4195767,
+      4459958,
+      4778735,
+      3750000
+    ]
+  },
+  {
+    "id": 132,
+    "name": "Azizi Zain",
+    "area": "Al Furjan",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 1067840,
+    "size_sqft": 818,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      1241888,
+      985608,
+      1071089,
+      1055547,
+      1012766,
+      1067840
+    ]
+  },
+  {
+    "id": 133,
+    "name": "Azizi Zain",
+    "area": "Al Furjan",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 1650340,
+    "size_sqft": 1387,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      2105743,
+      1671196,
+      1816138,
+      1789785,
+      1717245,
+      1650340
+    ]
+  },
+  {
+    "id": 134,
+    "name": "Azizi Zain",
+    "area": "Al Furjan",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 1768900,
+    "size_sqft": 1331,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      2020724,
+      1603722,
+      1742811,
+      1717522,
+      1647911,
+      1768900
+    ]
+  },
+  {
+    "id": 135,
+    "name": "Al Furjan — تاون‌هاوس",
+    "area": "Al Furjan",
+    "type": "تاون‌هاوس",
+    "price_aed": 4050000,
+    "size_sqft": 2226,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      4785677,
+      3316740,
+      3849867,
+      4092278,
+      4384775,
+      4050000
+    ]
+  },
+  {
+    "id": 136,
+    "name": "Stellar Axis By Ajmal Estate Developers",
+    "area": "International City Ph 2 & 3",
+    "type": "استودیو",
+    "price_aed": 531146,
+    "size_sqft": 482,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      666365,
+      620816,
+      644627,
+      620720,
+      590450,
+      531146
+    ]
+  },
+  {
+    "id": 137,
+    "name": "Nest",
+    "area": "International City Ph 2 & 3",
+    "type": "آپارتمان سه خواب",
+    "price_aed": 1275000,
+    "size_sqft": 1930,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      2668225,
+      2485840,
+      2581182,
+      2485454,
+      2364250,
+      1275000
+    ]
+  },
+  {
+    "id": 138,
+    "name": "Park Residency",
+    "area": "International City Ph 2 & 3",
+    "type": "استودیو",
+    "price_aed": 561095,
+    "size_sqft": 388,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      536410,
+      499744,
+      518911,
+      499666,
+      475300,
+      561095
+    ]
+  },
+  {
+    "id": 139,
+    "name": "Greenfield By Samana Developers",
+    "area": "International City Ph 2 & 3",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 1311500,
+    "size_sqft": 1026,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      1418445,
+      1321488,
+      1372172,
+      1321283,
+      1256850,
+      1311500
+    ]
+  },
+  {
+    "id": 140,
+    "name": "Coventry 2",
+    "area": "International City Ph 2 & 3",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 878559,
+    "size_sqft": 717,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      991252,
+      923496,
+      958916,
+      923353,
+      878325,
+      878559
+    ]
+  },
+  {
+    "id": 141,
+    "name": "Beach Oasis 2",
     "area": "Dubai Studio City",
     "type": "استودیو",
-    "price_aed": 580000,
-    "size_sqft": 388,
+    "price_aed": 550760,
+    "size_sqft": 343,
     "roi_pct": 5.9,
     "trend_aed": [
-      576064,
-      557944,
-      614592,
-      561979,
-      628017,
-      580000
+      509252,
+      493234,
+      543312,
+      496801,
+      555180,
+      550760
+    ]
+  },
+  {
+    "id": 142,
+    "name": "Laya Courtyard",
+    "area": "Dubai Studio City",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 1095611,
+    "size_sqft": 686,
+    "roi_pct": 5.9,
+    "trend_aed": [
+      1018504,
+      986468,
+      1086624,
+      993602,
+      1110360,
+      1095611
+    ]
+  },
+  {
+    "id": 143,
+    "name": "Beach Oasis 2",
+    "area": "Dubai Studio City",
+    "type": "استودیو",
+    "price_aed": 570000,
+    "size_sqft": 347,
+    "roi_pct": 5.9,
+    "trend_aed": [
+      515191,
+      498986,
+      549648,
+      502595,
+      561654,
+      570000
+    ]
+  },
+  {
+    "id": 144,
+    "name": "Azizi Mirage 1",
+    "area": "Dubai Studio City",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 1560000,
+    "size_sqft": 1199,
+    "roi_pct": 5.9,
+    "trend_aed": [
+      1780155,
+      1724162,
+      1899216,
+      1736632,
+      1940701,
+      1560000
+    ]
+  },
+  {
+    "id": 145,
+    "name": "Laya Courtyard",
+    "area": "Dubai Studio City",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 994703,
+    "size_sqft": 729,
+    "roi_pct": 5.9,
+    "trend_aed": [
+      1082346,
+      1048302,
+      1154736,
+      1055884,
+      1179959,
+      994703
+    ]
+  },
+  {
+    "id": 146,
+    "name": "Creek Palace",
+    "area": "Dubai Creek Harbour",
+    "type": "آپارتمان سه خواب",
+    "price_aed": 4400000,
+    "size_sqft": 1654,
+    "roi_pct": 6.2,
+    "trend_aed": [
+      3967781,
+      3639296,
+      3768970,
+      3729770,
+      3684450,
+      4400000
+    ]
+  },
+  {
+    "id": 147,
+    "name": "Creek Waters",
+    "area": "Dubai Creek Harbour",
+    "type": "آپارتمان چهار خواب",
+    "price_aed": 7370000,
+    "size_sqft": 2804,
+    "roi_pct": 6.2,
+    "trend_aed": [
+      6726516,
+      6169641,
+      6389475,
+      6323020,
+      6246190,
+      7370000
+    ]
+  },
+  {
+    "id": 148,
+    "name": "Creek Horizon",
+    "area": "Dubai Creek Harbour",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 1650000,
+    "size_sqft": 772,
+    "roi_pct": 6.2,
+    "trend_aed": [
+      1851951,
+      1698632,
+      1759156,
+      1740860,
+      1719707,
+      1650000
+    ]
+  },
+  {
+    "id": 149,
+    "name": "Creek Gate",
+    "area": "Dubai Creek Harbour",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 2880000,
+    "size_sqft": 1115,
+    "roi_pct": 6.2,
+    "trend_aed": [
+      2674774,
+      2453334,
+      2540750,
+      2514325,
+      2483774,
+      2880000
+    ]
+  },
+  {
+    "id": 150,
+    "name": "Harbour Views",
+    "area": "Dubai Creek Harbour",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 2550000,
+    "size_sqft": 1217,
+    "roi_pct": 6.2,
+    "trend_aed": [
+      2919461,
+      2677765,
+      2773178,
+      2744335,
+      2710989,
+      2550000
+    ]
+  },
+  {
+    "id": 151,
+    "name": "Serra",
+    "area": "Wadi Al Safa 4",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 1330000,
+    "size_sqft": 731,
+    "roi_pct": 4.5,
+    "trend_aed": [
+      1433856,
+      1376473,
+      1382613,
+      1329981,
+      1374499,
+      1330000
+    ]
+  },
+  {
+    "id": 152,
+    "name": "Serra",
+    "area": "Wadi Al Safa 4",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 1292300,
+    "size_sqft": 682,
+    "roi_pct": 4.5,
+    "trend_aed": [
+      1337743,
+      1284206,
+      1289935,
+      1240831,
+      1282365,
+      1292300
+    ]
+  },
+  {
+    "id": 153,
+    "name": "Azizi Milan 9",
+    "area": "Wadi Al Safa 4",
+    "type": "استودیو",
+    "price_aed": 597960,
+    "size_sqft": 328,
+    "roi_pct": 4.5,
+    "trend_aed": [
+      643372,
+      617624,
+      620379,
+      596763,
+      616738,
+      597960
+    ]
+  },
+  {
+    "id": 154,
+    "name": "California Village",
+    "area": "Wadi Al Safa 4",
+    "type": "ویلا",
+    "price_aed": 4090000,
+    "size_sqft": 3031,
+    "roi_pct": 5.3,
+    "trend_aed": [
+      4709871,
+      4709871,
+      4349485,
+      4449205,
+      4534679,
+      4090000
+    ]
+  },
+  {
+    "id": 155,
+    "name": "California Village",
+    "area": "Wadi Al Safa 4",
+    "type": "ویلا",
+    "price_aed": 4550000,
+    "size_sqft": 3500,
+    "roi_pct": 5.3,
+    "trend_aed": [
+      5438650,
+      5438650,
+      5022500,
+      5137650,
+      5236350,
+      4550000
+    ]
+  },
+  {
+    "id": 156,
+    "name": "Tonino Lamborghini Residences",
+    "area": "Business Park",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 3380150,
+    "size_sqft": 1352,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      4801358,
+      4911005,
+      4799194,
+      4686438,
+      4615052,
+      3380150
+    ]
+  },
+  {
+    "id": 157,
+    "name": "Maybach Six",
+    "area": "Business Park",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 2400000,
+    "size_sqft": 611,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      2169844,
+      2219396,
+      2168867,
+      2117909,
+      2085648,
+      2400000
+    ]
+  },
+  {
+    "id": 158,
+    "name": "Maybach Ultimate Luxury",
+    "area": "Business Park",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 2314000,
+    "size_sqft": 615,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      2184050,
+      2233926,
+      2183066,
+      2131774,
+      2099302,
+      2314000
+    ]
+  },
+  {
+    "id": 159,
+    "name": "Project Maybach",
+    "area": "Business Park",
+    "type": "استودیو",
+    "price_aed": 1350000,
+    "size_sqft": 380,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      1349494,
+      1380312,
+      1348886,
+      1317194,
+      1297130,
+      1350000
+    ]
+  },
+  {
+    "id": 160,
+    "name": "Maybach Six",
+    "area": "Business Park",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 3269000,
+    "size_sqft": 983,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      3490928,
+      3570649,
+      3489355,
+      3407373,
+      3355470,
+      3269000
+    ]
+  },
+  {
+    "id": 161,
+    "name": "Uh East By Ellington",
+    "area": "Jumeirah Lakes Towers",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 2300000,
+    "size_sqft": 1290,
+    "roi_pct": 7.3,
+    "trend_aed": [
+      3860325,
+      1929969,
+      2070837,
+      1867533,
+      1907265,
+      2300000
+    ]
+  },
+  {
+    "id": 162,
+    "name": "Diamondz By Danube",
+    "area": "Jumeirah Lakes Towers",
+    "type": "آپارتمان سه خواب",
+    "price_aed": 3617120,
+    "size_sqft": 1519,
+    "roi_pct": 7.3,
+    "trend_aed": [
+      4545608,
+      2272576,
+      2438451,
+      2199056,
+      2245842,
+      3617120
+    ]
+  },
+  {
+    "id": 163,
+    "name": "Concorde Tower",
+    "area": "Jumeirah Lakes Towers",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 1250000,
+    "size_sqft": 1433,
+    "roi_pct": 7.3,
+    "trend_aed": [
+      4288252,
+      2143911,
+      2300395,
+      2074554,
+      2118690,
+      1250000
+    ]
+  },
+  {
+    "id": 164,
+    "name": "Gold Crest Executive",
+    "area": "Jumeirah Lakes Towers",
+    "type": "استودیو",
+    "price_aed": 789000,
+    "size_sqft": 406,
+    "roi_pct": 7.3,
+    "trend_aed": [
+      1214955,
+      607417,
+      651752,
+      587766,
+      600271,
+      789000
+    ]
+  },
+  {
+    "id": 165,
+    "name": "Mbl Signature",
+    "area": "Jumeirah Lakes Towers",
+    "type": "استودیو",
+    "price_aed": 1030430,
+    "size_sqft": 536,
+    "roi_pct": 7.3,
+    "trend_aed": [
+      1603980,
+      801910,
+      860441,
+      775967,
+      792476,
+      1030430
+    ]
+  },
+  {
+    "id": 166,
+    "name": "Velos Residence",
+    "area": "Motor City",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 2105777,
+    "size_sqft": 1047,
+    "roi_pct": 4.5,
+    "trend_aed": [
+      1725561,
+      1843872,
+      1730377,
+      1764614,
+      1847117,
+      2105777
+    ]
+  },
+  {
+    "id": 167,
+    "name": "Takaya",
+    "area": "Motor City",
+    "type": "آپارتمان سه خواب",
+    "price_aed": 2840819,
+    "size_sqft": 1629,
+    "roi_pct": 4.5,
+    "trend_aed": [
+      2684755,
+      2868832,
+      2692248,
+      2745517,
+      2873882,
+      2840819
+    ]
+  },
+  {
+    "id": 168,
+    "name": "The Community Motor City",
+    "area": "Motor City",
+    "type": "استودیو",
+    "price_aed": 826000,
+    "size_sqft": 559,
+    "roi_pct": 4.5,
+    "trend_aed": [
+      921288,
+      984455,
+      923859,
+      942139,
+      986188,
+      826000
+    ]
+  },
+  {
+    "id": 169,
+    "name": "Velos Residence",
+    "area": "Motor City",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 1200000,
+    "size_sqft": 705,
+    "roi_pct": 4.5,
+    "trend_aed": [
+      1161910,
+      1241576,
+      1165154,
+      1188207,
+      1243761,
+      1200000
+    ]
+  },
+  {
+    "id": 170,
+    "name": "Beverly Grande",
+    "area": "Motor City",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 1820000,
+    "size_sqft": 1456,
+    "roi_pct": 4.5,
+    "trend_aed": [
+      2399634,
+      2564162,
+      2406331,
+      2453942,
+      2568675,
+      1820000
+    ]
+  },
+  {
+    "id": 171,
+    "name": "Damac Islands 2 - Bahamas 2",
+    "area": "Al Yelayiss 1",
+    "type": "تاون‌هاوس",
+    "price_aed": 4074000,
+    "size_sqft": 2363,
+    "roi_pct": 3.2,
+    "trend_aed": [
+      4305150,
+      4221263,
+      4425663,
+      4425663,
+      3788598,
+      4074000
+    ]
+  },
+  {
+    "id": 172,
+    "name": "Damac Islands 2 - Antigua 1",
+    "area": "Al Yelayiss 1",
+    "type": "تاون‌هاوس",
+    "price_aed": 4982250,
+    "size_sqft": 2407,
+    "roi_pct": 3.2,
+    "trend_aed": [
+      4385313,
+      4299865,
+      4508070,
+      4508070,
+      3859143,
+      4982250
+    ]
+  },
+  {
+    "id": 173,
+    "name": "Damac Islands 2 - Antigua 1",
+    "area": "Al Yelayiss 1",
+    "type": "تاون‌هاوس",
+    "price_aed": 2844300,
+    "size_sqft": 1550,
+    "roi_pct": 3.2,
+    "trend_aed": [
+      2823945,
+      2768920,
+      2902995,
+      2902995,
+      2485115,
+      2844300
+    ]
+  },
+  {
+    "id": 174,
+    "name": "Damac Islands 2 - Bermuda",
+    "area": "Al Yelayiss 1",
+    "type": "تاون‌هاوس",
+    "price_aed": 2982000,
+    "size_sqft": 1550,
+    "roi_pct": 3.2,
+    "trend_aed": [
+      2823945,
+      2768920,
+      2902995,
+      2902995,
+      2485115,
+      2982000
+    ]
+  },
+  {
+    "id": 175,
+    "name": "Binghatti Cullinan",
+    "area": "Sama Al Jadaf",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 1529999,
+    "size_sqft": 686,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      1468314,
+      1686531,
+      1420089,
+      1661012,
+      1418374,
+      1529999
+    ]
+  },
+  {
+    "id": 176,
+    "name": "Binghatti Cullinan",
+    "area": "Sama Al Jadaf",
+    "type": "آپارتمان سه خواب",
+    "price_aed": 3599999,
+    "size_sqft": 2299,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      4920780,
+      5652092,
+      4759160,
+      5566569,
+      4753412,
+      3599999
+    ]
+  },
+  {
+    "id": 177,
+    "name": "Binghatti Cullinan",
+    "area": "Sama Al Jadaf",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 1448999,
+    "size_sqft": 727,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      1556071,
+      1787330,
+      1504963,
+      1760285,
+      1503145,
+      1448999
+    ]
+  },
+  {
+    "id": 178,
+    "name": "Azizi David",
+    "area": "Sama Al Jadaf",
+    "type": "استودیو",
+    "price_aed": 863000,
+    "size_sqft": 334,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      714894,
+      821139,
+      691413,
+      808714,
+      690578,
+      863000
+    ]
+  },
+  {
+    "id": 179,
+    "name": "Azizi David",
+    "area": "Sama Al Jadaf",
+    "type": "استودیو",
+    "price_aed": 827005,
+    "size_sqft": 334,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      714894,
+      821139,
+      691413,
+      808714,
+      690578,
+      827005
+    ]
+  },
+  {
+    "id": 180,
+    "name": "Golf Residences By Fortimo",
+    "area": "Dubai Hills",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 1850000,
+    "size_sqft": 933,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      2217554,
+      2247317,
+      1959580,
+      2103728,
+      1990369,
+      1850000
+    ]
+  },
+  {
+    "id": 181,
+    "name": "Dubai Hills — استودیو",
+    "area": "Dubai Hills",
+    "type": "استودیو",
+    "price_aed": 940000,
+    "size_sqft": 491,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      1167009,
+      1182672,
+      1031247,
+      1107107,
+      1047450,
+      940000
+    ]
+  },
+  {
+    "id": 182,
+    "name": "Park Ridge",
+    "area": "Dubai Hills",
+    "type": "آپارتمان سه خواب",
+    "price_aed": 4850000,
+    "size_sqft": 2180,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      5181424,
+      5250966,
+      4578654,
+      4915464,
+      4650594,
+      4850000
+    ]
+  },
+  {
+    "id": 183,
+    "name": "Park Horizon",
+    "area": "Dubai Hills",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 2750750,
+    "size_sqft": 1001,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      2379177,
+      2411109,
+      2102400,
+      2257055,
+      2135433,
+      2750750
+    ]
+  },
+  {
+    "id": 184,
+    "name": "Maple",
+    "area": "Dubai Hills",
+    "type": "تاون‌هاوس",
+    "price_aed": 4800000,
+    "size_sqft": 2094,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      4753380,
+      4009801,
+      3599167,
+      4911896,
+      4816619,
+      4800000
+    ]
+  },
+  {
+    "id": 185,
+    "name": "The Caden By Prescott",
+    "area": "Horizon",
+    "type": "آپارتمان سه خواب",
+    "price_aed": 4401860,
+    "size_sqft": 2032,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      4771339,
+      4883709,
+      4805680,
+      5140960,
+      4844491,
+      4401860
+    ]
+  },
+  {
+    "id": 186,
+    "name": "Riverton House",
+    "area": "Horizon",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 3097828,
+    "size_sqft": 1173,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      2754321,
+      2819188,
+      2774145,
+      2967690,
+      2796549,
+      3097828
+    ]
+  },
+  {
+    "id": 187,
+    "name": "The Highgrove",
+    "area": "Horizon",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 1931828,
+    "size_sqft": 779,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      1829170,
+      1872249,
+      1842335,
+      1970870,
+      1857214,
+      1931828
+    ]
+  },
+  {
+    "id": 188,
+    "name": "Riverton House",
+    "area": "Horizon",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 3363828,
+    "size_sqft": 1173,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      2754321,
+      2819188,
+      2774145,
+      2967690,
+      2796549,
+      3363828
+    ]
+  },
+  {
+    "id": 189,
+    "name": "Riverton House",
+    "area": "Horizon",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 2106828,
+    "size_sqft": 787,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      1847955,
+      1891476,
+      1861255,
+      1991110,
+      1876287,
+      2106828
+    ]
+  },
+  {
+    "id": 190,
+    "name": "South Park Residences By Wellington",
+    "area": "Dubai Industrial City",
+    "type": "ویلا",
+    "price_aed": 2600000,
+    "size_sqft": 2601,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      2294342,
+      2294342,
+      2071696,
+      2616346,
+      2616346,
+      2600000
+    ]
+  },
+  {
+    "id": 191,
+    "name": "Samana Hills South 3",
+    "area": "Dubai Industrial City",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 1372018,
+    "size_sqft": 1023,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      1472404,
+      1293584,
+      1330514,
+      1432200,
+      1541354,
+      1372018
+    ]
+  },
+  {
+    "id": 192,
+    "name": "Samana Hills South 3",
+    "area": "Dubai Industrial City",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 1199000,
+    "size_sqft": 863,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      1242116,
+      1091264,
+      1122418,
+      1208200,
+      1300282,
+      1199000
+    ]
+  },
+  {
+    "id": 193,
+    "name": "Samana South Haven",
+    "area": "Dubai Industrial City",
+    "type": "استودیو",
+    "price_aed": 606800,
+    "size_sqft": 372,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      535420,
+      470394,
+      483823,
+      520800,
+      560492,
+      606800
+    ]
+  },
+  {
+    "id": 194,
+    "name": "Samana Hills South 3",
+    "area": "Dubai Industrial City",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 949000,
+    "size_sqft": 729,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      1049250,
+      921820,
+      948137,
+      1020600,
+      1098384,
+      949000
+    ]
+  },
+  {
+    "id": 195,
+    "name": "International City Ph 1 — آپارتمان یک خواب",
+    "area": "International City Ph 1",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 455000,
+    "size_sqft": 743,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      633408,
+      506206,
+      436512,
+      460660,
+      485625,
+      455000
+    ]
+  },
+  {
+    "id": 196,
+    "name": "International City Ph 1 — استودیو",
+    "area": "International City Ph 1",
+    "type": "استودیو",
+    "price_aed": 400000,
+    "size_sqft": 484,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      412610,
+      329749,
+      284350,
+      300080,
+      316342,
+      400000
+    ]
+  },
+  {
+    "id": 197,
+    "name": "Rufi Gardens",
+    "area": "International City Ph 1",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 800000,
+    "size_sqft": 1221,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      1040902,
+      831867,
+      717338,
+      757020,
+      798046,
+      800000
+    ]
+  },
+  {
+    "id": 198,
+    "name": "Yigo26",
+    "area": "International City Ph 1",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 757514,
+    "size_sqft": 645,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      549862,
+      439438,
+      378938,
+      399900,
+      421572,
+      757514
+    ]
+  },
+  {
+    "id": 199,
+    "name": "International City Ph 1 — آپارتمان دو خواب",
+    "area": "International City Ph 1",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 725000,
+    "size_sqft": 1085,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      924962,
+      739210,
+      637438,
+      672700,
+      709156,
+      725000
+    ]
+  },
+  {
+    "id": 200,
+    "name": "Binghatti Hills",
+    "area": "Dubai Science Park",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 2100000,
+    "size_sqft": 1561,
+    "roi_pct": 6.2,
+    "trend_aed": [
+      2473717,
+      2674149,
+      3401419,
+      3075794,
+      2567064,
+      2100000
+    ]
+  },
+  {
+    "id": 201,
+    "name": "Binghatti Hillside",
+    "area": "Dubai Science Park",
+    "type": "استودیو",
+    "price_aed": 786999,
+    "size_sqft": 361,
+    "roi_pct": 6.2,
+    "trend_aed": [
+      572077,
+      618429,
+      786619,
+      711314,
+      593664,
+      786999
+    ]
+  },
+  {
+    "id": 202,
+    "name": "Vincitore Aqua Dimore",
+    "area": "Dubai Science Park",
+    "type": "آپارتمان سه خواب",
+    "price_aed": 2992000,
+    "size_sqft": 1951,
+    "roi_pct": 6.2,
+    "trend_aed": [
+      3091750,
+      3342258,
+      4251229,
+      3844250,
+      3208420,
+      2992000
+    ]
+  },
+  {
+    "id": 203,
+    "name": "Vincitore Aqua Flora",
+    "area": "Dubai Science Park",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 1524000,
+    "size_sqft": 869,
+    "roi_pct": 6.2,
+    "trend_aed": [
+      1377104,
+      1488684,
+      1893551,
+      1712278,
+      1429070,
+      1524000
+    ]
+  },
+  {
+    "id": 204,
+    "name": "Vincitore Aqua Flora",
+    "area": "Dubai Science Park",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 1340000,
+    "size_sqft": 776,
+    "roi_pct": 6.2,
+    "trend_aed": [
+      1229727,
+      1329366,
+      1690904,
+      1529030,
+      1276132,
+      1340000
+    ]
+  },
+  {
+    "id": 205,
+    "name": "Sobha Hartland - Crest Grande",
+    "area": "Sobha Heartland",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 2695000,
+    "size_sqft": 1365,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      2782143,
+      2708979,
+      2693418,
+      2595274,
+      2609470,
+      2695000
+    ]
+  },
+  {
+    "id": 206,
+    "name": "Sobha Hartland - The Crest",
+    "area": "Sobha Heartland",
+    "type": "آپارتمان سه خواب",
+    "price_aed": 3351871,
+    "size_sqft": 1701,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      3466978,
+      3375805,
+      3356413,
+      3234111,
+      3251802,
+      3351871
+    ]
+  },
+  {
+    "id": 207,
+    "name": "Sobha Hartland - Crest Grande",
+    "area": "Sobha Heartland",
+    "type": "آپارتمان چهار خواب",
+    "price_aed": 4800000,
+    "size_sqft": 2220,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      4524804,
+      4405812,
+      4380504,
+      4220886,
+      4243974,
+      4800000
+    ]
+  },
+  {
+    "id": 208,
+    "name": "Sobha Hartland - Crest Grande",
+    "area": "Sobha Heartland",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 2350000,
+    "size_sqft": 1279,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      2606858,
+      2538303,
+      2523723,
+      2431763,
+      2445064,
+      2350000
+    ]
+  },
+  {
+    "id": 209,
+    "name": "Wilton Park Residences",
+    "area": "Sobha Heartland",
+    "type": "استودیو",
+    "price_aed": 975000,
+    "size_sqft": 541,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      1102666,
+      1073669,
+      1067501,
+      1028603,
+      1034230,
+      975000
+    ]
+  },
+  {
+    "id": 210,
+    "name": "Living Legends Phase 5",
+    "area": "Living Legends",
+    "type": "استودیو",
+    "price_aed": 608690,
+    "size_sqft": 422,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      499184,
+      376171,
+      503024,
+      614981,
+      603249,
+      608690
+    ]
+  },
+  {
+    "id": 211,
+    "name": "Living Legends Phase 5",
+    "area": "Living Legends",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 1390533,
+    "size_sqft": 946,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      1119023,
+      843264,
+      1127632,
+      1378606,
+      1352307,
+      1390533
+    ]
+  },
+  {
+    "id": 212,
+    "name": "Living Legends Phase 6",
+    "area": "Living Legends",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 1715000,
+    "size_sqft": 1559,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      1844141,
+      1389693,
+      1858328,
+      2271931,
+      2228590,
+      1715000
+    ]
+  },
+  {
+    "id": 213,
+    "name": "Living Legends Phase 6",
+    "area": "Living Legends",
+    "type": "آپارتمان سه خواب",
+    "price_aed": 2100000,
+    "size_sqft": 1815,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      2146964,
+      1617891,
+      2163480,
+      2645000,
+      2594542,
+      2100000
+    ]
+  },
+  {
+    "id": 214,
+    "name": "Living Legends Phase 6",
+    "area": "Living Legends",
+    "type": "آپارتمان سه خواب",
+    "price_aed": 2250000,
+    "size_sqft": 1854,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      2193097,
+      1652656,
+      2209968,
+      2701834,
+      2650293,
+      2250000
+    ]
+  },
+  {
+    "id": 215,
+    "name": "Rise By Athlon 1",
+    "area": "Wadi Al Safa 5",
+    "type": "آپارتمان سه خواب",
+    "price_aed": 3481593,
+    "size_sqft": 2142,
+    "roi_pct": 4.9,
+    "trend_aed": [
+      3527446,
+      3495530,
+      3454403,
+      2741332,
+      3438981,
+      3481593
+    ]
+  },
+  {
+    "id": 216,
+    "name": "Arabian Ranches Lll - Raya",
+    "area": "Wadi Al Safa 5",
+    "type": "ویلا",
+    "price_aed": 4300000,
+    "size_sqft": 3025,
+    "roi_pct": 4.9,
+    "trend_aed": [
+      5203908,
+      4974915,
+      4833345,
+      5089260,
+      4674532,
+      4300000
+    ]
+  },
+  {
+    "id": 217,
+    "name": "Rise By Athlon 4",
+    "area": "Wadi Al Safa 5",
+    "type": "آپارتمان سه خواب",
+    "price_aed": 3341163,
+    "size_sqft": 2090,
+    "roi_pct": 4.9,
+    "trend_aed": [
+      3441812,
+      3410671,
+      3370543,
+      2674782,
+      3355495,
+      3341163
+    ]
+  },
+  {
+    "id": 218,
+    "name": "Arabian Ranches Lll - Bliss 2",
+    "area": "Wadi Al Safa 5",
+    "type": "تاون‌هاوس",
+    "price_aed": 4050000,
+    "size_sqft": 1569,
+    "roi_pct": 4.9,
+    "trend_aed": [
+      2699151,
+      2580377,
+      2506948,
+      2639686,
+      2424576,
+      4050000
+    ]
+  },
+  {
+    "id": 219,
+    "name": "Athlon By Al Dar 1",
+    "area": "Wadi Al Safa 5",
+    "type": "تاون‌هاوس",
+    "price_aed": 3174899,
+    "size_sqft": 1807,
+    "roi_pct": 4.9,
+    "trend_aed": [
+      3108582,
+      2971792,
+      2887225,
+      3040097,
+      2792357,
+      3174899
+    ]
+  },
+  {
+    "id": 220,
+    "name": "Discovery Gardens — آپارتمان یک خواب",
+    "area": "Discovery Gardens",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 760000,
+    "size_sqft": 836,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      776978,
+      778065,
+      862501,
+      714028,
+      746715,
+      760000
+    ]
+  },
+  {
+    "id": 221,
+    "name": "Discovery Gardens — استودیو",
+    "area": "Discovery Gardens",
+    "type": "استودیو",
+    "price_aed": 500000,
+    "size_sqft": 466,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      433100,
+      433706,
+      480772,
+      398011,
+      416231,
+      500000
+    ]
+  },
+  {
+    "id": 222,
+    "name": "Discovery Gardens — استودیو",
+    "area": "Discovery Gardens",
+    "type": "استودیو",
+    "price_aed": 510000,
+    "size_sqft": 493,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      458194,
+      458835,
+      508628,
+      421071,
+      440348,
+      510000
+    ]
+  },
+  {
+    "id": 223,
+    "name": "Discovery Gardens — آپارتمان یک خواب",
+    "area": "Discovery Gardens",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 790000,
+    "size_sqft": 969,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      900589,
+      901848,
+      999717,
+      827623,
+      865511,
+      790000
+    ]
+  },
+  {
+    "id": 224,
+    "name": "Discovery Gardens — آپارتمان دو خواب",
+    "area": "Discovery Gardens",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 1200000,
+    "size_sqft": 1399,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      1300231,
+      1302049,
+      1443348,
+      1194886,
+      1249587,
+      1200000
+    ]
+  },
+  {
+    "id": 225,
+    "name": "Wadi Al Safa 3 — آپارتمان سه خواب",
+    "area": "Wadi Al Safa 3",
+    "type": "آپارتمان سه خواب",
+    "price_aed": 1520000,
+    "size_sqft": 1812,
+    "roi_pct": 4.5,
+    "trend_aed": [
+      3468893,
+      3310705,
+      2734852,
+      3559493,
+      1417890,
+      1520000
+    ]
+  },
+  {
+    "id": 226,
+    "name": "Derby Heights",
+    "area": "Wadi Al Safa 3",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 1305922,
+    "size_sqft": 698,
+    "roi_pct": 4.5,
+    "trend_aed": [
+      1336251,
+      1275316,
+      1053491,
+      1371151,
+      546185,
+      1305922
+    ]
+  },
+  {
+    "id": 227,
+    "name": "Taormina Village 1",
+    "area": "Wadi Al Safa 3",
+    "type": "تاون‌هاوس",
+    "price_aed": 2682565,
+    "size_sqft": 854,
+    "roi_pct": 3.0,
+    "trend_aed": [
+      2526217,
+      2394360,
+      2068559,
+      2021674,
+      2547140,
+      2682565
+    ]
+  },
+  {
+    "id": 228,
+    "name": "Madison Residence",
+    "area": "Wadi Al Safa 3",
+    "type": "استودیو",
+    "price_aed": 454915,
+    "size_sqft": 625,
+    "roi_pct": 4.5,
+    "trend_aed": [
+      1196500,
+      1141938,
+      943312,
+      1227750,
+      489062,
+      454915
+    ]
+  },
+  {
+    "id": 229,
+    "name": "Rome By Sd",
+    "area": "Wadi Al Safa 3",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 1724271,
+    "size_sqft": 1173,
+    "roi_pct": 4.5,
+    "trend_aed": [
+      2245591,
+      2143188,
+      1770409,
+      2304241,
+      917872,
+      1724271
+    ]
+  },
+  {
+    "id": 230,
+    "name": "Palm Central Private Residences - Frond N",
+    "area": "Palm Jabal Ali",
+    "type": "آپارتمان چهار خواب",
+    "price_aed": 13170000,
+    "size_sqft": 3251,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      1179138,
+      1179138,
+      1179138,
+      11831364,
+      11857372,
+      13170000
+    ]
+  },
+  {
+    "id": 231,
+    "name": "Palm Central Private Residences - Frond N",
+    "area": "Palm Jabal Ali",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 5817000,
+    "size_sqft": 1532,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      555656,
+      555656,
+      555656,
+      5575408,
+      5587664,
+      5817000
+    ]
+  },
+  {
+    "id": 232,
+    "name": "Palm Central Private Residences - Frond N",
+    "area": "Palm Jabal Ali",
+    "type": "آپارتمان سه خواب",
+    "price_aed": 7723000,
+    "size_sqft": 2025,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      734468,
+      734468,
+      734468,
+      7369582,
+      7385782,
+      7723000
+    ]
+  },
+  {
+    "id": 233,
+    "name": "Palm Central Private Residences - Frond N",
+    "area": "Palm Jabal Ali",
+    "type": "آپارتمان سه خواب",
+    "price_aed": 7767000,
+    "size_sqft": 2028,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      735556,
+      735556,
+      735556,
+      7380500,
+      7396724,
+      7767000
+    ]
+  },
+  {
+    "id": 234,
+    "name": "Palm Central Private Residences - Frond N",
+    "area": "Palm Jabal Ali",
+    "type": "آپارتمان چهار خواب",
+    "price_aed": 13107000,
+    "size_sqft": 3251,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      1179138,
+      1179138,
+      1179138,
+      11831364,
+      11857372,
+      13107000
+    ]
+  },
+  {
+    "id": 235,
+    "name": "Odessa",
+    "area": "Al Yelayiss 2",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 1067888,
+    "size_sqft": 647,
+    "roi_pct": 6.1,
+    "trend_aed": [
+      1142473,
+      940156,
+      1011002,
+      1007185,
+      984152,
+      1067888
+    ]
+  },
+  {
+    "id": 236,
+    "name": "Evelyn On The Park",
+    "area": "Al Yelayiss 2",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 1153888,
+    "size_sqft": 616,
+    "roi_pct": 6.1,
+    "trend_aed": [
+      1087733,
+      895110,
+      962562,
+      958927,
+      936998,
+      1153888
+    ]
+  },
+  {
+    "id": 237,
+    "name": "The Regent",
+    "area": "Al Yelayiss 2",
+    "type": "استودیو",
+    "price_aed": 640000,
+    "size_sqft": 343,
+    "roi_pct": 6.1,
+    "trend_aed": [
+      605669,
+      498413,
+      535972,
+      533948,
+      521737,
+      640000
+    ]
+  },
+  {
+    "id": 238,
+    "name": "Sama Townhouses",
+    "area": "Al Yelayiss 2",
+    "type": "تاون‌هاوس",
+    "price_aed": 2950000,
+    "size_sqft": 2051,
+    "roi_pct": 5.0,
+    "trend_aed": [
+      3193817,
+      2439664,
+      3285292,
+      2997947,
+      3258219,
+      2950000
+    ]
+  },
+  {
+    "id": 239,
+    "name": "Lexington",
+    "area": "Al Yelayiss 2",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 1660888,
+    "size_sqft": 1530,
+    "roi_pct": 6.1,
+    "trend_aed": [
+      2701674,
+      2223243,
+      2390778,
+      2381751,
+      2327283,
+      1660888
+    ]
+  },
+  {
+    "id": 240,
+    "name": "Prestige Gardens By Prestige One",
+    "area": "Al Satwa",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 1732000,
+    "size_sqft": 544,
+    "roi_pct": 3.9,
+    "trend_aed": [
+      1176509,
+      1372784,
+      1281990,
+      1274157,
+      1158720,
+      1732000
+    ]
+  },
+  {
+    "id": 241,
+    "name": "Purvanchal Triana Residences",
+    "area": "Al Satwa",
+    "type": "استودیو",
+    "price_aed": 1033363,
+    "size_sqft": 474,
+    "roi_pct": 3.9,
+    "trend_aed": [
+      1025120,
+      1196139,
+      1117028,
+      1110203,
+      1009620,
+      1033363
+    ]
+  },
+  {
+    "id": 242,
+    "name": "West 5 Residences",
+    "area": "Al Satwa",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 1615000,
+    "size_sqft": 735,
+    "roi_pct": 3.9,
+    "trend_aed": [
+      1589584,
+      1854772,
+      1732101,
+      1721517,
+      1565550,
+      1615000
+    ]
+  },
+  {
+    "id": 243,
+    "name": "Rabdan Gardens",
+    "area": "Al Satwa",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 2220469,
+    "size_sqft": 1180,
+    "roi_pct": 3.9,
+    "trend_aed": [
+      2551986,
+      2977730,
+      2780788,
+      2763796,
+      2513400,
+      2220469
+    ]
+  },
+  {
+    "id": 244,
+    "name": "Rabdan Gardens",
+    "area": "Al Satwa",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 2600104,
+    "size_sqft": 1311,
+    "roi_pct": 3.9,
+    "trend_aed": [
+      2835300,
+      3308308,
+      3089503,
+      3070624,
+      2792430,
+      2600104
+    ]
+  },
+  {
+    "id": 245,
+    "name": "Palace Residences Hillside A",
+    "area": "Hadaeq Sheikh Mohammed Bin Rashid",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 2972888,
+    "size_sqft": 1061,
+    "roi_pct": 5.4,
+    "trend_aed": [
+      2538655,
+      2733030,
+      2473085,
+      2523164,
+      2388629,
+      2972888
+    ]
+  },
+  {
+    "id": 246,
+    "name": "Palace Residences Hillside A",
+    "area": "Hadaeq Sheikh Mohammed Bin Rashid",
+    "type": "آپارتمان سه خواب",
+    "price_aed": 4886170,
+    "size_sqft": 1882,
+    "roi_pct": 5.4,
+    "trend_aed": [
+      4503061,
+      4847844,
+      4386754,
+      4475584,
+      4236947,
+      4886170
+    ]
+  },
+  {
+    "id": 247,
+    "name": "Vida Residences Hillside",
+    "area": "Hadaeq Sheikh Mohammed Bin Rashid",
+    "type": "آپارتمان سه خواب",
+    "price_aed": 4464534,
+    "size_sqft": 1827,
+    "roi_pct": 5.4,
+    "trend_aed": [
+      4371463,
+      4706169,
+      4258554,
+      4344789,
+      4113125,
+      4464534
+    ]
+  },
+  {
+    "id": 248,
+    "name": "Address Residences L Dubai Hills Estate",
+    "area": "Hadaeq Sheikh Mohammed Bin Rashid",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 1977888,
+    "size_sqft": 752,
+    "roi_pct": 5.4,
+    "trend_aed": [
+      1799310,
+      1937077,
+      1752837,
+      1788331,
+      1692978,
+      1977888
+    ]
+  },
+  {
+    "id": 249,
+    "name": "Elvira",
+    "area": "Hadaeq Sheikh Mohammed Bin Rashid",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 2585000,
+    "size_sqft": 1113,
+    "roi_pct": 5.4,
+    "trend_aed": [
+      2663075,
+      2866977,
+      2594292,
+      2646825,
+      2505697,
+      2585000
+    ]
+  },
+  {
+    "id": 250,
+    "name": "Prestige One Residences",
+    "area": "Dubai Maritime City",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 4971042,
+    "size_sqft": 1209,
+    "roi_pct": 2.2,
+    "trend_aed": [
+      4120272,
+      4204298,
+      3690231,
+      3517827,
+      3918127,
+      4971042
+    ]
+  },
+  {
+    "id": 251,
+    "name": "Breez By Danube",
+    "area": "Dubai Maritime City",
+    "type": "استودیو",
+    "price_aed": 1487640,
+    "size_sqft": 414,
+    "roi_pct": 2.2,
+    "trend_aed": [
+      1410912,
+      1439685,
+      1263652,
+      1204616,
+      1341691,
+      1487640
+    ]
+  },
+  {
+    "id": 252,
+    "name": "Prestige One Residences",
+    "area": "Dubai Maritime City",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 2681620,
+    "size_sqft": 873,
+    "roi_pct": 2.2,
+    "trend_aed": [
+      2975184,
+      3035858,
+      2664658,
+      2540168,
+      2829218,
+      2681620
+    ]
+  },
+  {
+    "id": 253,
+    "name": "Chelsea Residences 2 By Damac",
+    "area": "Dubai Maritime City",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 2469150,
+    "size_sqft": 774,
+    "roi_pct": 2.2,
+    "trend_aed": [
+      2637792,
+      2691585,
+      2362480,
+      2252108,
+      2508379,
+      2469150
+    ]
+  },
+  {
+    "id": 254,
+    "name": "Chelsea Residences By Damac",
+    "area": "Dubai Maritime City",
+    "type": "آپارتمان سه خواب",
+    "price_aed": 5351640,
+    "size_sqft": 2048,
+    "roi_pct": 2.2,
+    "trend_aed": [
+      6979584,
+      7121920,
+      6251110,
+      5959066,
+      6637158,
+      5351640
+    ]
+  },
+  {
+    "id": 255,
+    "name": "Symphony",
+    "area": "Town Square",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 1400000,
+    "size_sqft": 969,
+    "roi_pct": 7.9,
+    "trend_aed": [
+      1467744,
+      1228983,
+      1269487,
+      1221812,
+      1313867,
+      1400000
+    ]
+  },
+  {
+    "id": 256,
+    "name": "Liva",
+    "area": "Town Square",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 880000,
+    "size_sqft": 690,
+    "roi_pct": 7.9,
+    "trend_aed": [
+      1045143,
+      875127,
+      903969,
+      870021,
+      935571,
+      880000
+    ]
+  },
+  {
+    "id": 257,
+    "name": "The Diplomat Residences",
+    "area": "Town Square",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 1250000,
+    "size_sqft": 906,
+    "roi_pct": 7.9,
+    "trend_aed": [
+      1372318,
+      1149080,
+      1186951,
+      1142375,
+      1228445,
+      1250000
+    ]
+  },
+  {
+    "id": 258,
+    "name": "Noor Townhouses",
+    "area": "Town Square",
+    "type": "ویلا",
+    "price_aed": 3415000,
+    "size_sqft": 2983,
+    "roi_pct": 5.7,
+    "trend_aed": [
+      3937858,
+      3220447,
+      3801834,
+      3921750,
+      4114154,
+      3415000
+    ]
+  },
+  {
+    "id": 259,
+    "name": "Una",
+    "area": "Town Square",
+    "type": "استودیو",
+    "price_aed": 510000,
+    "size_sqft": 347,
+    "roi_pct": 7.9,
+    "trend_aed": [
+      525601,
+      440100,
+      454605,
+      437532,
+      470497,
+      510000
+    ]
+  },
+  {
+    "id": 260,
+    "name": "Ayami Residence, By Ayat Development",
+    "area": "Warsan First",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 1319094,
+    "size_sqft": 1085,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      1193066,
+      1640303,
+      1496758,
+      1489488,
+      1360373,
+      1319094
+    ]
+  },
+  {
+    "id": 261,
+    "name": "Ayami Residence, By Ayat Development",
+    "area": "Warsan First",
+    "type": "استودیو",
+    "price_aed": 531800,
+    "size_sqft": 388,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      426645,
+      586578,
+      535246,
+      532646,
+      486474,
+      531800
+    ]
+  },
+  {
+    "id": 262,
+    "name": "Ayami Residence, By Ayat Development",
+    "area": "Warsan First",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 1293100,
+    "size_sqft": 1085,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      1193066,
+      1640303,
+      1496758,
+      1489488,
+      1360373,
+      1293100
+    ]
+  },
+  {
+    "id": 263,
+    "name": "Ayami Residence, By Ayat Development",
+    "area": "Warsan First",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 850672,
+    "size_sqft": 642,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      705943,
+      970576,
+      885639,
+      881338,
+      804940,
+      850672
+    ]
+  },
+  {
+    "id": 264,
+    "name": "Ryze By Aum",
+    "area": "Warsan First",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 901555,
+    "size_sqft": 828,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      910469,
+      1251770,
+      1142226,
+      1136678,
+      1038146,
+      901555
+    ]
+  },
+  {
+    "id": 265,
+    "name": "Seven Hotel And Apartments The Palm",
+    "area": "Palm Jumeirah",
+    "type": "استودیو",
+    "price_aed": 1400000,
+    "size_sqft": 360,
+    "roi_pct": 4.9,
+    "trend_aed": [
+      1032624,
+      1055664,
+      817812,
+      1134612,
+      1004652,
+      1400000
+    ]
+  },
+  {
+    "id": 266,
+    "name": "Royal Amwaj",
+    "area": "Palm Jumeirah",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 3100000,
+    "size_sqft": 1158,
+    "roi_pct": 4.9,
+    "trend_aed": [
+      3321607,
+      3395719,
+      2630629,
+      3649669,
+      3231631,
+      3100000
+    ]
+  },
+  {
+    "id": 267,
+    "name": "Palm Beach Towers - 2",
+    "area": "Palm Jumeirah",
+    "type": "آپارتمان سه خواب",
+    "price_aed": 8215000,
+    "size_sqft": 2537,
+    "roi_pct": 4.9,
+    "trend_aed": [
+      7277131,
+      7439499,
+      5763303,
+      7995863,
+      7080006,
+      8215000
+    ]
+  },
+  {
+    "id": 268,
+    "name": "Palm Jumeirah — آپارتمان یک خواب",
+    "area": "Palm Jumeirah",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 2775000,
+    "size_sqft": 1144,
+    "roi_pct": 4.9,
+    "trend_aed": [
+      3281450,
+      3354666,
+      2598825,
+      3605545,
+      3192561,
+      2775000
+    ]
+  },
+  {
+    "id": 269,
+    "name": "Palm Jumeirah — آپارتمان دو خواب",
+    "area": "Palm Jumeirah",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 5500000,
+    "size_sqft": 1551,
+    "roi_pct": 4.9,
+    "trend_aed": [
+      4448888,
+      4548152,
+      3523407,
+      4888287,
+      4328376,
+      5500000
+    ]
+  },
+  {
+    "id": 270,
+    "name": "Skyvue",
+    "area": "Bukadra",
+    "type": "آپارتمان چهار خواب",
+    "price_aed": 9005390,
+    "size_sqft": 3111,
+    "roi_pct": 2.7,
+    "trend_aed": [
+      9177450,
+      7917495,
+      7855275,
+      7956382,
+      7544175,
+      9005390
+    ]
+  },
+  {
+    "id": 271,
+    "name": "Skyvue",
+    "area": "Bukadra",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 2696801,
+    "size_sqft": 1009,
+    "roi_pct": 2.7,
+    "trend_aed": [
+      2976550,
+      2567905,
+      2547725,
+      2580518,
+      2446825,
+      2696801
+    ]
+  },
+  {
+    "id": 272,
+    "name": "Skyscape",
+    "area": "Bukadra",
+    "type": "آپارتمان سه خواب",
+    "price_aed": 5542133,
+    "size_sqft": 2068,
+    "roi_pct": 2.7,
+    "trend_aed": [
+      6100600,
+      5263060,
+      5221700,
+      5288910,
+      5014900,
+      5542133
+    ]
+  },
+  {
+    "id": 273,
+    "name": "Skyvue",
+    "area": "Bukadra",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 2990078,
+    "size_sqft": 997,
+    "roi_pct": 2.7,
+    "trend_aed": [
+      2941150,
+      2537365,
+      2517425,
+      2549828,
+      2417725,
+      2990078
+    ]
+  },
+  {
+    "id": 274,
+    "name": "Skyvue",
+    "area": "Bukadra",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 2174708,
+    "size_sqft": 901,
+    "roi_pct": 2.7,
+    "trend_aed": [
+      2657950,
+      2293045,
+      2275025,
+      2304308,
+      2184925,
+      2174708
+    ]
+  },
+  {
+    "id": 275,
+    "name": "Damac Riverside Views - Capri 2",
+    "area": "Dubai Investment Park Second",
+    "type": "استودیو",
+    "price_aed": 775560,
+    "size_sqft": 519,
+    "roi_pct": 12.9,
+    "trend_aed": [
+      750734,
+      744350,
+      737914,
+      743208,
+      714559,
+      775560
+    ]
+  },
+  {
+    "id": 276,
+    "name": "Ritaj",
+    "area": "Dubai Investment Park Second",
+    "type": "آپارتمان سه خواب",
+    "price_aed": 1650000,
+    "size_sqft": 2608,
+    "roi_pct": 12.9,
+    "trend_aed": [
+      3772472,
+      3740394,
+      3708054,
+      3734656,
+      3590694,
+      1650000
+    ]
+  },
+  {
+    "id": 277,
+    "name": "Damac Riverside Views - Capri 2",
+    "area": "Dubai Investment Park Second",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 1335000,
+    "size_sqft": 984,
+    "roi_pct": 12.9,
+    "trend_aed": [
+      1423356,
+      1411253,
+      1399051,
+      1409088,
+      1354771,
+      1335000
+    ]
+  },
+  {
+    "id": 278,
+    "name": "Damac Riverside - Lush",
+    "area": "Dubai Investment Park Second",
+    "type": "تاون‌هاوس",
+    "price_aed": 2654000,
+    "size_sqft": 1550,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      2649570,
+      2434275,
+      2778995,
+      2581060,
+      2743035,
+      2654000
+    ]
+  },
+  {
+    "id": 279,
+    "name": "Damac Riverside Views - Capri 1",
+    "area": "Dubai Investment Park Second",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 1020480,
+    "size_sqft": 716,
+    "roi_pct": 12.9,
+    "trend_aed": [
+      1035694,
+      1026887,
+      1018009,
+      1025312,
+      985789,
+      1020480
+    ]
+  },
+  {
+    "id": 280,
+    "name": "Reem By Vision",
+    "area": "Liwan",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 1830000,
+    "size_sqft": 2041,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      1610553,
+      2783720,
+      1874863,
+      2481040,
+      1530954,
+      1830000
+    ]
+  },
+  {
+    "id": 281,
+    "name": "Sunrise Boulevard 10",
+    "area": "Liwan",
+    "type": "تاون‌هاوس",
+    "price_aed": 2025000,
+    "size_sqft": 2277,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      2024936,
+      2024936,
+      2024936,
+      2024936,
+      2024936,
+      2025000
+    ]
+  },
+  {
+    "id": 282,
+    "name": "Empire Lakeviews",
+    "area": "Liwan",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 1064777,
+    "size_sqft": 755,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      595770,
+      1029745,
+      693543,
+      917778,
+      566326,
+      1064777
+    ]
+  },
+  {
+    "id": 283,
+    "name": "Qpoint Liwan-Plot R047",
+    "area": "Liwan",
+    "type": "آپارتمان سه خواب",
+    "price_aed": 1250000,
+    "size_sqft": 1609,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      1269662,
+      2194515,
+      1478027,
+      1955900,
+      1206911,
+      1250000
+    ]
+  },
+  {
+    "id": 284,
+    "name": "Empire Lakeviews",
+    "area": "Liwan",
+    "type": "استودیو",
+    "price_aed": 729777,
+    "size_sqft": 432,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      340891,
+      589205,
+      396835,
+      525139,
+      324043,
+      729777
+    ]
+  },
+  {
+    "id": 285,
+    "name": "Fawad Azizi Residence",
+    "area": "Dubai Healthcare City - Phase 2",
+    "type": "استودیو",
+    "price_aed": 873760,
+    "size_sqft": 400,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      867640,
+      780440,
+      807480,
+      674920,
+      599880,
+      873760
+    ]
+  },
+  {
+    "id": 286,
+    "name": "Adeba Azizi",
+    "area": "Dubai Healthcare City - Phase 2",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 1482300,
+    "size_sqft": 727,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      1576936,
+      1418450,
+      1467595,
+      1226667,
+      1090282,
+      1482300
+    ]
+  },
+  {
+    "id": 287,
+    "name": "Farhad Azizi Residence",
+    "area": "Dubai Healthcare City - Phase 2",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 2020000,
+    "size_sqft": 1098,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      2381672,
+      2142308,
+      2216533,
+      1852655,
+      1646671,
+      2020000
+    ]
+  },
+  {
+    "id": 288,
+    "name": "Adeba Azizi",
+    "area": "Dubai Healthcare City - Phase 2",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 2129810,
+    "size_sqft": 1067,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      2314430,
+      2081824,
+      2153953,
+      1800349,
+      1600180,
+      2129810
+    ]
+  },
+  {
+    "id": 289,
+    "name": "Adeba Azizi",
+    "area": "Dubai Healthcare City - Phase 2",
+    "type": "استودیو",
+    "price_aed": 805874,
+    "size_sqft": 368,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      798229,
+      718005,
+      742882,
+      620926,
+      551890,
+      805874
+    ]
+  },
+  {
+    "id": 290,
+    "name": "Fern",
+    "area": "Al Wasl",
+    "type": "آپارتمان چهار خواب",
+    "price_aed": 9975000,
+    "size_sqft": 2716,
+    "roi_pct": 4.2,
+    "trend_aed": [
+      9139068,
+      9152377,
+      8106988,
+      8805272,
+      8548338,
+      9975000
+    ]
+  },
+  {
+    "id": 291,
+    "name": "Damac City 2",
+    "area": "Al Wasl",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 3428480,
+    "size_sqft": 1502,
+    "roi_pct": 4.2,
+    "trend_aed": [
+      5054080,
+      5061440,
+      4483320,
+      4869484,
+      4727395,
+      3428480
+    ]
+  },
+  {
+    "id": 292,
+    "name": "City Walk Crestlane 3",
+    "area": "Al Wasl",
+    "type": "آپارتمان سه خواب",
+    "price_aed": 10158000,
+    "size_sqft": 3451,
+    "roi_pct": 4.2,
+    "trend_aed": [
+      11612270,
+      11629180,
+      10300890,
+      11188142,
+      10861677,
+      10158000
+    ]
+  },
+  {
+    "id": 293,
+    "name": "City Walk Crestlane 3",
+    "area": "Al Wasl",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 2666000,
+    "size_sqft": 788,
+    "roi_pct": 4.2,
+    "trend_aed": [
+      2651541,
+      2655402,
+      2352101,
+      2554696,
+      2480151,
+      2666000
+    ]
+  },
+  {
+    "id": 294,
+    "name": "Eden House The Park",
+    "area": "Al Wasl",
+    "type": "آپارتمان سه خواب",
+    "price_aed": 11240789,
+    "size_sqft": 2405,
+    "roi_pct": 4.2,
+    "trend_aed": [
+      8092584,
+      8104369,
+      7178684,
+      7797010,
+      7569497,
+      11240789
+    ]
+  },
+  {
+    "id": 295,
+    "name": "Sobha Central Phase Ii",
+    "area": "DMCC EZ2",
+    "type": "آپارتمان سه خواب",
+    "price_aed": 5086668,
+    "size_sqft": 1667,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      4921818,
+      4759285,
+      4900980,
+      4850970,
+      4717610,
+      5086668
+    ]
+  },
+  {
+    "id": 296,
+    "name": "Sobha Central Phase Ii",
+    "area": "DMCC EZ2",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 2116366,
+    "size_sqft": 695,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      2051988,
+      1984225,
+      2043300,
+      2022450,
+      1966850,
+      2116366
+    ]
+  },
+  {
+    "id": 297,
+    "name": "Sobha Central Phase I",
+    "area": "DMCC EZ2",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 3246311,
+    "size_sqft": 1157,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      3416042,
+      3303235,
+      3401580,
+      3366870,
+      3274310,
+      3246311
+    ]
+  },
+  {
+    "id": 298,
+    "name": "Sobha Central Phase I",
+    "area": "DMCC EZ2",
+    "type": "آپارتمان دو خواب",
+    "price_aed": 2702056,
+    "size_sqft": 957,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      2825542,
+      2732235,
+      2813580,
+      2784870,
+      2708310,
+      2702056
+    ]
+  },
+  {
+    "id": 299,
+    "name": "Sobha Central Phase I",
+    "area": "DMCC EZ2",
+    "type": "آپارتمان یک خواب",
+    "price_aed": 2011602,
+    "size_sqft": 702,
+    "roi_pct": 6.0,
+    "trend_aed": [
+      2072655,
+      2004210,
+      2063880,
+      2042820,
+      1986660,
+      2011602
     ]
   }
 ]
