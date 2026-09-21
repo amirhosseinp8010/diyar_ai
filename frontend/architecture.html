@@ -1,0 +1,374 @@
+<title>معماری فنی دیار AI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<style>
+  :root{
+    --bg:#F4F5F7; --bg-elevated:#FFFFFF; --bg-sunken:#E9EBEF;
+    --text:#14181F; --text-muted:#5B6472; --text-faint:#8A94A3;
+    --border:#DADFE6; --border-strong:#C3CAD4;
+    --accent:#B9843A; --accent-strong:#96692A; --accent-soft:#F1E4CE;
+    --teal:#1B6E75; --teal-soft:#DCEEEF; --teal-strong:#134F54;
+    --danger:#B14A3A; --danger-soft:#F5E1DC;
+    --code-bg:#EAEBEF; --code-text:#3A4453;
+    --shadow-card: 0 1px 2px rgba(20,24,31,0.06), 0 8px 24px -12px rgba(20,24,31,0.12);
+    --radius-md:14px; --radius-sm:8px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0E141B; --bg-elevated:#161D27; --bg-sunken:#0A0F15;
+      --text:#EDF1F5; --text-muted:#9AA7B4; --text-faint:#6C7887;
+      --border:#28323E; --border-strong:#384354;
+      --accent:#D9A85A; --accent-strong:#E9BF7C; --accent-soft:#2E2213;
+      --teal:#5CC2C9; --teal-soft:#12262A; --teal-strong:#8FE0E6;
+      --danger:#E08A76; --danger-soft:#2E1A15;
+      --code-bg:#0E1620; --code-text:#C9D3DE;
+      --shadow-card: 0 1px 2px rgba(0,0,0,0.3), 0 12px 28px -14px rgba(0,0,0,0.55);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0E141B; --bg-elevated:#161D27; --bg-sunken:#0A0F15;
+    --text:#EDF1F5; --text-muted:#9AA7B4; --text-faint:#6C7887;
+    --border:#28323E; --border-strong:#384354;
+    --accent:#D9A85A; --accent-strong:#E9BF7C; --accent-soft:#2E2213;
+    --teal:#5CC2C9; --teal-soft:#12262A; --teal-strong:#8FE0E6;
+    --danger:#E08A76; --danger-soft:#2E1A15;
+    --code-bg:#0E1620; --code-text:#C9D3DE;
+    --shadow-card: 0 1px 2px rgba(0,0,0,0.3), 0 12px 28px -14px rgba(0,0,0,0.55);
+  }
+  *{box-sizing:border-box;}
+  body{background:var(--bg);color:var(--text);font-family:'Vazirmatn',-apple-system,'Segoe UI',sans-serif;direction:rtl;line-height:1.7;}
+  h1,h2,h3{font-family:'Vazirmatn',sans-serif;font-weight:800;text-wrap:balance;margin:0;letter-spacing:-0.01em;}
+  p{margin:0;}
+  .num, code, .mono{font-family:'JetBrains Mono','Vazirmatn',monospace;font-variant-numeric:tabular-nums;}
+  code{direction:ltr;unicode-bidi:embed;background:var(--code-bg);color:var(--code-text);padding:2px 6px;border-radius:5px;font-size:0.9em;}
+
+  .page{max-width:1180px;margin:0 auto;padding:0 24px 90px;}
+
+  .doc-header{padding:44px 0 30px;border-bottom:1px solid var(--border);}
+  .doc-kicker{color:var(--teal);font-weight:700;font-size:13px;background:var(--teal-soft);display:inline-block;padding:5px 13px;border-radius:999px;margin-bottom:14px;}
+  .doc-header h1{font-size:clamp(26px,3.6vw,38px);line-height:1.3;margin-bottom:10px;}
+  .doc-header .sub{font-size:15.5px;color:var(--text-muted);max-width:70ch;}
+  .doc-meta{display:flex;gap:22px;flex-wrap:wrap;margin-top:20px;font-size:12.5px;color:var(--text-faint);}
+  .doc-meta b{color:var(--text-muted);font-weight:600;}
+
+  .layout{display:grid;grid-template-columns:240px 1fr;gap:48px;padding-top:36px;align-items:start;}
+  @media (max-width:860px){.layout{grid-template-columns:1fr;}.toc{display:none;}}
+
+  .toc{position:sticky;top:24px;display:flex;flex-direction:column;gap:2px;}
+  .toc a{color:var(--text-muted);text-decoration:none;font-size:13px;padding:7px 10px;border-radius:8px;transition:background .12s,color .12s;}
+  .toc a:hover{background:var(--bg-sunken);color:var(--text);}
+  .toc-label{font-size:11px;font-weight:700;color:var(--text-faint);letter-spacing:.04em;padding:0 10px 8px;}
+
+  section.sec{padding-bottom:54px;margin-bottom:54px;border-bottom:1px solid var(--border);scroll-margin-top:24px;}
+  section.sec:last-child{border-bottom:none;}
+  .sec-head{display:flex;align-items:baseline;gap:12px;margin-bottom:18px;}
+  .sec-no{font-family:'JetBrains Mono',monospace;color:var(--accent);font-size:14px;font-weight:700;direction:ltr;}
+  .sec-head h2{font-size:22px;}
+  .sec-lede{color:var(--text-muted);font-size:15px;max-width:75ch;margin-bottom:22px;}
+
+  .callout{background:var(--bg-elevated);border:1px solid var(--border);border-radius:var(--radius-md);padding:18px 20px;box-shadow:var(--shadow-card);}
+  .callout.teal{background:var(--teal-soft);border-color:var(--teal);}
+  .callout.danger{background:var(--danger-soft);border-color:var(--danger);}
+  .callout h4{font-size:13.5px;font-weight:700;margin-bottom:6px;}
+  .callout p{font-size:13.5px;color:var(--text-muted);}
+  .callout.teal h4{color:var(--teal-strong);}
+  .callout.danger h4{color:var(--danger);}
+
+  figure{margin:0 0 10px;}
+  .diagram-box{background:var(--bg-elevated);border:1px solid var(--border);border-radius:var(--radius-md);padding:20px;box-shadow:var(--shadow-card);}
+  .diagram-box svg{width:100%;height:auto;display:block;}
+  figcaption{font-size:12.5px;color:var(--text-faint);margin-top:10px;text-align:right;}
+
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+  @media (max-width:760px){.grid-3{grid-template-columns:1fr;}}
+  .src-card{background:var(--bg-elevated);border:1px solid var(--border);border-radius:var(--radius-sm);padding:15px;}
+  .src-card h4{font-size:13.5px;font-weight:700;margin-bottom:6px;}
+  .src-card p{font-size:12.5px;color:var(--text-muted);}
+  .src-card code{display:inline-block;margin-top:8px;font-size:11px;}
+
+  pre{background:var(--code-bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:16px 18px;overflow-x:auto;direction:ltr;text-align:left;}
+  pre code{background:none;padding:0;font-size:12.5px;color:var(--code-text);line-height:1.65;}
+
+  table{width:100%;border-collapse:collapse;font-size:13px;background:var(--bg-elevated);border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden;}
+  th,td{padding:10px 14px;text-align:right;border-bottom:1px solid var(--border);}
+  thead th{background:var(--bg-sunken);color:var(--text-faint);font-size:11.5px;font-weight:700;letter-spacing:.02em;}
+  tbody tr:last-child td{border-bottom:none;}
+  td code, td .mono{direction:ltr;display:inline-block;font-size:12px;}
+  .wrap-table{overflow-x:auto;}
+
+  .model-card{background:var(--bg-elevated);border:1px solid var(--border);border-radius:var(--radius-md);padding:20px;box-shadow:var(--shadow-card);margin-bottom:14px;}
+  .model-card h4{font-size:15px;margin-bottom:4px;}
+  .model-tag{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--accent);}
+  .model-card p{font-size:13.5px;color:var(--text-muted);margin-top:8px;}
+  .model-card .kv{display:flex;gap:8px;margin-top:10px;font-size:12px;flex-wrap:wrap;}
+  .model-card .kv span{background:var(--bg-sunken);border-radius:6px;padding:4px 9px;color:var(--text-muted);}
+
+  .phase-row{display:grid;grid-template-columns:72px 1fr;gap:18px;padding:18px 0;border-bottom:1px solid var(--border);}
+  .phase-row:last-child{border-bottom:none;}
+  .phase-q{font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--accent);font-size:14px;direction:ltr;}
+  .phase-row h4{font-size:14.5px;margin-bottom:6px;}
+  .phase-row ul{margin:0;padding-inline-start:18px;font-size:13px;color:var(--text-muted);display:flex;flex-direction:column;gap:4px;}
+
+  footer{padding:30px 0 10px;color:var(--text-faint);font-size:12px;border-top:1px solid var(--border);margin-top:10px;}
+</style>
+
+<div class="page" dir="rtl" lang="fa">
+
+  <div class="doc-header">
+    <span class="doc-kicker">سند فنی</span>
+    <h1>معماری MVP دیار AI</h1>
+    <p class="sub">نقشه‌ی فنیِ ساخت نسخه‌ی اول واقعیِ دیار — از دموی مفهومی فعلی تا سرویسی با داده‌ی زنده، مدل‌های هوش مصنوعی و مسیر مقیاس‌پذیری.</p>
+    <div class="doc-meta">
+      <span><b>نسخه:</b> v0.1 — پیش‌نویس</span>
+      <span><b>دامنه:</b> املاک و اقامت دبی (فاز اول)</span>
+      <span><b>هم‌راستا با:</b> نقشه‌ی راه Q1–Q4 پیچ‌دک</span>
+    </div>
+  </div>
+
+  <div class="layout">
+    <nav class="toc">
+      <span class="toc-label">فهرست</span>
+      <a href="#s1">۱. دامنه‌ی MVP</a>
+      <a href="#s2">۲. معماری سیستم</a>
+      <a href="#s3">۳. منابع داده</a>
+      <a href="#s4">۴. مدل داده</a>
+      <a href="#s5">۵. مدل‌های هوش مصنوعی</a>
+      <a href="#s6">۶. سطح API</a>
+      <a href="#s7">۷. پشته‌ی فنی</a>
+      <a href="#s8">۸. نقشه‌ی ساخت مرحله‌ای</a>
+      <a href="#s9">۹. ریسک‌های فنی</a>
+    </nav>
+
+    <main>
+      <section class="sec" id="s1">
+        <div class="sec-head"><span class="sec-no">01</span><h2>دامنه‌ی MVP</h2></div>
+        <p class="sec-lede">دموی تعاملیِ فعلی (جست‌وجوی ملک، چت مشاور، محاسبه‌گر بودجه) با داده‌ی نمونه ساخته شده تا مفهوم را نشان دهد. هدف این سند، مشخص کردن چیزی‌ست که برای تبدیل آن به یک محصول واقعی — با داده‌ی زنده‌ی DLD و پاسخ‌های هوش مصنوعیِ واقعی — لازم است.</p>
+        <div class="callout">
+          <h4>مرز MVP واقعی (فاز اول، Q1–Q2)</h4>
+          <p>جست‌وجو و ارزیابی قیمت برای شهر دبی به‌تنهایی (نه کل امارات)، مشاور ویزا فقط برای سه مسیر پرتکرار (اقامت ملکی، ویزای طلاییِ ملکی، ویزای طلاییِ کارآفرینی)، و همتایابی سبک زندگی با حداکثر ۶ فیلتر ثابت. اپ موبایل، پشتیبانی چندزبانه و کانسیرژ پرمیوم به فازهای بعدی موکول می‌شود.</p>
+        </div>
+      </section>
+
+      <section class="sec" id="s2">
+        <div class="sec-head"><span class="sec-no">02</span><h2>معماری سیستم</h2></div>
+        <p class="sec-lede">کلاینت از طریق یک API Gateway به سه سرویس اصلی می‌رسد؛ هر سرویس یا از پایگاه‌داده‌ی مشترک می‌خواند/می‌نویسد یا برای استدلال زبانی به Claude API متکی است. داده‌ی خام قیمت از یک خط لولهٔ ETL روزانه از Dubai Pulse تغذیه می‌شود.</p>
+        <figure>
+          <div class="diagram-box">
+            <svg viewBox="0 0 920 560" role="img" aria-label="نمودار معماری: کلاینت به API Gateway وصل می‌شود؛ Gateway درخواست را به سه سرویس (ارزیابی قیمت، مشاور ویزا، همتایاب سبک زندگی) می‌فرستد؛ سرویس ارزیابی از خط لوله‌ی ETL دیتاست باز DLD تغذیه می‌شود؛ سرویس مشاور ویزا برای استدلال به Claude API متصل است؛ هر سه سرویس روی PostgreSQL مشترک با pgvector می‌خوانند و می‌نویسند." xmlns="http://www.w3.org/2000/svg" style="color:var(--text)">
+              <defs>
+                <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                  <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+                </marker>
+              </defs>
+
+              <!-- row1: client -->
+              <rect x="350" y="26" width="220" height="52" rx="10" fill="none" stroke="currentColor" stroke-width="1.5"/>
+              <text x="460" y="47" text-anchor="middle" font-size="13" font-weight="700" fill="currentColor">کلاینت وب / موبایل</text>
+              <text x="460" y="65" text-anchor="middle" font-size="10.5" fill="currentColor" opacity="0.55">Next.js · React Native</text>
+
+              <line x1="460" y1="78" x2="460" y2="136" stroke="currentColor" stroke-width="1.5" marker-end="url(#arrow)"/>
+              <text x="474" y="112" font-size="10.5" fill="currentColor" opacity="0.7">HTTPS / REST</text>
+
+              <!-- row2: gateway -->
+              <rect x="340" y="138" width="240" height="52" rx="10" fill="none" stroke="currentColor" stroke-width="1.5"/>
+              <text x="460" y="159" text-anchor="middle" font-size="13" font-weight="700" fill="currentColor">API Gateway</text>
+              <text x="460" y="177" text-anchor="middle" font-size="10.5" fill="currentColor" opacity="0.55">Auth · Rate limit · Routing</text>
+
+              <line x1="460" y1="190" x2="460" y2="212" stroke="currentColor" stroke-width="1.5"/>
+              <text x="474" y="205" font-size="10.5" fill="currentColor" opacity="0.7">مسیریابی درخواست</text>
+              <line x1="180" y1="212" x2="740" y2="212" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="180" y1="212" x2="180" y2="258" stroke="currentColor" stroke-width="1.5" marker-end="url(#arrow)"/>
+              <line x1="460" y1="212" x2="460" y2="258" stroke="currentColor" stroke-width="1.5" marker-end="url(#arrow)"/>
+              <line x1="740" y1="212" x2="740" y2="258" stroke="currentColor" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+              <!-- row3: services -->
+              <rect x="60" y="260" width="240" height="70" rx="10" fill="none" stroke="currentColor" stroke-width="1.5"/>
+              <text x="180" y="288" text-anchor="middle" font-size="12.5" font-weight="700" fill="currentColor">سرویس ارزیابی قیمت</text>
+              <text x="180" y="305" text-anchor="middle" font-size="10" fill="currentColor" opacity="0.55">Valuation Service</text>
+
+              <rect x="340" y="260" width="240" height="70" rx="10" fill="none" stroke="var(--accent)" stroke-width="1.75"/>
+              <text x="460" y="288" text-anchor="middle" font-size="12.5" font-weight="700" fill="currentColor">سرویس مشاور ویزا</text>
+              <text x="460" y="305" text-anchor="middle" font-size="10" fill="currentColor" opacity="0.55">Visa &amp; Doc Advisor</text>
+
+              <rect x="620" y="260" width="240" height="70" rx="10" fill="none" stroke="currentColor" stroke-width="1.5"/>
+              <text x="740" y="288" text-anchor="middle" font-size="12.5" font-weight="700" fill="currentColor">سرویس همتایاب سبک زندگی</text>
+              <text x="740" y="305" text-anchor="middle" font-size="10" fill="currentColor" opacity="0.55">Lifestyle Match</text>
+
+              <!-- connectors row3 -> row4 -->
+              <line x1="170" y1="330" x2="170" y2="388" stroke="currentColor" stroke-width="1.5" marker-end="url(#arrow)"/>
+              <line x1="440" y1="330" x2="400" y2="388" stroke="currentColor" stroke-width="1.5" marker-end="url(#arrow)"/>
+              <line x1="480" y1="330" x2="720" y2="388" stroke="var(--accent)" stroke-width="1.75" marker-end="url(#arrow)"/>
+              <line x1="740" y1="330" x2="480" y2="388" stroke="currentColor" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+              <text x="185" y="362" font-size="10.5" fill="currentColor" opacity="0.7">تراکنش‌های DLD (به‌روزرسانی روزانه)</text>
+              <text x="588" y="362" font-size="10.5" fill="var(--accent)">RAG + استدلال حقوقی</text>
+
+              <!-- row4: backends -->
+              <rect x="40" y="390" width="260" height="70" rx="10" fill="none" stroke="currentColor" stroke-width="1.25" stroke-dasharray="5 4"/>
+              <text x="170" y="418" text-anchor="middle" font-size="12.5" font-weight="700" fill="currentColor">خط لوله‌ی ETL</text>
+              <text x="170" y="435" text-anchor="middle" font-size="10" fill="currentColor" opacity="0.55">Dubai Pulse — DLD Open Data</text>
+              <text x="170" y="450" text-anchor="middle" font-size="9.5" fill="currentColor" opacity="0.45">منبع بیرونی</text>
+
+              <rect x="330" y="390" width="260" height="70" rx="10" fill="none" stroke="currentColor" stroke-width="1.5"/>
+              <text x="460" y="418" text-anchor="middle" font-size="12.5" font-weight="700" fill="currentColor">PostgreSQL + pgvector</text>
+              <text x="460" y="435" text-anchor="middle" font-size="10" fill="currentColor" opacity="0.55">قیمت‌ها · آستانه‌های ویزا · embeddings</text>
+
+              <rect x="620" y="390" width="260" height="70" rx="10" fill="none" stroke="var(--accent)" stroke-width="1.75"/>
+              <text x="750" y="418" text-anchor="middle" font-size="12.5" font-weight="700" fill="currentColor">Claude API</text>
+              <text x="750" y="435" text-anchor="middle" font-size="10" fill="currentColor" opacity="0.55">استدلال زبانی · تحلیل سند</text>
+              <text x="750" y="450" text-anchor="middle" font-size="9.5" fill="var(--accent)">وابستگی بیرونی به LLM</text>
+            </svg>
+          </div>
+          <figcaption>مسیر داده از کلاینت تا سرویس‌های هوش مصنوعی و منابع بیرونی؛ رنگ برجسته، وابستگی به Claude API و منطق مشاور ویزا را نشان می‌دهد.</figcaption>
+        </figure>
+      </section>
+
+      <section class="sec" id="s3">
+        <div class="sec-head"><span class="sec-no">03</span><h2>منابع داده</h2></div>
+        <p class="sec-lede">داده‌ی پایه‌ی MVP از یک منبع رسمی و رایگان می‌آید؛ داده‌های تکمیلی (اسناد حقوقی، لیستینگ زنده) در فازهای بعد از طریق قرارداد با آژانس‌ها اضافه می‌شود.</p>
+        <div class="grid-3">
+          <div class="src-card">
+            <h4>تراکنش‌های DLD</h4>
+            <p>تاریخچه‌ی معاملات ثبت‌شده‌ی رسمی دبی — پایه‌ی مدل ارزیابی قیمت. رایگان و باز.</p>
+            <code>dubaipulse.gov.ae/dld-transactions</code>
+          </div>
+          <div class="src-card">
+            <h4>آستانه‌های ویزا</h4>
+            <p>قوانین GDRFA/ICP برای ویزای ملکی و طلایی — نگهداری دستی در جدولی قابل به‌روزرسانی، نه هاردکد در کد.</p>
+            <code>visa_rules (جدول نسخه‌دار)</code>
+          </div>
+          <div class="src-card">
+            <h4>لیستینگ زنده (فاز ۲)</h4>
+            <p>فید ملک از آژانس‌های پایلوت (۵۰ آژانس، Q2) از طریق API یا آپلود CSV دستی در شروع کار.</p>
+            <code>partner_listings_feed</code>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec" id="s4">
+        <div class="sec-head"><span class="sec-no">04</span><h2>مدل داده</h2></div>
+        <p class="sec-lede">شمای اصلی PostgreSQL — فقط جدول‌های هسته‌ای MVP، بدون جزئیات ستون‌های ثانویه.</p>
+        <pre><code>properties        id, area, type, bedrooms, size_sqft, developer_id, geo_point
+transactions      id, property_id, price_aed, date, source ('DLD' | 'listing')
+valuations        property_id, predicted_price_aed, confidence, model_version, computed_at
+visa_rules        id, route ('property_2y' | 'golden_property' | 'golden_entrepreneur'),
+                   min_investment_aed, duration_years, requires_sponsor, updated_at
+visa_sessions     id, user_id, budget_aed, goal, recommended_route_id, created_at
+agencies          id, name, tier ('pilot' | 'paid'), contact
+leads             id, agency_id, property_id, user_id, status, created_at</code></pre>
+      </section>
+
+      <section class="sec" id="s5">
+        <div class="sec-head"><span class="sec-no">05</span><h2>مدل‌های هوش مصنوعی</h2></div>
+        <p class="sec-lede">چهار قابلیت هوش مصنوعیِ پیچ‌دک، در MVP به سه مدل/سرویس فنی نگاشت می‌شود (مشاور ویزا و دستیار اسناد یک سرویس مشترک‌اند چون هر دو روی استدلال زبانی متکی‌اند).</p>
+
+        <div class="model-card">
+          <h4>مدل ارزیابی قیمت</h4>
+          <span class="model-tag">gradient-boosted regression (LightGBM)</span>
+          <p>ورودی: منطقه، متراژ، نوع ملک، طبقه، سن ساختمان. آموزش روی تاریخچه‌ی تراکنش‌های DLD. خروجی: قیمت پیش‌بینی‌شده + بازه‌ی اطمینان، نه یک عدد قطعی.</p>
+          <div class="kv"><span>داده: DLD historical</span><span>بازآموزی: هفتگی</span><span>سنجه: MAE بر حسب AED</span></div>
+        </div>
+
+        <div class="model-card">
+          <h4>مشاور ویزا و اسناد</h4>
+          <span class="model-tag">rules engine + Claude API (RAG)</span>
+          <p>آستانه‌های ویزا (مبلغ، مدت، نیاز به کفیل) به‌صورت جدول قانونمند نگه‌داری می‌شود — نه چیزی که مدل زبانی حدس بزند. Claude فقط برای گفت‌وگوی طبیعی، خلاصه‌سازی مدارک و توضیح ساده‌ی نتیجه به کار می‌رود؛ منبع حقیقتِ عددی همیشه جدول قوانین است.</p>
+          <div class="kv"><span>منبع حقیقت: visa_rules</span><span>LLM: توضیح، نه تصمیم</span><span>بازبینی انسانی: الزامی قبل از هر مشاوره‌ی نهایی</span></div>
+        </div>
+
+        <div class="model-card">
+          <h4>همتایاب سبک زندگی</h4>
+          <span class="model-tag">embedding similarity (pgvector)</span>
+          <p>هر ملک بر اساس ویژگی‌های محله (فاصله تا مدرسه، ساحل، مترو، تراکم جامعه‌ی فارسی‌زبان) به یک بردار نگاشت می‌شود؛ جست‌وجو با نزدیک‌ترین‌همسایه به‌جای فیلتر سخت‌گیرانه انجام می‌شود.</p>
+          <div class="kv"><span>ذخیره: pgvector</span><span>ورودی اولیه: داده‌ی دستی محله‌ها (فاز ۱)</span></div>
+        </div>
+
+        <div class="callout danger">
+          <h4>محدودیتِ عمدی</h4>
+          <p>هیچ خروجی مدل ارزیابی یا مشاور ویزا به‌عنوان مشاوره‌ی قطعیِ مالی یا حقوقی نمایش داده نمی‌شود؛ هر پاسخ باید به همراه رد پای منبع (کدام تراکنش‌ها، کدام قانون) و دکمه‌ی «تأیید با مشاور مجاز» ارائه شود.</p>
+        </div>
+      </section>
+
+      <section class="sec" id="s6">
+        <div class="sec-head"><span class="sec-no">06</span><h2>سطح API</h2></div>
+        <p class="sec-lede">اندپوینت‌های هسته‌ای کافی برای بازتولید دموی فعلی با داده‌ی واقعی.</p>
+        <div class="wrap-table">
+          <table>
+            <thead><tr><th>متد</th><th>مسیر</th><th>کاربرد</th></tr></thead>
+            <tbody>
+              <tr><td class="mono">GET</td><td class="mono">/v1/properties/search</td><td>جست‌وجو با فیلتر منطقه/بودجه/نوع</td></tr>
+              <tr><td class="mono">GET</td><td class="mono">/v1/properties/:id/valuation</td><td>قیمت پیش‌بینی‌شده + روند ۶ ماهه</td></tr>
+              <tr><td class="mono">GET</td><td class="mono">/v1/properties/:id/lifestyle-match</td><td>امتیاز تطابق با پروفایل کاربر</td></tr>
+              <tr><td class="mono">POST</td><td class="mono">/v1/visa/advise</td><td>ورودی: بودجه/هدف → مسیر ویزا + جدول زمانی</td></tr>
+              <tr><td class="mono">POST</td><td class="mono">/v1/chat</td><td>پیام آزاد کاربر به دستیار (RAG روی visa_rules)</td></tr>
+              <tr><td class="mono">GET</td><td class="mono">/v1/agencies/:id/leads</td><td>لیدهای واردشده برای آژانس پایلوت</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="sec" id="s7">
+        <div class="sec-head"><span class="sec-no">07</span><h2>پشته‌ی فنی</h2></div>
+        <div class="wrap-table">
+          <table>
+            <thead><tr><th>لایه</th><th>انتخاب</th><th>چرا</th></tr></thead>
+            <tbody>
+              <tr><td>فرانت‌اند</td><td class="mono">Next.js (وب) · React Native (موبایل، Q3)</td><td>یک تیم کوچک، اشتراک منطق بین وب و موبایل</td></tr>
+              <tr><td>بک‌اند</td><td class="mono">FastAPI (Python)</td><td>هم‌زبان با پایپ‌لاین داده و مدل ML</td></tr>
+              <tr><td>پایگاه‌داده</td><td class="mono">PostgreSQL + pgvector</td><td>داده‌ی رابطه‌ای و embedding در یک موتور، بدون DB دوم</td></tr>
+              <tr><td>هوش مصنوعی زبانی</td><td class="mono">Claude API</td><td>استدلال + خلاصه‌سازی سند با کیفیت بالا در فارسی</td></tr>
+              <tr><td>زیرساخت</td><td class="mono">کانتینر + یک ابر منطقه‌ی خاورمیانه</td><td>تأخیر کم برای کاربران داخل امارات</td></tr>
+              <tr><td>احراز هویت</td><td class="mono">OAuth + شماره موبایل (OTP)</td><td>رایج‌ترین روش ورود برای کاربران منطقه</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="sec" id="s8">
+        <div class="sec-head"><span class="sec-no">08</span><h2>نقشه‌ی ساخت مرحله‌ای</h2></div>
+        <div class="phase-row">
+          <span class="phase-q">Q1</span>
+          <div><h4>پایه‌ی فنی</h4><ul>
+            <li>بک‌اند FastAPI + شمای PostgreSQL بالا</li>
+            <li>مدل ارزیابی نسخه‌ی اول، آموزش‌دیده روی نمونه‌ی دیتاست DLD</li>
+            <li>مشاور ویزا با جدول قوانین دستی (بدون LLM هنوز)</li>
+          </ul></div>
+        </div>
+        <div class="phase-row">
+          <span class="phase-q">Q2</span>
+          <div><h4>داده‌ی زنده + بتای بسته</h4><ul>
+            <li>خط لوله‌ی ETL روزانه از Dubai Pulse</li>
+            <li>اتصال Claude API برای گفت‌وگوی طبیعی و تحلیل سند</li>
+            <li>فید لیستینگ ۵۰ آژانس پایلوت (شروع با CSV دستی)</li>
+          </ul></div>
+        </div>
+        <div class="phase-row">
+          <span class="phase-q">Q3</span>
+          <div><h4>لانچ عمومی</h4><ul>
+            <li>اپ موبایل React Native</li>
+            <li>همتایاب سبک زندگی با embedding کامل</li>
+            <li>پشتیبانی عربی/روسی/هندی در دستیار</li>
+          </ul></div>
+        </div>
+        <div class="phase-row">
+          <span class="phase-q">Q4</span>
+          <div><h4>مقیاس منطقه‌ای</h4><ul>
+            <li>افزودن ابوظبی، دوحه، ریاض (نیاز به منبع داده‌ی مشابه DLD در هر بازار)</li>
+            <li>مدل ارزیابی جدا برای هر بازار (cold-start متفاوت)</li>
+          </ul></div>
+        </div>
+      </section>
+
+      <section class="sec" id="s9">
+        <div class="sec-head"><span class="sec-no">09</span><h2>ریسک‌های فنی</h2></div>
+        <div class="grid-3">
+          <div class="src-card"><h4>وابستگی به یک منبع داده</h4><p>اگر دسترسی به Dubai Pulse محدود یا تغییر فرمت شود، مدل ارزیابی متوقف می‌شود. کاهش ریسک: کش کردن دیتاست خام + نسخه‌بندی schema.</p></div>
+          <div class="src-card"><h4>خطای LLM در حوزه‌ی حقوقی</h4><p>Claude نباید منبع نهاییِ آستانه‌ی ویزا باشد. کاهش ریسک: جدول قوانین جدا + بازبینی انسانی قبل از هر پاسخ قطعی.</p></div>
+          <div class="src-card"><h4>Cold-start بازارهای جدید</h4><p>مدل قیمت برای ابوظبی/دوحه/ریاض بدون تاریخچه‌ی تراکنش دقیق نیست. کاهش ریسک: شروع با بازه‌ی اطمینان وسیع‌تر و برچسب «داده‌ی محدود».</p></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>معماری فنی دیار AI — سند پیش‌نویس، برای هم‌راستایی تیم فنی و سرمایه‌گذار. جزئیات پیاده‌سازی با شروع توسعه دقیق‌تر می‌شود.</footer>
+</div>

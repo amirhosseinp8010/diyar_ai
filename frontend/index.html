@@ -1,0 +1,1155 @@
+<title>دیار AI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<style>
+  :root{
+    --bg:#F4F5F7;
+    --bg-elevated:#FFFFFF;
+    --bg-sunken:#E9EBEF;
+    --text:#14181F;
+    --text-muted:#5B6472;
+    --text-faint:#8A94A3;
+    --border:#DADFE6;
+    --border-strong:#C3CAD4;
+    --accent:#B9843A;
+    --accent-strong:#96692A;
+    --accent-soft:#F1E4CE;
+    --teal:#1B6E75;
+    --teal-soft:#DCEEEF;
+    --success:#2F8F5B;
+    --success-soft:#DEF0E5;
+    --warning:#B65C1F;
+    --warning-soft:#F6E4D4;
+    --shadow-card: 0 1px 2px rgba(20,24,31,0.06), 0 8px 24px -12px rgba(20,24,31,0.12);
+    --radius-md: 14px;
+    --radius-lg: 22px;
+    --radius-sm: 8px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0E141B;
+      --bg-elevated:#161D27;
+      --bg-sunken:#0A0F15;
+      --text:#EDF1F5;
+      --text-muted:#9AA7B4;
+      --text-faint:#6C7887;
+      --border:#28323E;
+      --border-strong:#384354;
+      --accent:#D9A85A;
+      --accent-strong:#E9BF7C;
+      --accent-soft:#2E2213;
+      --teal:#5CC2C9;
+      --teal-soft:#12262A;
+      --success:#57C08B;
+      --success-soft:#122A20;
+      --warning:#E08A46;
+      --warning-soft:#2E1D10;
+      --shadow-card: 0 1px 2px rgba(0,0,0,0.3), 0 12px 28px -14px rgba(0,0,0,0.55);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0E141B;
+    --bg-elevated:#161D27;
+    --bg-sunken:#0A0F15;
+    --text:#EDF1F5;
+    --text-muted:#9AA7B4;
+    --text-faint:#6C7887;
+    --border:#28323E;
+    --border-strong:#384354;
+    --accent:#D9A85A;
+    --accent-strong:#E9BF7C;
+    --accent-soft:#2E2213;
+    --teal:#5CC2C9;
+    --teal-soft:#12262A;
+    --success:#57C08B;
+    --success-soft:#122A20;
+    --warning:#E08A46;
+    --warning-soft:#2E1D10;
+    --shadow-card: 0 1px 2px rgba(0,0,0,0.3), 0 12px 28px -14px rgba(0,0,0,0.55);
+  }
+
+  *{box-sizing:border-box;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Vazirmatn',-apple-system,'Segoe UI',sans-serif;
+    direction:rtl;
+    line-height:1.65;
+  }
+  h1,h2,h3,h4{
+    font-family:'Vazirmatn',sans-serif;
+    font-weight:800;
+    text-wrap:balance;
+    margin:0;
+    letter-spacing:-0.01em;
+  }
+  p{margin:0;}
+  button{font-family:inherit;}
+  .num{
+    direction:ltr;
+    unicode-bidi:embed;
+    font-family:'JetBrains Mono','Vazirmatn',monospace;
+    font-variant-numeric:tabular-nums;
+  }
+  ::selection{background:var(--accent-soft);color:var(--accent-strong);}
+
+  .app{max-width:1180px;margin:0 auto;padding:0 20px 80px;}
+
+  /* ---------- topbar ---------- */
+  .topbar{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:20px 0 18px;
+    position:sticky;top:0;background:color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter:blur(10px);z-index:40;
+    border-bottom:1px solid var(--border);
+    margin-bottom:0;
+    gap:14px;flex-wrap:wrap;
+  }
+  .brand{display:flex;align-items:center;gap:10px;}
+  .brand-mark{width:34px;height:34px;flex:none;}
+  .brand-name{font-size:19px;font-weight:800;letter-spacing:-0.01em;}
+  .brand-name .en{font-family:'JetBrains Mono',monospace;font-weight:600;color:var(--accent);font-size:15px;margin-inline-start:2px;}
+  .topbar-right{display:flex;align-items:center;gap:10px;}
+  .tabs{display:flex;gap:4px;background:var(--bg-sunken);padding:4px;border-radius:999px;border:1px solid var(--border);}
+  .tab-btn{
+    border:none;background:transparent;color:var(--text-muted);
+    padding:9px 20px;border-radius:999px;font-size:14.5px;font-weight:600;cursor:pointer;
+    transition:background .15s ease, color .15s ease;
+  }
+  .tab-btn.active{background:var(--bg-elevated);color:var(--text);box-shadow:var(--shadow-card);}
+  .tab-btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+  .lang-btn{
+    border:1.5px solid var(--border-strong);background:var(--bg-elevated);color:var(--text);
+    padding:8px 16px;border-radius:999px;font-size:13px;font-weight:700;cursor:pointer;
+    font-family:'JetBrains Mono',monospace;transition:border-color .15s ease;
+  }
+  .lang-btn:hover{border-color:var(--accent);}
+  .lang-btn:focus-visible{outline:2px solid var(--teal);outline-offset:2px;}
+
+  .tab-panel[hidden]{display:none;}
+
+  /* ---------- hero ---------- */
+  .hero{padding:56px 0 44px;display:grid;grid-template-columns:1.1fr 0.9fr;gap:40px;align-items:center;}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    color:var(--teal);font-weight:700;font-size:13px;letter-spacing:.03em;
+    background:var(--teal-soft);padding:6px 14px;border-radius:999px;margin-bottom:18px;
+  }
+  .hero h1{font-size:clamp(30px,4vw,44px);line-height:1.25;margin-bottom:16px;}
+  .hero h1 .accent{color:var(--accent);}
+  .hero .sub{font-size:17px;color:var(--text-muted);max-width:52ch;margin-bottom:26px;}
+  .goal-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;}
+  .goal-label{font-size:13.5px;color:var(--text-faint);font-weight:600;width:100%;margin-bottom:2px;}
+  .pill{
+    border:1.5px solid var(--border-strong);background:var(--bg-elevated);color:var(--text);
+    padding:10px 18px;border-radius:999px;font-size:14.5px;font-weight:600;cursor:pointer;
+    transition:all .15s ease;
+  }
+  .pill:hover{border-color:var(--accent);}
+  .pill.active{background:var(--accent);border-color:var(--accent);color:#241804;}
+  .pill:focus-visible{outline:2px solid var(--teal);outline-offset:2px;}
+  .goal-response{margin-top:16px;font-size:14.5px;color:var(--teal);font-weight:600;min-height:20px;}
+
+  .skyline-wrap{
+    background:linear-gradient(180deg, var(--teal-soft), var(--bg-sunken));
+    border-radius:var(--radius-lg);border:1px solid var(--border);
+    padding:18px;overflow:hidden;
+  }
+  .skyline-wrap svg{width:100%;height:auto;display:block;}
+
+  /* ---------- sections ---------- */
+  section.block{padding:52px 0;border-top:1px solid var(--border);}
+  .block-head{max-width:60ch;margin-bottom:32px;}
+  .block-kicker{color:var(--accent);font-weight:700;font-size:13px;letter-spacing:.04em;margin-bottom:8px;display:block;}
+  .block-head h2{font-size:clamp(22px,2.6vw,30px);margin-bottom:10px;}
+  .block-head p{color:var(--text-muted);font-size:15.5px;}
+
+  .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+  .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+  @media (max-width:860px){
+    .hero{grid-template-columns:1fr;}
+    .grid-4{grid-template-columns:repeat(2,1fr);}
+    .grid-2{grid-template-columns:1fr;}
+  }
+  @media (max-width:560px){
+    .grid-4{grid-template-columns:1fr;}
+    .topbar{flex-direction:column;gap:12px;align-items:stretch;}
+  }
+
+  .problem-card{
+    background:var(--bg-elevated);border:1px solid var(--border);border-radius:var(--radius-md);
+    padding:20px;display:flex;flex-direction:column;gap:10px;
+  }
+  .problem-num{font-family:'JetBrains Mono',monospace;color:var(--text-faint);font-size:13px;font-weight:600;}
+  .problem-card h4{font-size:15.5px;font-weight:700;}
+  .problem-card p{font-size:14px;color:var(--text-muted);}
+
+  .pillar-card{
+    background:var(--bg-elevated);border:1px solid var(--border);border-radius:var(--radius-md);
+    padding:22px;display:flex;flex-direction:column;gap:12px;box-shadow:var(--shadow-card);
+  }
+  .pillar-icon{
+    width:40px;height:40px;border-radius:11px;background:var(--accent-soft);
+    display:flex;align-items:center;justify-content:center;color:var(--accent-strong);
+  }
+  .pillar-card h4{font-size:16.5px;}
+  .pillar-card p{font-size:14px;color:var(--text-muted);}
+  .pillar-tag{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--text-faint);direction:ltr;text-align:right;}
+
+  .revenue-list{display:flex;flex-direction:column;border:1px solid var(--border);border-radius:var(--radius-md);overflow:hidden;background:var(--bg-elevated);}
+  .revenue-row{display:flex;justify-content:space-between;gap:16px;align-items:center;padding:16px 20px;border-bottom:1px solid var(--border);}
+  .revenue-row:last-child{border-bottom:none;}
+  .revenue-row h4{font-size:15px;font-weight:700;margin-bottom:3px;}
+  .revenue-row p{font-size:13.5px;color:var(--text-muted);}
+  .revenue-tag{
+    flex:none;font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;
+    background:var(--success-soft);color:var(--success);padding:6px 12px;border-radius:8px;direction:ltr;
+  }
+
+  .callout{
+    background:linear-gradient(135deg, var(--accent-soft), var(--bg-elevated) 60%);
+    border:1px solid var(--border-strong);border-radius:var(--radius-lg);padding:28px;
+  }
+  .callout h3{font-size:19px;margin-bottom:6px;}
+  .callout > p.lead{color:var(--text-muted);font-size:14.5px;margin-bottom:20px;max-width:70ch;}
+  .path-list{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+  @media (max-width:860px){.path-list{grid-template-columns:1fr;}}
+  .path-item{background:var(--bg-elevated);border:1px solid var(--border);border-radius:var(--radius-sm);padding:16px;}
+  .path-item h5{font-size:14.5px;font-weight:700;margin-bottom:6px;}
+  .path-item p{font-size:13.5px;color:var(--text-muted);}
+  .disclaimer{margin-top:18px;font-size:13px;color:var(--warning);background:var(--warning-soft);padding:10px 14px;border-radius:var(--radius-sm);}
+
+  .roadmap{display:flex;flex-direction:column;gap:0;}
+  .rm-row{display:grid;grid-template-columns:70px 1fr;gap:18px;padding:16px 0;border-bottom:1px solid var(--border);}
+  .rm-row:last-child{border-bottom:none;}
+  .rm-q{font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--accent);font-size:14px;direction:ltr;text-align:right;}
+  .rm-row h4{font-size:15px;margin-bottom:4px;}
+  .rm-row p{font-size:13.5px;color:var(--text-muted);}
+
+  footer{padding:28px 0 10px;color:var(--text-faint);font-size:12.5px;border-top:1px solid var(--border);margin-top:20px;}
+
+  /* ---------- demo tab ---------- */
+  .demo-head{padding-top:40px;}
+  .demo-goal-row{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 40px;}
+
+  .demo-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:22px;align-items:start;}
+  @media (max-width:940px){.demo-grid{grid-template-columns:1fr;}}
+
+  .chat-card{
+    background:var(--bg-elevated);border:1px solid var(--border);border-radius:var(--radius-lg);
+    box-shadow:var(--shadow-card);display:flex;flex-direction:column;height:520px;overflow:hidden;
+  }
+  .chat-header{padding:16px 18px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px;}
+  .chat-avatar{width:32px;height:32px;border-radius:9px;background:var(--teal-soft);color:var(--teal);display:flex;align-items:center;justify-content:center;flex:none;}
+  .chat-header strong{font-size:14.5px;}
+  .chat-header span{display:block;font-size:12px;color:var(--success);}
+  .chat-live-badge{
+    margin-inline-start:auto;font-size:10.5px;font-weight:700;color:var(--accent-strong);
+    background:var(--accent-soft);padding:4px 10px;border-radius:999px;display:flex;align-items:center;gap:5px;
+  }
+  .chat-live-badge::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent);}
+  .bubble.bot.thinking{color:var(--text-faint);font-style:italic;}
+  .chat-body{flex:1;overflow-y:auto;padding:16px 18px;display:flex;flex-direction:column;gap:12px;}
+  .bubble{max-width:85%;padding:11px 14px;border-radius:14px;font-size:14px;line-height:1.6;}
+  .bubble.bot{background:var(--bg-sunken);align-self:flex-start;border-bottom-left-radius:4px;}
+  .bubble.user{background:var(--accent);color:#241804;align-self:flex-end;border-bottom-right-radius:4px;font-weight:600;}
+  .chat-input-row{display:flex;gap:8px;padding:14px;border-top:1px solid var(--border);}
+  .chat-input-row input{
+    flex:1;border:1.5px solid var(--border-strong);background:var(--bg);color:var(--text);
+    border-radius:999px;padding:10px 16px;font-size:14px;font-family:inherit;
+  }
+  .chat-input-row input:focus-visible{outline:2px solid var(--teal);}
+  .chat-send{
+    background:var(--teal);color:#06181a;border:none;width:42px;height:42px;border-radius:50%;
+    cursor:pointer;display:flex;align-items:center;justify-content:center;flex:none;
+  }
+  .chat-suggest{display:flex;flex-wrap:wrap;gap:6px;padding:0 14px 14px;}
+  .chip{
+    font-size:12px;border:1px solid var(--border-strong);background:var(--bg);color:var(--text-muted);
+    padding:6px 11px;border-radius:999px;cursor:pointer;
+  }
+  .chip:hover{border-color:var(--teal);color:var(--teal);}
+
+  .listings-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px;}
+  .listings-head h3{font-size:16.5px;}
+  .listings-head span{font-size:12.5px;color:var(--text-faint);}
+  .listing-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;}
+  @media (max-width:640px){.listing-grid{grid-template-columns:1fr;}}
+
+  .prop-card{
+    background:var(--bg-elevated);border:1px solid var(--border);border-radius:var(--radius-md);
+    overflow:hidden;cursor:pointer;box-shadow:var(--shadow-card);transition:transform .12s ease, border-color .12s ease;
+    text-align:right;
+  }
+  .prop-card:hover{transform:translateY(-2px);border-color:var(--border-strong);}
+  .prop-card:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+  .prop-photo{
+    height:104px;position:relative;display:flex;align-items:flex-end;justify-content:space-between;padding:10px 12px;
+  }
+  .prop-photo .match{
+    background:rgba(14,20,27,0.72);color:#fff;font-family:'JetBrains Mono',monospace;
+    font-size:12px;font-weight:600;padding:4px 9px;border-radius:7px;direction:ltr;
+  }
+  .prop-photo svg{position:absolute;inset:0;width:100%;height:100%;}
+  .prop-body{padding:14px;display:flex;flex-direction:column;gap:8px;}
+  .prop-body h4{font-size:14.5px;font-weight:700;}
+  .prop-body .loc{font-size:12.5px;color:var(--text-muted);}
+  .prop-stats{display:flex;justify-content:space-between;align-items:center;margin-top:2px;}
+  .prop-price{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:15px;direction:ltr;text-align:right;}
+  .prop-price small{font-family:'Vazirmatn';font-weight:500;font-size:11px;color:var(--text-faint);}
+  .prop-roi{font-size:12px;color:var(--success);font-weight:600;direction:ltr;}
+  .prop-badges{display:flex;gap:6px;flex-wrap:wrap;}
+  .badge{font-size:11px;font-weight:600;padding:4px 9px;border-radius:7px;}
+  .badge.golden{background:var(--accent-soft);color:var(--accent-strong);}
+  .badge.residency{background:var(--teal-soft);color:var(--teal);}
+
+  /* calculator */
+  .calc-card{
+    margin-top:22px;background:var(--bg-elevated);border:1px solid var(--border);border-radius:var(--radius-lg);
+    padding:24px;box-shadow:var(--shadow-card);
+  }
+  .calc-card h3{font-size:16.5px;margin-bottom:4px;}
+  .calc-card > p{font-size:13.5px;color:var(--text-muted);margin-bottom:20px;}
+  .calc-value{font-family:'JetBrains Mono',monospace;font-size:26px;font-weight:700;color:var(--accent);direction:ltr;text-align:center;margin-bottom:8px;}
+  #calcUnitLabel{font-family:'Vazirmatn';font-size:14px;color:var(--text-muted);}
+  input[type=range]{
+    width:100%;accent-color:var(--accent);height:6px;margin-bottom:22px;
+  }
+  .calc-result{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  @media (max-width:560px){.calc-result{grid-template-columns:1fr;}}
+  .calc-path{background:var(--bg-sunken);border-radius:var(--radius-sm);padding:16px;}
+  .calc-path h5{font-size:14px;color:var(--accent);margin-bottom:6px;}
+  .calc-path p{font-size:13.5px;color:var(--text-muted);}
+  .calc-match{background:var(--bg-sunken);border-radius:var(--radius-sm);padding:16px;}
+  .calc-match h5{font-size:14px;margin-bottom:8px;}
+  .match-chip-row{display:flex;flex-wrap:wrap;gap:6px;}
+  .match-chip{font-size:12px;background:var(--bg-elevated);border:1px solid var(--border);padding:5px 10px;border-radius:7px;}
+
+  /* modal */
+  .modal-backdrop{
+    position:fixed;inset:0;background:rgba(8,10,14,0.6);backdrop-filter:blur(3px);
+    display:flex;align-items:center;justify-content:center;z-index:100;padding:20px;
+  }
+  .modal-backdrop[hidden]{display:none;}
+  .modal{
+    background:var(--bg-elevated);border-radius:var(--radius-lg);max-width:640px;width:100%;
+    max-height:88vh;overflow-y:auto;border:1px solid var(--border);box-shadow:var(--shadow-card);
+  }
+  .modal-photo{height:150px;position:relative;}
+  .modal-photo svg{position:absolute;inset:0;width:100%;height:100%;}
+  .modal-close{
+    position:absolute;top:12px;left:12px;width:34px;height:34px;border-radius:50%;
+    background:rgba(14,20,27,0.6);color:#fff;border:none;cursor:pointer;font-size:16px;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .modal-body{padding:22px;}
+  .modal-body h3{font-size:20px;margin-bottom:4px;}
+  .modal-loc{font-size:13.5px;color:var(--text-muted);margin-bottom:18px;}
+  .modal-stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px;}
+  .modal-stat{background:var(--bg-sunken);border-radius:var(--radius-sm);padding:12px;text-align:center;}
+  .modal-stat .v{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:16px;direction:ltr;}
+  .modal-stat .l{font-size:11.5px;color:var(--text-faint);margin-top:3px;}
+  .modal-section{margin-bottom:20px;}
+  .modal-section h5{font-size:13.5px;color:var(--text-faint);font-weight:700;letter-spacing:.02em;margin-bottom:10px;}
+  .chart-row{display:grid;grid-template-columns:1.4fr 1fr;gap:16px;}
+  @media (max-width:520px){.chart-row{grid-template-columns:1fr;}}
+  .chart-box{background:var(--bg-sunken);border-radius:var(--radius-sm);padding:12px;}
+  .chart-box svg{width:100%;height:auto;display:block;}
+  .visa-note{background:var(--teal-soft);color:var(--teal);border-radius:var(--radius-sm);padding:14px;font-size:13.5px;font-weight:600;}
+  .visa-note.gold{background:var(--accent-soft);color:var(--accent-strong);}
+</style>
+
+<div class="app" dir="rtl" lang="fa" id="appRoot">
+
+  <header class="topbar">
+    <div class="brand">
+      <svg class="brand-mark" viewBox="0 0 34 34" fill="none">
+        <rect width="34" height="34" rx="9" fill="var(--accent)"/>
+        <path d="M9 24V13.5L17 8l8 5.5V24" stroke="#241804" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" fill="none"/>
+        <path d="M14 24v-6h6v6" stroke="#241804" stroke-width="2" stroke-linejoin="round"/>
+      </svg>
+      <div class="brand-name" data-en-html="Diyar <span class=&quot;en&quot;>AI</span>">دیار <span class="en">AI</span></div>
+    </div>
+    <div class="topbar-right">
+      <nav class="tabs" role="tablist">
+        <button class="tab-btn active" data-tab="story" role="tab" aria-selected="true" data-en="Story">داستان</button>
+        <button class="tab-btn" data-tab="demo" role="tab" aria-selected="false" data-en="Live Demo">دمو تعاملی</button>
+      </nav>
+      <button class="lang-btn" id="langToggle" type="button">English</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ STORY TAB ============ -->
+    <section id="tab-story" class="tab-panel active">
+
+      <div class="hero">
+        <div>
+          <span class="eyebrow" data-en="PropTech for the Gulf">پراپ‌تک برای خلیج فارس</span>
+          <h1 data-en-html="AI Assistant for Buying Property &amp; Moving to <span class=&quot;accent&quot;>Dubai</span>">دستیار هوش مصنوعیِ خرید ملک و <span class="accent">مهاجرت به دبی</span></h1>
+          <p class="sub" data-en="Diyar turns property search across the UAE and the Gulf into one clear path: real prices, a property that fits your lifestyle, and an exact visa &amp; residency roadmap — all in one assistant.">دیار، جست‌وجوی ملک در امارات و کشورهای عربی خلیج فارس رو به یک مسیر شفاف تبدیل می‌کنه: قیمت واقعی، ملک مناسب سبک زندگی‌ات، و نقشه‌ی دقیق ویزا و اقامت — همه در یک دستیار.</p>
+          <div class="goal-row">
+            <span class="goal-label" data-en="What do you want to use this for?">می‌خوای با این اپ چیکار کنی؟</span>
+            <button class="pill goal-pill" data-goal="invest" data-en="Invest">سرمایه‌گذاری کنم</button>
+            <button class="pill goal-pill" data-goal="live" data-en="Live in Dubai">در دبی زندگی کنم</button>
+            <button class="pill goal-pill" data-goal="migrate" data-en="Get residency">مهاجرت و اقامت بگیرم</button>
+          </div>
+          <p class="goal-response" id="goalResponse"></p>
+        </div>
+        <div class="skyline-wrap">
+          <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="400" height="300" fill="none"/>
+            <rect x="20" y="200" width="34" height="90" fill="var(--border-strong)" opacity="0.5"/>
+            <rect x="64" y="160" width="30" height="130" fill="var(--border-strong)" opacity="0.6"/>
+            <rect x="104" y="190" width="26" height="100" fill="var(--border-strong)" opacity="0.5"/>
+            <polygon points="150,60 170,290 130,290" fill="var(--accent)"/>
+            <rect x="200" y="140" width="28" height="150" fill="var(--border-strong)" opacity="0.6"/>
+            <rect x="238" y="180" width="34" height="110" fill="var(--border-strong)" opacity="0.5"/>
+            <rect x="282" y="120" width="24" height="170" fill="var(--teal)" opacity="0.55"/>
+            <rect x="316" y="200" width="30" height="90" fill="var(--border-strong)" opacity="0.5"/>
+            <rect x="356" y="170" width="24" height="120" fill="var(--border-strong)" opacity="0.6"/>
+            <line x1="0" y1="290" x2="400" y2="290" stroke="var(--border-strong)" stroke-width="1.5"/>
+          </svg>
+        </div>
+      </div>
+
+      <section class="block">
+        <div class="block-head">
+          <span class="block-kicker" data-en="The problem">مسئله</span>
+          <h2 data-en="Why the Gulf property market is hard for foreigners">چرا بازار املاک خلیج فارس برای خارجی‌ها سخته؟</h2>
+          <p data-en="Every year, tens of thousands of foreign buyers look for property or residency in Dubai — but the information they need is scattered and incomplete.">هر سال ده‌ها هزار ایرانی و خارجی دیگه دنبال ملک یا اقامت تو دبی هستن، اما اطلاعات لازم پخش و ناقصه.</p>
+        </div>
+        <div class="grid-4">
+          <div class="problem-card"><span class="problem-num">01</span><h4 data-en="Opaque pricing">عدم شفافیت قیمت</h4><p data-en="Listed prices on existing platforms are often far from what properties actually sell for.">قیمت‌های نمایشی روی پلتفرم‌های فعلی اغلب با قیمت واقعیِ معامله‌شده فاصله دارن.</p></div>
+          <div class="problem-card"><span class="problem-num">02</span><h4 data-en="Complex visa rules">پیچیدگی قوانین ویزا</h4><p data-en="Dozens of residency routes — property, golden, startup — nearly impossible to untangle without a lawyer.">ده‌ها مسیر اقامتی (ملکی، طلایی، استارتاپی) که فهمیدنش بدون وکیل تقریباً غیرممکنه.</p></div>
+          <div class="problem-card"><span class="problem-num">03</span><h4 data-en="Remote-purchase risk">ریسک خرید از راه دور</h4><p data-en="Buying property from another country, without an in-person visit or official document verification, carries real risk.">خرید ملک از کشور دیگه، بدون بازدید حضوری یا تایید رسمی اسناد، ریسک بالایی داره.</p></div>
+          <div class="problem-card"><span class="problem-num">04</span><h4 data-en="Scattered information">اطلاعات پراکنده</h4><p data-en="The property site, the visa consultant, the bank, the school — none of them talk to each other.">سایت ملک، مشاور ویزا، بانک و مدرسه هرکدوم جدا هستن و باهم حرف نمی‌زنن.</p></div>
+        </div>
+      </section>
+
+      <section class="block">
+        <div class="block-head">
+          <span class="block-kicker" data-en="The solution">راه‌حل</span>
+          <h2 data-en="Diyar's four AI pillars">چهار ستون هوش مصنوعی دیار</h2>
+          <p data-en="Each part of Diyar uses a dedicated AI model to strip away one layer of market complexity.">هر بخش دیار با مدل‌های AI اختصاصی، یه لایه از پیچیدگی بازار رو ساده می‌کنه.</p>
+        </div>
+        <div class="grid-4">
+          <div class="pillar-card">
+            <div class="pillar-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+            </div>
+            <h4 data-en="Migration &amp; visa advisor">مشاور مهاجرت و ویزا</h4>
+            <p data-en="Based on your budget, goal and nationality, it works out the exact residency route with a timeline and cost.">بر اساس بودجه، هدف و ملیتت، مسیر دقیق اقامتی (ملکی، طلایی، استارتاپی) رو با جدول زمانی و هزینه محاسبه می‌کنه.</p>
+            <span class="pillar-tag">AI Visa Advisor</span>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>
+            </div>
+            <h4 data-en="Price valuation &amp; forecast">ارزیاب و پیش‌بین قیمت</h4>
+            <p data-en="A pricing model trained on registered DLD transaction data — shows real value and the coming trend.">مدل قیمت‌گذاری آموزش‌دیده روی داده‌ی معاملات ثبت‌شده‌ی DLD؛ ارزش واقعی و روند ۱۲ ماه آینده رو نشون می‌ده.</p>
+            <span class="pillar-tag">AI Valuation</span>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.5-7-10a7 7 0 0114 0c0 5.5-7 10-7 10z"/><circle cx="12" cy="11" r="2.3"/></svg>
+            </div>
+            <h4 data-en="Lifestyle match">همتایاب سبک زندگی</h4>
+            <p data-en="Instead of filtering by size and price, it suggests property by lifestyle — schools, the beach, the metro, community.">به‌جای فیلتر متراژ و قیمت، بر اساس سبک زندگی — مدرسه‌ی بین‌المللی، ساحل، مترو، محله‌ی ایرانی‌نشین — ملک پیشنهاد می‌ده.</p>
+            <span class="pillar-tag">Lifestyle Match</span>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M9.5 13h5M9.5 17h5"/></svg>
+            </div>
+            <h4 data-en="Document &amp; legal copilot">دستیار اسناد و حقوقی</h4>
+            <p data-en="Reviews the contract, the title deed and RERA compliance, and explains it all in plain language.">قرارداد، سند مالکیت (Title Deed) و انطباق با مقررات RERA رو بررسی و به زبان ساده توضیح می‌ده.</p>
+            <span class="pillar-tag">Doc Copilot</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="block">
+        <div class="block-head">
+          <span class="block-kicker" data-en="Business model">مدل کسب‌وکار</span>
+          <h2 data-en="Where the revenue comes from">از کجا درآمد می‌سازیم</h2>
+        </div>
+        <div class="revenue-list">
+          <div class="revenue-row"><div><h4 data-en="Transaction commission">کمیسیون معامله</h4><p data-en="1–2% of every successful purchase or lease closed on the platform">۱ تا ۲ درصد از هر خرید یا اجاره‌ی موفق‌شده روی پلتفرم</p></div><span class="revenue-tag">1–2%</span></div>
+          <div class="revenue-row"><div><h4 data-en="Agency &amp; agent subscriptions">اشتراک آژانس‌ها و مشاوران</h4><p data-en="Monthly subscription for access to AI-matched leads">اشتراک ماهانه برای دسترسی به لیدهای منطبق‌شده با AI</p></div><span class="revenue-tag">SaaS</span></div>
+          <div class="revenue-row"><div><h4 data-en="Premium migration concierge">کانسیرژ پرمیوم مهاجرت</h4><p data-en="Flat fee for the full journey: visa, bank account, school enrollment, relocation">هزینه‌ی ثابت برای مسیر کامل: ویزا، حساب بانکی، ثبت مدرسه، جابه‌جایی</p></div><span class="revenue-tag" data-en="Flat fee">فی ثابت</span></div>
+          <div class="revenue-row"><div><h4 data-en="Featured developer listings">لیستینگ ویژه‌ی سازنده‌ها</h4><p data-en="Promoting off-plan projects for major Dubai developers">تبلیغ پروژه‌های پیش‌فروش (Off-plan) برای دولوپرهای بزرگ دبی</p></div><span class="revenue-tag" data-en="Ads">تبلیغات</span></div>
+        </div>
+      </section>
+
+      <section class="block">
+        <div class="block-head">
+          <span class="block-kicker" data-en="For the founder">برای بنیان‌گذار</span>
+          <h2 data-en="Your own migration path, through this startup">مسیر مهاجرت خودت با همین استارتاپ</h2>
+        </div>
+        <div class="callout">
+          <h3 data-en="Building Diyar can itself be your gateway into Dubai">ساختن دیار می‌تونه خودش دروازه‌ی ورودت به دبی باشه</h3>
+          <p class="lead" data-en="The UAE has several defined residency routes for startup founders and property investors. These are a starting point:">امارات چند مسیر اقامتی مشخص برای بنیان‌گذاران استارتاپ و سرمایه‌گذاران ملکی داره. این‌ها نقطه‌ی شروع فکر کردنن:</p>
+          <div class="path-list">
+            <div class="path-item">
+              <h5 data-en="Entrepreneur Golden Visa">ویزای طلاییِ کارآفرینی</h5>
+              <p data-en="With idea endorsement from an approved incubator (like in5, Dubai Internet City or Hub71), you can get a 5- or 10-year visa without a sponsor.">با تایید ایده از یک انکوباتور معتبر (مثل in5، Dubai Internet City یا Hub71)، بدون نیاز به کفیل می‌تونی ویزای ۵ یا ۱۰ ساله بگیری.</p>
+            </div>
+            <div class="path-item">
+              <h5 data-en="Free Zone license">لایسنس منطقه‌ی آزاد (Free Zone)</h5>
+              <p data-en="By registering a company in DIFC or Dubai Internet City, you get personal residency and can hire a team too.">با ثبت شرکت در DIFC یا Dubai Internet City، هم اقامت شخصی می‌گیری هم می‌تونی تیم استخدام کنی.</p>
+            </div>
+            <div class="path-item">
+              <h5 data-en="Property Golden Visa (parallel)">ویزای طلایی ملکی (موازی)</h5>
+              <p data-en="If you also invest in property alongside the startup (AED 2M+), a second 10-year route stays open.">اگه کنار استارتاپ روی ملک هم سرمایه‌گذاری کنی (۲ میلیون درهم به بالا)، مسیر ۱۰ ساله‌ی دوم هم باز می‌مونه.</p>
+            </div>
+          </div>
+          <p class="disclaimer" data-en="⚠️ UAE residency rules change over time; these are a starting point, not legal advice. Confirm with a licensed advisor or directly with GDRFA/ICP before any final decision.">⚠️ قوانین اقامتی امارات به‌مرور تغییر می‌کنه؛ این‌ها فقط نقطه‌ی شروعن، نه مشاوره‌ی حقوقی. برای تصمیم نهایی حتماً با مشاور مجاز یا مستقیم GDRFA/ICP هماهنگ کن.</p>
+        </div>
+      </section>
+
+      <section class="block">
+        <div class="block-head">
+          <span class="block-kicker" data-en="Roadmap">نقشه‌ی راه</span>
+          <h2 data-en="From demo to regional expansion">از دمو تا توسعه‌ی منطقه‌ای</h2>
+        </div>
+        <div class="roadmap">
+          <div class="rm-row"><span class="rm-q">Q1</span><div><h4 data-en="MVP — this interactive demo">MVP — همین دموی تعاملی</h4><p data-en="Property search + basic visa advisor, to get early feedback from Persian-speaking users.">جست‌وجوی ملک + مشاور ویزای پایه، برای گرفتن بازخورد اولیه از کاربران فارسی‌زبان.</p></div></div>
+          <div class="rm-row"><span class="rm-q">Q2</span><div><h4 data-en="Closed beta">بتای بسته</h4><p data-en="Connect real DLD transaction data and pilot with 50 agencies in Dubai.">اتصال به داده‌ی واقعی معاملات DLD و پایلوت با ۵۰ آژانس در دبی.</p></div></div>
+          <div class="rm-row"><span class="rm-q">Q3</span><div><h4 data-en="Public launch">لانچ عمومی</h4><p data-en="Mobile app, premium concierge service, Arabic/Russian/Hindi support.">اپ موبایل، سرویس کانسیرژ پرمیوم، پشتیبانی عربی/روسی/هندی.</p></div></div>
+          <div class="rm-row"><span class="rm-q">Q4</span><div><h4 data-en="Regional expansion">توسعه‌ی منطقه‌ای</h4><p data-en="Entering Abu Dhabi, Doha and Riyadh.">ورود به ابوظبی، دوحه و ریاض.</p></div></div>
+        </div>
+      </section>
+    </section>
+
+    <!-- ============ DEMO TAB ============ -->
+    <section id="tab-demo" class="tab-panel" hidden>
+      <div class="demo-head">
+        <span class="block-kicker" data-en="Live demo">دمو تعاملی</span>
+        <h2 data-en="Here's how it works">اینجوری کار می‌کنه</h2>
+        <p style="color:var(--text-muted);font-size:15px;margin-top:6px;" data-en="Chat with the assistant, click any property, and try your budget in the calculator — everything runs on sample data.">با دستیار چت کن، روی ملک‌ها کلیک کن و بودجه‌ات رو تو محاسبه‌گر امتحان کن — همه‌چی با داده‌ی نمونه است.</p>
+        <div class="demo-goal-row">
+          <button class="pill goal-pill" data-goal="invest" data-en="Invest">سرمایه‌گذاری</button>
+          <button class="pill goal-pill" data-goal="live" data-en="Live in Dubai">زندگی در دبی</button>
+          <button class="pill goal-pill" data-goal="migrate" data-en="Migrate &amp; residency">مهاجرت و اقامت</button>
+        </div>
+      </div>
+
+      <div class="demo-grid">
+        <div class="chat-card">
+          <div class="chat-header">
+            <div class="chat-avatar">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+            </div>
+            <div><strong data-en="Diyar Assistant">دستیار دیار</strong><span id="chatStatus">آنلاین</span></div>
+            <span class="chat-live-badge" id="chatLiveBadge" hidden data-en="Claude Live">Claude زنده</span>
+          </div>
+          <div class="chat-body" id="chatBody"></div>
+          <div class="chat-suggest" id="chatSuggest">
+            <button class="chip" data-q="بودجه ۱.۵ میلیون درهم دارم">بودجه ۱.۵ میلیون درهم دارم</button>
+            <button class="chip" data-q="ویزای طلایی چطوریه؟">ویزای طلایی چطوریه؟</button>
+            <button class="chip" data-q="قیمت ملک تو مارینا چقدره؟">قیمت‌ها تو مارینا؟</button>
+          </div>
+          <div class="chat-input-row">
+            <input type="text" id="chatInput" placeholder="سوالت رو بنویس…" data-en-placeholder="Type your question…" />
+            <button class="chat-send" id="chatSend" aria-label="ارسال" data-en-label="Send">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12l16-8-6 16-3-7-7-1z"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div>
+          <div class="listings-head">
+            <h3 data-en="AI-matched properties">ملک‌های منطبق با AI</h3>
+            <span id="listingCount">۱۸ مورد <span class="chat-live-badge" id="apiLiveBadge" hidden data-en="API Live" style="margin-inline-start:8px;">API زنده</span></span>
+          </div>
+          <div class="listing-grid" id="listingGrid"></div>
+
+          <div class="calc-card">
+            <h3 data-en="Visa path calculator">محاسبه‌گر مسیر ویزا</h3>
+            <p data-en="Move your budget to see the suggested residency path.">بودجه‌ات رو جابه‌جا کن تا مسیر اقامتی پیشنهادی رو ببینی.</p>
+            <div class="calc-value"><span class="num" id="calcValue">1,500,000</span> <span id="calcUnitLabel">درهم</span></div>
+            <input type="range" id="calcSlider" min="300000" max="8000000" step="50000" value="1500000">
+            <div class="calc-result">
+              <div class="calc-path">
+                <h5 id="calcPathTitle">ویزای اقامتی ۲ ساله (ملکی)</h5>
+                <p id="calcPathDesc">با این بودجه واجد شرایط ویزای اقامتی ۲ ساله از طریق سرمایه‌گذاری ملکی هستی.</p>
+              </div>
+              <div class="calc-match">
+                <h5 data-en="Properties close to your budget">ملک‌های نزدیک به بودجه‌ات</h5>
+                <div class="match-chip-row" id="calcMatches"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer data-en="Diyar AI — concept demo. All prices, yields and visa paths are sample and approximate, and are not a substitute for licensed legal or financial advice.">
+    دیار AI — دموی مفهومی. تمام قیمت‌ها، بازده‌ها و مسیرهای ویزا نمونه و تقریبی هستن و جایگزین مشاوره‌ی حقوقی یا مالی رسمی نیستن.
+  </footer>
+</div>
+
+<div class="modal-backdrop" id="modalBackdrop" hidden>
+  <div class="modal" id="modalContent"></div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  // ---------- language state ----------
+  var currentLang = 'fa';
+
+  var NAME_EN = {
+    'برج‌های دبی مارینا': 'Dubai Marina Towers',
+    'داون‌تاون دبی': 'Downtown Dubai',
+    'جمیرا ویلج سیرکل': 'Jumeirah Village Circle',
+    'النخله جمیرا': 'Palm Jumeirah',
+    'بیزینس‌بی': 'Business Bay',
+    'دبی هیلز استیت': 'Dubai Hills Estate',
+    'الفرجان': 'Al Furjan',
+    'دبی کریک هاربر': 'Dubai Creek Harbour',
+    'عربین رنچز ۳': 'Arabian Ranches 3',
+    'دبی ساوث': 'Dubai South',
+    'المرابع العربیه': 'Al Barari',
+    'میدان (Meydan)': 'Meydan',
+    'جمیرا لیک تاورز (JLT)': 'Jumeirah Lake Towers',
+    'دبی مارینا (پنت‌هاوس)': 'Dubai Marina (Penthouse)',
+    'سیتی واک': 'City Walk',
+    'بلوواتر': 'Bluewaters Island',
+    'تاون‌اسکوئر': 'Town Square',
+    'المدینه الجمیریه': 'Madinat Jumeirah Living'
+  };
+  var TYPE_EN = {
+    'آپارتمان دو خواب': '2BR Apartment',
+    'آپارتمان یک خواب': '1BR Apartment',
+    'استودیو': 'Studio',
+    'ویلا': 'Villa',
+    'تاون‌هاوس': 'Townhouse',
+    'پنت‌هاوس': 'Penthouse'
+  };
+  function displayName(name){ return currentLang === 'en' ? (NAME_EN[name] || name) : name; }
+  function displayType(type){ return currentLang === 'en' ? (TYPE_EN[type] || type) : type; }
+
+  var chatRulesFa = [
+    { kws:['ویزای طلایی','طلایی','golden'], reply:'ویزای طلایی امارات ۱۰ ساله‌ست و از طریق سرمایه‌گذاری ملکی (حداقل ۲ میلیون درهم) یا تایید یک انکوباتور معتبر برای کارآفرینان قابل دریافته — بدون نیاز به کفیل.' },
+    { kws:['بودجه'], reply:'با بودجه‌ای که گفتی، بهترین گزینه یکی از این محله‌هاست: بیزینس‌بی، جمیرا ویلج سیرکل یا دبی مارینا. برای دیدن مسیر ویزای دقیق، محاسبه‌گر پایین صفحه رو امتحان کن.' },
+    { kws:['مارینا','marina'], reply:'در دبی مارینا، آپارتمان دو خوابه به‌طور میانگین حدود ۱٬۴۵۰٬۰۰۰ درهم قیمت داره و بازده اجاره‌ی تقریبی ۶٫۸٪ در ساله.' },
+    { kws:['قیمت','ارزش','price'], reply:'قیمت بستگی به محله داره — از ۶۲۰٬۰۰۰ درهم برای استودیو در JVC تا بیش از ۷ میلیون درهم برای ویلا در النخله. روی هر کارت ملک کلیک کن تا روند ۶ ماهه‌ی قیمتش رو ببینی.' },
+    { kws:['مدرسه','مدارس','school'], reply:'محله‌های دبی هیلز و جمیرا ویلج سیرکل به مدارس بین‌المللی معتبر نزدیک‌ترن و بین خانواده‌های ایرانی محبوبن.' },
+    { kws:['اقامت','ملکی','residency'], reply:'با سرمایه‌گذاری ملکی ۷۵۰٬۰۰۰ درهم به بالا، ویزای اقامتی ۲ ساله می‌گیری؛ از ۲ میلیون درهم به بالا وارد مسیر ویزای طلایی ۱۰ ساله می‌شی.' }
+  ];
+  var chatRulesEn = [
+    { kws:['golden visa','golden','طلایی'], reply:'The UAE Golden Visa runs 10 years, through either property investment (AED 2M+) or an approved incubator endorsement for entrepreneurs — no sponsor required.' },
+    { kws:['budget'], reply:"With that budget, a strong fit would be Business Bay, Jumeirah Village Circle or Dubai Marina. Try the calculator below for the exact visa path." },
+    { kws:['marina'], reply:'In Dubai Marina, a 2BR apartment averages around AED 1,450,000 with a rental yield near 6.8% a year.' },
+    { kws:['price','value'], reply:'Prices vary a lot by area — from AED 620,000 for a JVC studio to over AED 7M for a Palm Jumeirah villa. Click any property card to see its 6-month price trend.' },
+    { kws:['school'], reply:'Dubai Hills Estate and Jumeirah Village Circle sit closest to well-regarded international schools and are popular with expat families.' },
+    { kws:['residency','property visa'], reply:'From AED 750,000 in property you get a 2-year residency visa; from AED 2,000,000 you move into the 10-year Golden Visa route.' }
+  ];
+
+  var L = {
+    fa: {
+      matchSuffix: '٪ تطابق',
+      aedWord: 'AED',
+      itemsSuffix: 'مورد',
+      goldBadge: 'واجد شرایط ویزای طلایی',
+      residencyBadge: 'واجد شرایط اقامت ملکی',
+      roiPrefix: 'ROI ',
+      dubaiUAE: 'دبی، امارات متحده عربی',
+      priceLabel: 'قیمت (AED)',
+      matchStatLabel: 'تطابق با ذائقه‌ات',
+      roiStatLabel: 'بازده سرمایه',
+      trendTitle: 'روند قیمت AI — ۶ ماه اخیر و بازده اجاره',
+      visaTitle: 'مسیر ویزا برای این ملک',
+      yieldLabel: 'بازده سالانه',
+      visaGold: 'این ملک واجد شرایط ویزای طلایی ۱۰ ساله است (حداقل ۲ میلیون درهم سرمایه‌گذاری ملکی) — بدون نیاز به کفیل.',
+      visaResidency: 'این ملک واجد شرایط ویزای اقامتی ۲ ساله از طریق سرمایه‌گذاری ملکی است.',
+      visaNone: 'برای ویزای اقامتی ملکی به حداقل ۷۵۰,۰۰۰ درهم نیاز داری؛ فعلاً گزینه‌ی اجاره یا ویزای کاری مناسب‌تره.',
+      goalMessages: {
+        invest: 'خب! روی بازده اجاره و رشد سرمایه تمرکز می‌کنیم — محله‌هایی مثل بیزینس‌بی و JVC بازده بالاتری دارن.',
+        live: 'عالیه! سراغ محله‌هایی می‌ریم که به مدرسه، مترو و مراکز ایرانی‌نشین نزدیک‌ترن.',
+        migrate: 'باشه! اول مسیر ویزا رو با محاسبه‌گر پایین بررسی کن، بعد ملک متناسب باهاش رو پیدا می‌کنیم.'
+      },
+      chatGreeting: 'سلام 👋 من دستیار هوش مصنوعی دیار هستم. بگو دنبال چی هستی — مثلاً «بودجه ۱.۵ میلیون درهم دارم» یا «قیمت ملک تو مارینا چقدره؟»',
+      chatThinking: 'در حال فکر کردن…',
+      chatOnline: 'آنلاین',
+      chatConnected: 'متصل به هوش مصنوعی Claude',
+      chatFallback: 'خوبه! برای این سوال، پیشنهاد می‌کنم اول هدفت رو از بالای صفحه انتخاب کنی، بعد یکی از ملک‌های پیشنهادی رو باز کنی — جزئیات قیمت، بازده و مسیر ویزا اونجا نشون داده می‌شه.',
+      chatRules: chatRulesFa,
+      chips: [
+        { q:'بودجه ۱.۵ میلیون درهم دارم', label:'بودجه ۱.۵ میلیون درهم دارم' },
+        { q:'ویزای طلایی چطوریه؟', label:'ویزای طلایی چطوریه؟' },
+        { q:'قیمت ملک تو مارینا چقدره؟', label:'قیمت‌ها تو مارینا؟' }
+      ],
+      calcAedWord: 'درهم',
+      calcGold: { title:'ویزای طلایی ۱۰ ساله', desc:'با این بودجه مستقیماً واجد شرایط ویزای طلایی ۱۰ ساله‌ای — بدون نیاز به کفیل و قابل تمدید.' },
+      calcResidency: { title:'ویزای اقامتی ۲ ساله (ملکی)', desc:'با این بودجه واجد شرایط ویزای اقامتی ۲ ساله از طریق سرمایه‌گذاری ملکی هستی؛ قابل تمدید تا زمانی که مالک ملک باشی.' },
+      calcEntrepreneur: { title:'ویزای طلایی کارآفرینی ۵ ساله', desc:'با این بودجه هنوز به آستانه‌ی ویزای ملکی نرسیدی؛ مسیر جایگزین، ویزای طلاییِ کارآفرینی از طریق یه استارتاپِ تاییدشده توسط انکوباتوره.' },
+      systemPromptFn: function(lines){
+        return 'تو «دستیار دیار» هستی: دستیار هوش مصنوعیِ پلتفرم دیار برای جست‌وجوی ملک و مشاوره‌ی مهاجرت/ویزا در دبی و خلیج فارس. به فارسیِ محاوره‌ای، دوستانه و کوتاه (حداکثر ۴-۵ جمله) پاسخ بده. فقط بر پایه‌ی داده‌های زیر صحبت کن؛ اگر چیزی رو نمی‌دونی صادقانه بگو.\n\nملک‌های نمونه‌ی موجود در دمو:\n' + lines +
+          '\n\nقوانین ویزا (نمونه و تقریبی):\n- سرمایه‌گذاری ملکی از ۷۵۰,۰۰۰ درهم → ویزای اقامتی ۲ ساله\n- سرمایه‌گذاری ملکی از ۲,۰۰۰,۰۰۰ درهم → ویزای طلایی ۱۰ ساله (بدون کفیل)\n- تاییدِ پروژه توسط انکوباتور معتبر (in5/DTEC) با ارزش حداقل ۵۰۰,۰۰۰ درهم → ویزای طلایی کارآفرینی ۵ ساله\n\nهر جا مرتبط بود خیلی کوتاه و طبیعی (نه مثل دیسکلیمر رسمی) یادآوری کن که این‌ها نمونه‌ان و تصمیم نهایی نیاز به تایید مشاور مجاز داره. وقتی به‌درد می‌خوره، کاربر رو به کارت‌های ملک یا محاسبه‌گر پایین صفحه ارجاع بده.';
+      }
+    },
+    en: {
+      matchSuffix: '% match',
+      aedWord: 'AED',
+      itemsSuffix: 'listed',
+      goldBadge: 'Golden Visa eligible',
+      residencyBadge: 'Residency visa eligible',
+      roiPrefix: 'ROI ',
+      dubaiUAE: 'Dubai, United Arab Emirates',
+      priceLabel: 'Price (AED)',
+      matchStatLabel: 'Taste match',
+      roiStatLabel: 'Return on investment',
+      trendTitle: 'AI price trend — last 6 months & rental yield',
+      visaTitle: 'Visa path for this property',
+      yieldLabel: 'Annual yield',
+      visaGold: 'This property qualifies for the 10-year Golden Visa (AED 2M+ property investment) — no sponsor needed.',
+      visaResidency: 'This property qualifies for the 2-year residency visa through property investment.',
+      visaNone: 'A property residency visa needs at least AED 750,000; renting or a work/startup visa fits better for now.',
+      goalMessages: {
+        invest: "Great — let's focus on rental yield and capital growth. Areas like Business Bay and JVC run higher yields.",
+        live: "Nice! Let's look at neighborhoods close to schools, the metro, and expat communities.",
+        migrate: "Sure — check the visa path with the calculator below first, then we'll find a matching property."
+      },
+      chatGreeting: 'Hi 👋 I\'m the Diyar AI assistant. Tell me what you\'re after — e.g. "I have a budget of AED 1.5 million" or "What do prices look like in Marina?"',
+      chatThinking: 'Thinking…',
+      chatOnline: 'Online',
+      chatConnected: 'Connected to Claude AI',
+      chatFallback: "Good question! Start by picking your goal at the top of the page, then open one of the suggested properties — price, yield and visa path all show up there.",
+      chatRules: chatRulesEn,
+      chips: [
+        { q:'I have a budget of AED 1.5 million', label:'AED 1.5M budget' },
+        { q:'How does the Golden Visa work?', label:'How does the Golden Visa work?' },
+        { q:'What are prices like in Marina?', label:'Prices in Marina?' }
+      ],
+      calcAedWord: 'AED',
+      calcGold: { title:'10-year Golden Visa', desc:'This budget directly qualifies for the 10-year Golden Visa — no sponsor needed, renewable.' },
+      calcResidency: { title:'2-year residency visa (property)', desc:'This budget qualifies for a 2-year residency visa through property investment; renewable as long as you own the property.' },
+      calcEntrepreneur: { title:'5-year Entrepreneur Golden Visa', desc:"This budget hasn't reached the property-visa threshold yet; the alternative route is the Entrepreneur Golden Visa through an incubator-endorsed startup." },
+      systemPromptFn: function(lines){
+        return 'You are the "Diyar Assistant": an AI assistant for the Diyar platform, helping with property search and migration/visa advice in Dubai and the Gulf. Reply in friendly, concise English (max 4-5 sentences). Base answers only on the data below; if you don\'t know something, say so honestly.\n\nSample properties in this demo:\n' + lines +
+          '\n\nVisa rules (sample, approximate):\n- Property investment from AED 750,000 → 2-year residency visa\n- Property investment from AED 2,000,000 → 10-year Golden Visa (no sponsor)\n- Project endorsed by an approved incubator (in5/DTEC) worth at least AED 500,000 → 5-year Entrepreneur Golden Visa\n\nWhen relevant, briefly and naturally (not like a formal disclaimer) mention these are samples and a final decision needs a licensed advisor. Point the user to the property cards or calculator below when useful.';
+      }
+    }
+  };
+
+  // ---------- tabs ----------
+  var tabBtns = document.querySelectorAll('.tab-btn');
+  var panels = { story: document.getElementById('tab-story'), demo: document.getElementById('tab-demo') };
+  tabBtns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var target = btn.getAttribute('data-tab');
+      tabBtns.forEach(function(b){
+        var active = b.getAttribute('data-tab') === target;
+        b.classList.toggle('active', active);
+        b.setAttribute('aria-selected', active ? 'true' : 'false');
+      });
+      Object.keys(panels).forEach(function(k){ panels[k].hidden = (k !== target); });
+      window.scrollTo({top:0, behavior:'instant'});
+    });
+  });
+
+  // ---------- goal pills ----------
+  document.querySelectorAll('.goal-pill').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var goal = btn.getAttribute('data-goal');
+      document.querySelectorAll('.goal-pill').forEach(function(b){
+        b.classList.toggle('active', b.getAttribute('data-goal') === goal);
+      });
+      var out = document.getElementById('goalResponse');
+      if(out) out.textContent = L[currentLang].goalMessages[goal] || '';
+    });
+  });
+
+  // ---------- backend wiring: try the real API, fall back to sample data ----------
+  // Update this once deployed (e.g. 'https://diyar-ai-backend.onrender.com')
+  var API_BASE = (window.DIYAR_API_BASE || 'http://127.0.0.1:8000');
+  var HUES = ['210,55%','38,60%','165,40%','340,45%','265,45%','20,55%'];
+
+  // ---------- mock property data (fallback when the API is unreachable) ----------
+  var properties = [
+    { id:1, name:'برج‌های دبی مارینا', type:'آپارتمان دو خواب', price:1450000, roi:6.8, yieldPct:6.8, match:94, hue:'210,55%', trend:[1180000,1220000,1260000,1310000,1380000,1450000] },
+    { id:2, name:'داون‌تاون دبی', type:'آپارتمان یک خواب', price:1890000, roi:5.9, yieldPct:5.9, match:88, hue:'38,60%', trend:[1620000,1680000,1720000,1790000,1840000,1890000] },
+    { id:3, name:'جمیرا ویلج سیرکل', type:'استودیو', price:620000, roi:8.1, yieldPct:8.1, match:82, hue:'165,40%', trend:[540000,555000,570000,590000,605000,620000] },
+    { id:4, name:'النخله جمیرا', type:'ویلا', price:7200000, roi:4.5, yieldPct:4.5, match:76, hue:'340,45%', trend:[6400000,6550000,6700000,6900000,7050000,7200000] },
+    { id:5, name:'بیزینس‌بی', type:'آپارتمان دو خواب', price:1150000, roi:7.2, yieldPct:7.2, match:91, hue:'265,45%', trend:[960000,1000000,1040000,1080000,1120000,1150000] },
+    { id:6, name:'دبی هیلز استیت', type:'تاون‌هاوس', price:2650000, roi:6.1, yieldPct:6.1, match:85, hue:'20,55%', trend:[2280000,2360000,2440000,2520000,2590000,2650000] }
+  ];
+
+  function fmtAED(n){ return Number(n).toLocaleString('en-US'); }
+  function toPersianDigits(n){
+    var fa = ['۰','۱','۲','۳','۴','۵','۶','۷','۸','۹'];
+    return String(n).replace(/[0-9]/g, function(d){ return fa[+d]; });
+  }
+
+  function visaBadge(price){
+    if(price >= 2000000) return '<span class="badge golden">'+L[currentLang].goldBadge+'</span>';
+    if(price >= 750000) return '<span class="badge residency">'+L[currentLang].residencyBadge+'</span>';
+    return '';
+  }
+
+  function photoSVG(hue){
+    return '<svg viewBox="0 0 300 104" preserveAspectRatio="none">'+
+      '<defs><linearGradient id="g'+hue.replace(/[^0-9]/g,'')+'" x1="0" y1="0" x2="1" y2="1">'+
+      '<stop offset="0" stop-color="hsl('+hue+',20%)"/><stop offset="1" stop-color="hsl('+hue+',42%)"/>'+
+      '</linearGradient></defs>'+
+      '<rect width="300" height="104" fill="url(#g'+hue.replace(/[^0-9]/g,'')+')"/>'+
+      '<rect x="20" y="60" width="16" height="44" fill="rgba(255,255,255,0.18)"/>'+
+      '<rect x="42" y="44" width="14" height="60" fill="rgba(255,255,255,0.14)"/>'+
+      '<polygon points="70,20 78,104 62,104" fill="rgba(255,255,255,0.22)"/>'+
+      '<rect x="90" y="52" width="12" height="52" fill="rgba(255,255,255,0.16)"/>'+
+      '</svg>';
+  }
+
+  function renderListings(){
+    var grid = document.getElementById('listingGrid');
+    var countLabel = document.getElementById('listingCount');
+    if (countLabel){
+      var badge = document.getElementById('apiLiveBadge');
+      var countNum = currentLang === 'fa' ? toPersianDigits(properties.length) : properties.length;
+      countLabel.childNodes[0].textContent = countNum + ' ' + L[currentLang].itemsSuffix + ' ';
+      if (badge) countLabel.appendChild(badge);
+    }
+    grid.innerHTML = properties.map(function(p){
+      return '<div class="prop-card" tabindex="0" data-id="'+p.id+'">'+
+        '<div class="prop-photo">'+ photoSVG(p.hue) +'<span class="match num">'+p.match+L[currentLang].matchSuffix+'</span></div>'+
+        '<div class="prop-body">'+
+          '<h4>'+displayName(p.name)+'</h4>'+
+          '<div class="loc">'+displayType(p.type)+'</div>'+
+          '<div class="prop-stats">'+
+            '<div class="prop-price"><span class="num">'+fmtAED(p.price)+'</span><br><small>'+L[currentLang].aedWord+'</small></div>'+
+            '<div class="prop-roi num">'+L[currentLang].roiPrefix+p.roi+'%</div>'+
+          '</div>'+
+          '<div class="prop-badges">'+ visaBadge(p.price) +'</div>'+
+        '</div>'+
+      '</div>';
+    }).join('');
+    grid.querySelectorAll('.prop-card').forEach(function(card){
+      card.addEventListener('click', function(){ openModal(Number(card.getAttribute('data-id'))); });
+      card.addEventListener('keydown', function(e){ if(e.key==='Enter') openModal(Number(card.getAttribute('data-id'))); });
+    });
+  }
+
+  // ---------- charts ----------
+  function trendSVG(data){
+    var w=280,h=110,pad=26;
+    var min=Math.min.apply(null,data), max=Math.max.apply(null,data);
+    var range = (max-min) || 1;
+    var stepX = (w-pad*1.2)/(data.length-1);
+    var pts = data.map(function(v,i){
+      var x = pad*0.3 + i*stepX;
+      var y = h-pad - ((v-min)/range)*(h-pad*1.8);
+      return [x,y];
+    });
+    var gridLines = [0,1,2,3].map(function(i){
+      var y = pad*0.3 + i*((h-pad*1.6)/3);
+      return '<line x1="'+(pad*0.3)+'" y1="'+y+'" x2="'+(w-6)+'" y2="'+y+'" stroke="var(--border)" stroke-width="1"/>';
+    }).join('');
+    var poly = pts.map(function(p){return p[0]+','+p[1];}).join(' ');
+    var last = pts[pts.length-1];
+    return '<svg viewBox="0 0 '+w+' '+h+'" xmlns="http://www.w3.org/2000/svg">'+
+      gridLines+
+      '<polyline points="'+poly+'" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>'+
+      '<circle cx="'+last[0]+'" cy="'+last[1]+'" r="4" fill="var(--accent)"/>'+
+      '<text x="'+pts[0][0]+'" y="'+(h-6)+'" font-size="9" fill="var(--text-faint)" font-family="JetBrains Mono">'+fmtAED(data[0])+'</text>'+
+      '<text x="'+(last[0]-2)+'" y="'+(h-6)+'" font-size="9" fill="var(--accent)" font-family="JetBrains Mono" text-anchor="end">'+fmtAED(data[data.length-1])+'</text>'+
+      '</svg>';
+  }
+
+  function donutSVG(pct){
+    var r=38, c=2*Math.PI*r, off=c*(1-pct/12);
+    return '<svg viewBox="0 0 100 100">'+
+      '<circle cx="50" cy="50" r="'+r+'" fill="none" stroke="var(--border)" stroke-width="10"/>'+
+      '<circle cx="50" cy="50" r="'+r+'" fill="none" stroke="var(--teal)" stroke-width="10" stroke-linecap="round" '+
+        'stroke-dasharray="'+c+'" stroke-dashoffset="'+off+'" transform="rotate(-90 50 50)"/>'+
+      '<text x="50" y="47" text-anchor="middle" font-size="17" font-weight="700" fill="var(--text)" font-family="JetBrains Mono">'+pct+'%</text>'+
+      '<text x="50" y="63" text-anchor="middle" font-size="9" fill="var(--text-faint)" font-family="Vazirmatn">'+L[currentLang].yieldLabel+'</text>'+
+      '</svg>';
+  }
+
+  function visaNoteFor(price){
+    if(price >= 2000000) return { cls:'gold', text: L[currentLang].visaGold };
+    if(price >= 750000) return { cls:'', text: L[currentLang].visaResidency };
+    return { cls:'', text: L[currentLang].visaNone };
+  }
+
+  function openModal(id){
+    var p = properties.filter(function(x){return x.id===id;})[0];
+    if(!p) return;
+    var note = visaNoteFor(p.price);
+    var t = L[currentLang];
+    var backdrop = document.getElementById('modalBackdrop');
+    var content = document.getElementById('modalContent');
+    content.innerHTML =
+      '<div class="modal-photo">'+ photoSVG(p.hue) +'<button class="modal-close" id="modalCloseBtn">✕</button></div>'+
+      '<div class="modal-body">'+
+        '<h3>'+displayName(p.name)+'</h3>'+
+        '<div class="modal-loc">'+displayType(p.type)+' · '+t.dubaiUAE+'</div>'+
+        '<div class="modal-stat-row">'+
+          '<div class="modal-stat"><div class="v">'+fmtAED(p.price)+'</div><div class="l">'+t.priceLabel+'</div></div>'+
+          '<div class="modal-stat"><div class="v">'+p.match+'%</div><div class="l">'+t.matchStatLabel+'</div></div>'+
+          '<div class="modal-stat"><div class="v">'+p.roi+'%</div><div class="l">'+t.roiStatLabel+'</div></div>'+
+        '</div>'+
+        '<div class="modal-section">'+
+          '<h5>'+t.trendTitle+'</h5>'+
+          '<div class="chart-row">'+
+            '<div class="chart-box">'+ trendSVG(p.trend) +'</div>'+
+            '<div class="chart-box">'+ donutSVG(p.yieldPct) +'</div>'+
+          '</div>'+
+        '</div>'+
+        '<div class="modal-section">'+
+          '<h5>'+t.visaTitle+'</h5>'+
+          '<div class="visa-note '+note.cls+'">'+note.text+'</div>'+
+        '</div>'+
+      '</div>';
+    backdrop.hidden = false;
+    document.getElementById('modalCloseBtn').addEventListener('click', closeModal);
+    backdrop.addEventListener('click', function(e){ if(e.target===backdrop) closeModal(); }, {once:true});
+  }
+  function closeModal(){ document.getElementById('modalBackdrop').hidden = true; }
+
+  // ---------- chat: real Claude via the `sample` capability, scripted fallback ----------
+  var chatBody = document.getElementById('chatBody');
+  var chatStatusEl = document.getElementById('chatStatus');
+  var chatLiveBadge = document.getElementById('chatLiveBadge');
+  var chatConnected = false;
+
+  function addBubble(text, who, extraClass){
+    var b = document.createElement('div');
+    b.className = 'bubble ' + who + (extraClass ? ' ' + extraClass : '');
+    b.textContent = text;
+    chatBody.appendChild(b);
+    chatBody.scrollTop = chatBody.scrollHeight;
+    return b;
+  }
+
+  function scriptedReply(msg){
+    var lower = msg.toLowerCase();
+    var rules = L[currentLang].chatRules;
+    for(var i=0;i<rules.length;i++){
+      for(var j=0;j<rules[i].kws.length;j++){
+        if(lower.indexOf(rules[i].kws[j])>-1) return rules[i].reply;
+      }
+    }
+    return L[currentLang].chatFallback;
+  }
+
+  var sampleFn = null;
+  var chatTurns = [];
+  try{
+    if (typeof window !== 'undefined' && window.claude && typeof window.claude.use === 'function'){
+      window.claude.use('sample').then(function(fn){
+        sampleFn = fn || null;
+        if (sampleFn){
+          chatConnected = true;
+          if (chatStatusEl) chatStatusEl.textContent = L[currentLang].chatConnected;
+          if (chatLiveBadge) chatLiveBadge.hidden = false;
+        }
+      }).catch(function(){ sampleFn = null; });
+    }
+  } catch(e){ sampleFn = null; }
+
+  function buildSystemPrompt(){
+    var lines = properties.map(function(p){
+      return '- ' + displayName(p.name) + ' (' + displayType(p.type) + '), ' + fmtAED(p.price) + ' AED, ROI ' + p.roi + '%, match ' + p.match + '%';
+    }).join('\n');
+    return L[currentLang].systemPromptFn(lines);
+  }
+
+  function resetChat(){
+    chatTurns = [];
+    chatBody.innerHTML = '';
+    addBubble(L[currentLang].chatGreeting, 'bot');
+  }
+
+  function sendChat(text){
+    text = (text || '').trim();
+    if(!text) return;
+    addBubble(text, 'user');
+    var input = document.getElementById('chatInput');
+    if(input) input.value = '';
+
+    if (sampleFn){
+      if (chatTurns.length === 0) chatTurns.push({ role:'user', content: buildSystemPrompt() });
+      chatTurns.push({ role:'user', content: text });
+      var thinkingBubble = addBubble(L[currentLang].chatThinking, 'bot', 'thinking');
+      var ctl = new AbortController();
+      sampleFn(chatTurns, {
+        modelTier: 'quick',
+        cache: false,
+        signal: ctl.signal,
+        onText: function(u){
+          thinkingBubble.classList.remove('thinking');
+          thinkingBubble.textContent = u.text;
+          chatBody.scrollTop = chatBody.scrollHeight;
+        }
+      }).then(function(res){
+        chatTurns.push({ role:'assistant', content: res.text });
+      }).catch(function(e){
+        thinkingBubble.classList.remove('thinking');
+        thinkingBubble.textContent = scriptedReply(text);
+        if (e && (e.code === 'not_granted' || e.code === 'sampling_disabled' || e.code === 'not_declared')) sampleFn = null;
+      });
+    } else {
+      setTimeout(function(){ addBubble(scriptedReply(text), 'bot'); }, 380);
+    }
+  }
+  document.getElementById('chatSend').addEventListener('click', function(){
+    sendChat(document.getElementById('chatInput').value);
+  });
+  document.getElementById('chatInput').addEventListener('keydown', function(e){
+    if(e.key === 'Enter') sendChat(e.target.value);
+  });
+  document.getElementById('chatSuggest').addEventListener('click', function(e){
+    var chip = e.target.closest('.chip');
+    if (chip) sendChat(chip.getAttribute('data-q'));
+  });
+
+  // ---------- calculator: instant local estimate, refined by the real API on release ----------
+  var slider = document.getElementById('calcSlider');
+
+  function routeTextFor(routeKey){
+    if (routeKey === 'golden_property') return L[currentLang].calcGold;
+    if (routeKey === 'property_2y') return L[currentLang].calcResidency;
+    return L[currentLang].calcEntrepreneur;
+  }
+
+  function localVisaCalc(v){
+    var routeKey = v >= 2000000 ? 'golden_property' : (v >= 750000 ? 'property_2y' : 'golden_entrepreneur');
+    var text = routeTextFor(routeKey);
+    var matches = properties.slice()
+      .sort(function(a,b){ return Math.abs(a.price - v) - Math.abs(b.price - v); })
+      .slice(0,3)
+      .map(function(p){ return { name:displayName(p.name), price:p.price }; });
+    return { title:text.title, desc:text.desc, matches:matches };
+  }
+
+  function applyCalcResult(result){
+    document.getElementById('calcPathTitle').textContent = result.title;
+    document.getElementById('calcPathDesc').textContent = result.desc;
+    document.getElementById('calcMatches').innerHTML = result.matches.map(function(m){
+      return '<span class="match-chip">'+m.name+' · <span class="num">'+fmtAED(m.price)+'</span> AED</span>';
+    }).join('');
+  }
+
+  function updateCalc(){
+    var v = Number(slider.value);
+    document.getElementById('calcValue').textContent = fmtAED(v);
+    document.getElementById('calcUnitLabel').textContent = L[currentLang].calcAedWord;
+    applyCalcResult(localVisaCalc(v));
+  }
+
+  function refineCalcFromAPI(){
+    var v = Number(slider.value);
+    fetch(API_BASE + '/v1/visa/advise', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ budget_aed: v })
+    })
+      .then(function(res){ if(!res.ok) throw new Error('bad status'); return res.json(); })
+      .then(function(data){
+        var text = routeTextFor(data.recommended.route);
+        applyCalcResult({
+          title: text.title,
+          desc: text.desc,
+          matches: data.matched_properties.map(function(p){ return { name: displayName(p.name), price: p.price_aed }; })
+        });
+      })
+      .catch(function(){ /* backend not reachable — local estimate already shown */ });
+  }
+
+  slider.addEventListener('input', updateCalc);
+  slider.addEventListener('change', refineCalcFromAPI);
+
+  // ---------- load real data from the backend when reachable; sample data otherwise ----------
+  function mapApiProperty(p, trend){
+    return {
+      id: p.id, name: p.name, type: p.type, price: p.price_aed,
+      roi: p.roi_pct, yieldPct: p.roi_pct,
+      match: Math.max(70, Math.min(97, Math.round(70 + p.roi_pct * 3))),
+      hue: HUES[(p.id - 1) % HUES.length],
+      trend: (trend && trend.length) ? trend : [p.price_aed]
+    };
+  }
+
+  function loadPropertiesFromAPI(){
+    var ctl = new AbortController();
+    var timer = setTimeout(function(){ ctl.abort(); }, 4000);
+    return fetch(API_BASE + '/v1/properties/search?limit=20', { signal: ctl.signal })
+      .then(function(res){ if(!res.ok) throw new Error('bad status'); return res.json(); })
+      .then(function(list){
+        return Promise.all(list.map(function(p){
+          return fetch(API_BASE + '/v1/properties/' + p.id + '/valuation')
+            .then(function(r){ return r.ok ? r.json() : null; })
+            .then(function(val){ return mapApiProperty(p, val && val.trend_aed); })
+            .catch(function(){ return mapApiProperty(p, null); });
+        }));
+      })
+      .then(function(mapped){
+        if (mapped.length){
+          properties = mapped;
+          var badge = document.getElementById('apiLiveBadge');
+          if (badge) badge.hidden = false;
+        }
+      })
+      .catch(function(){ /* backend not reachable — keep the sample data already rendered */ })
+      .finally(function(){ clearTimeout(timer); });
+  }
+
+  // ---------- i18n: generic static-text translator ----------
+  function applyStaticTranslations(lang){
+    document.querySelectorAll('[data-en]').forEach(function(el){
+      if (!el.hasAttribute('data-fa')) el.setAttribute('data-fa', el.textContent);
+      el.textContent = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-fa');
+    });
+    document.querySelectorAll('[data-en-html]').forEach(function(el){
+      if (!el.hasAttribute('data-fa-html')) el.setAttribute('data-fa-html', el.innerHTML);
+      el.innerHTML = lang === 'en' ? el.getAttribute('data-en-html') : el.getAttribute('data-fa-html');
+    });
+    document.querySelectorAll('[data-en-placeholder]').forEach(function(el){
+      if (!el.hasAttribute('data-fa-placeholder')) el.setAttribute('data-fa-placeholder', el.getAttribute('placeholder') || '');
+      el.setAttribute('placeholder', lang === 'en' ? el.getAttribute('data-en-placeholder') : el.getAttribute('data-fa-placeholder'));
+    });
+    document.querySelectorAll('[data-en-label]').forEach(function(el){
+      if (!el.hasAttribute('data-fa-label')) el.setAttribute('data-fa-label', el.getAttribute('aria-label') || '');
+      el.setAttribute('aria-label', lang === 'en' ? el.getAttribute('data-en-label') : el.getAttribute('data-fa-label'));
+    });
+  }
+
+  function setLang(lang){
+    currentLang = lang;
+    var root = document.getElementById('appRoot');
+    root.setAttribute('dir', lang === 'en' ? 'ltr' : 'rtl');
+    root.setAttribute('lang', lang === 'en' ? 'en' : 'fa');
+    applyStaticTranslations(lang);
+
+    document.getElementById('langToggle').textContent = lang === 'en' ? 'فارسی' : 'English';
+    chatStatusEl.textContent = chatConnected ? L[lang].chatConnected : L[lang].chatOnline;
+    L[lang].chips.forEach(function(c, i){
+      var chip = document.querySelectorAll('#chatSuggest .chip')[i];
+      if (chip){ chip.textContent = c.label; chip.setAttribute('data-q', c.q); }
+    });
+
+    resetChat();
+    renderListings();
+    updateCalc();
+  }
+
+  document.getElementById('langToggle').addEventListener('click', function(){
+    setLang(currentLang === 'fa' ? 'en' : 'fa');
+  });
+
+  // ---------- init ----------
+  resetChat();
+  renderListings();
+  updateCalc();
+  loadPropertiesFromAPI().then(function(){
+    renderListings();
+    updateCalc();
+  });
+})();
+</script>

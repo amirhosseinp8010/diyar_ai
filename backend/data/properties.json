@@ -1,0 +1,20 @@
+[
+  { "id": 1, "name": "برج‌های دبی مارینا", "area": "Dubai Marina", "type": "آپارتمان دو خواب", "price_aed": 1450000, "size_sqft": 1120, "roi_pct": 6.8, "trend_aed": [1180000, 1220000, 1260000, 1310000, 1380000, 1450000] },
+  { "id": 2, "name": "داون‌تاون دبی", "area": "Downtown Dubai", "type": "آپارتمان یک خواب", "price_aed": 1890000, "size_sqft": 890, "roi_pct": 5.9, "trend_aed": [1620000, 1680000, 1720000, 1790000, 1840000, 1890000] },
+  { "id": 3, "name": "جمیرا ویلج سیرکل", "area": "Jumeirah Village Circle", "type": "استودیو", "price_aed": 620000, "size_sqft": 430, "roi_pct": 8.1, "trend_aed": [540000, 555000, 570000, 590000, 605000, 620000] },
+  { "id": 4, "name": "النخله جمیرا", "area": "Palm Jumeirah", "type": "ویلا", "price_aed": 7200000, "size_sqft": 4600, "roi_pct": 4.5, "trend_aed": [6400000, 6550000, 6700000, 6900000, 7050000, 7200000] },
+  { "id": 5, "name": "بیزینس‌بی", "area": "Business Bay", "type": "آپارتمان دو خواب", "price_aed": 1150000, "size_sqft": 980, "roi_pct": 7.2, "trend_aed": [960000, 1000000, 1040000, 1080000, 1120000, 1150000] },
+  { "id": 6, "name": "دبی هیلز استیت", "area": "Dubai Hills Estate", "type": "تاون‌هاوس", "price_aed": 2650000, "size_sqft": 1980, "roi_pct": 6.1, "trend_aed": [2280000, 2360000, 2440000, 2520000, 2590000, 2650000] },
+  { "id": 7, "name": "الفرجان", "area": "Al Furjan", "type": "تاون‌هاوس", "price_aed": 1780000, "size_sqft": 1650, "roi_pct": 7.0, "trend_aed": [1520000, 1570000, 1620000, 1680000, 1730000, 1780000] },
+  { "id": 8, "name": "دبی کریک هاربر", "area": "Dubai Creek Harbour", "type": "آپارتمان یک خواب", "price_aed": 1340000, "size_sqft": 760, "roi_pct": 6.4, "trend_aed": [1120000, 1160000, 1210000, 1260000, 1300000, 1340000] },
+  { "id": 9, "name": "عربین رنچز ۳", "area": "Arabian Ranches 3", "type": "ویلا", "price_aed": 3450000, "size_sqft": 2900, "roi_pct": 5.3, "trend_aed": [2980000, 3080000, 3180000, 3280000, 3370000, 3450000] },
+  { "id": 10, "name": "دبی ساوث", "area": "Dubai South", "type": "آپارتمان دو خواب", "price_aed": 890000, "size_sqft": 1040, "roi_pct": 7.8, "trend_aed": [740000, 770000, 800000, 830000, 860000, 890000] },
+  { "id": 11, "name": "المرابع العربیه", "area": "Al Barari", "type": "ویلا", "price_aed": 9800000, "size_sqft": 6200, "roi_pct": 4.1, "trend_aed": [8700000, 8950000, 9150000, 9400000, 9600000, 9800000] },
+  { "id": 12, "name": "میدان (Meydan)", "area": "Meydan", "type": "تاون‌هاوس", "price_aed": 2180000, "size_sqft": 1720, "roi_pct": 6.6, "trend_aed": [1860000, 1930000, 2000000, 2070000, 2130000, 2180000] },
+  { "id": 13, "name": "جمیرا لیک تاورز (JLT)", "area": "Jumeirah Lake Towers", "type": "آپارتمان دو خواب", "price_aed": 1080000, "size_sqft": 1010, "roi_pct": 7.4, "trend_aed": [910000, 945000, 985000, 1020000, 1050000, 1080000] },
+  { "id": 14, "name": "دبی مارینا (پنت‌هاوس)", "area": "Dubai Marina", "type": "پنت‌هاوس", "price_aed": 5600000, "size_sqft": 3100, "roi_pct": 4.9, "trend_aed": [4900000, 5050000, 5200000, 5350000, 5480000, 5600000] },
+  { "id": 15, "name": "سیتی واک", "area": "City Walk", "type": "آپارتمان یک خواب", "price_aed": 1620000, "size_sqft": 820, "roi_pct": 6.0, "trend_aed": [1400000, 1450000, 1500000, 1550000, 1590000, 1620000] },
+  { "id": 16, "name": "بلوواتر", "area": "Bluewaters Island", "type": "آپارتمان دو خواب", "price_aed": 3980000, "size_sqft": 1560, "roi_pct": 5.1, "trend_aed": [3450000, 3570000, 3690000, 3810000, 3900000, 3980000] },
+  { "id": 17, "name": "تاون‌اسکوئر", "area": "Town Square", "type": "تاون‌هاوس", "price_aed": 1420000, "size_sqft": 1450, "roi_pct": 7.6, "trend_aed": [1190000, 1240000, 1290000, 1340000, 1380000, 1420000] },
+  { "id": 18, "name": "المدینه الجمیریه", "area": "Madinat Jumeirah Living", "type": "آپارتمان دو خواب", "price_aed": 2340000, "size_sqft": 1280, "roi_pct": 5.7, "trend_aed": [2020000, 2090000, 2160000, 2230000, 2290000, 2340000] }
+]
