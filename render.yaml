@@ -8,4 +8,6 @@ services:
     envVars:
       - key: PORT
         value: 8000
+      - key: ADMIN_TOKEN
+        generateValue: true
     healthCheckPath: /health
