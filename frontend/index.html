@@ -766,8 +766,7 @@
   });
 
   // ---------- backend wiring: try the real API, fall back to sample data ----------
-  // Update this once deployed (e.g. 'https://diyar-ai-backend.onrender.com')
-  var API_BASE = (window.DIYAR_API_BASE || 'http://127.0.0.1:8000');
+  var API_BASE = (window.DIYAR_API_BASE || 'https://diyar-ai-backend.onrender.com');
   var HUES = ['210,55%','38,60%','165,40%','340,45%','265,45%','20,55%'];
 
   // ---------- mock property data (fallback when the API is unreachable) ----------
