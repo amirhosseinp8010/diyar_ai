@@ -2,6 +2,12 @@
 
 پلتفرم هوش مصنوعی برای جست‌وجوی ملک، ارزیابی قیمت و مشاوره‌ی ویزا/مهاجرت در دبی.
 
+- **بک‌اند زنده:** [diyar-ai-backend.onrender.com/docs](https://diyar-ai-backend.onrender.com/docs)
+- **ریپو:** [github.com/amirhosseinp8010/diyar_ai](https://github.com/amirhosseinp8010/diyar_ai)
+- **دموی فرانت‌اند:** لینک آرتیفکت Claude (تو چت)
+
+نکته: پلن رایگان Render بعد از چند دقیقه بی‌فعالیتی می‌خوابه؛ اولین درخواست بعد از خواب چند ثانیه طول می‌کشه تا بیدار بشه.
+
 ## ساختار پروژه
 
 ```
