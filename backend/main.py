@@ -17,18 +17,22 @@ import io
 import json
 import os
 import statistics
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Literal, Optional
 
 from fastapi import FastAPI, File, Header, HTTPException, Query, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
 
 from visa_rules import VISA_RULES, recommend_route
 
 DATA_PATH = Path(__file__).parent / "data" / "properties.json"
 PROPERTIES: list[dict] = json.loads(DATA_PATH.read_text(encoding="utf-8"))
 PROPERTIES_BY_ID = {p["id"]: p for p in PROPERTIES}
+
+LEADS_PATH = Path(__file__).parent / "data" / "leads.json"
+LEADS: list[dict] = json.loads(LEADS_PATH.read_text(encoding="utf-8")) if LEADS_PATH.exists() else []
 
 # محافظ ساده‌ی اندپوینت‌های نوشتنی. قبل از دیپلوی عمومی، ADMIN_TOKEN رو
 # با یه مقدار واقعی ست کن (env var روی Render) — پیش‌فرض فقط برای توسعه‌ی لوکاله.
@@ -116,6 +120,32 @@ class ImportResult(BaseModel):
     mode: str
 
 
+class LeadIn(BaseModel):
+    name: str = Field(..., min_length=1, max_length=120)
+    contact: str = Field(..., min_length=3, max_length=120, description="ایمیل یا شماره تماس")
+    property_id: Optional[int] = None
+    message: Optional[str] = Field(None, max_length=1000)
+
+    @field_validator("name", "contact")
+    @classmethod
+    def _not_blank(cls, v: str) -> str:
+        v = v.strip()
+        if not v:
+            raise ValueError("نمی‌تونه خالی باشه")
+        return v
+
+
+class LeadOut(BaseModel):
+    id: int
+    name: str
+    contact: str
+    property_id: Optional[int]
+    property_name: Optional[str]
+    message: Optional[str]
+    status: str
+    created_at: str
+
+
 def _check_admin(x_admin_token: Optional[str]):
     if x_admin_token != ADMIN_TOKEN:
         raise HTTPException(401, "توکن ادمین نامعتبر است — هدر X-Admin-Token رو بفرست")
@@ -125,8 +155,16 @@ def _persist_properties():
     DATA_PATH.write_text(json.dumps(PROPERTIES, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
+def _persist_leads():
+    LEADS_PATH.write_text(json.dumps(LEADS, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
 def _next_property_id() -> int:
     return max((p["id"] for p in PROPERTIES), default=0) + 1
+
+
+def _next_lead_id() -> int:
+    return max((l["id"] for l in LEADS), default=0) + 1
 
 
 def _to_property_out(p: dict) -> Property:
@@ -337,3 +375,39 @@ async def import_properties_csv(
         raise HTTPException(400, f"فرمت CSV نامعتبره: {e}")
 
     return import_properties(items, mode=mode, x_admin_token=x_admin_token)
+
+
+@app.post("/v1/leads", response_model=LeadOut, tags=["leads"])
+def create_lead(payload: LeadIn):
+    """
+    ثبت لید — وقتی کاربر از یه ملک درخواست اطلاعات می‌کنه یا می‌خواد با مشاور صحبت کنه.
+    این دقیقاً همون چیزیه که مدل درآمدیِ «کمیسیون از لید به آژانس‌ها» روش سوار می‌شه؛
+    بدون این اندپوینت، اون خط تو پیچ‌دک فقط یه ادعاست.
+    """
+    property_name = None
+    if payload.property_id is not None:
+        prop = PROPERTIES_BY_ID.get(payload.property_id)
+        if not prop:
+            raise HTTPException(404, "ملکی با این شناسه پیدا نشد")
+        property_name = prop["name"]
+
+    lead = {
+        "id": _next_lead_id(),
+        "name": payload.name,
+        "contact": payload.contact,
+        "property_id": payload.property_id,
+        "property_name": property_name,
+        "message": payload.message,
+        "status": "new",
+        "created_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+    }
+    LEADS.append(lead)
+    _persist_leads()
+    return LeadOut(**lead)
+
+
+@app.get("/v1/leads", response_model=list[LeadOut], tags=["leads"])
+def list_leads(x_admin_token: Optional[str] = Header(None)):
+    """لیست لیدها — این چیزیه که داشبورد یه آژانسِ پارتنر می‌بینه. نیاز به X-Admin-Token داره."""
+    _check_admin(x_admin_token)
+    return [LeadOut(**l) for l in reversed(LEADS)]

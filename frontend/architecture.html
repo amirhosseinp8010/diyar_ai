@@ -301,7 +301,8 @@ leads             id, agency_id, property_id, user_id, status, created_at</code>
               <tr><td class="mono">GET</td><td class="mono">/v1/properties/:id/lifestyle-match</td><td>امتیاز تطابق با پروفایل کاربر</td></tr>
               <tr><td class="mono">POST</td><td class="mono">/v1/visa/advise</td><td>ورودی: بودجه/هدف → مسیر ویزا + جدول زمانی</td></tr>
               <tr><td class="mono">POST</td><td class="mono">/v1/chat</td><td>پیام آزاد کاربر به دستیار (RAG روی visa_rules)</td></tr>
-              <tr><td class="mono">GET</td><td class="mono">/v1/agencies/:id/leads</td><td>لیدهای واردشده برای آژانس پایلوت</td></tr>
+              <tr><td class="mono">POST</td><td class="mono">/v1/leads</td><td>ثبت لید — کاربر از یه ملک درخواست اطلاعات می‌کنه ✅ پیاده‌شده</td></tr>
+              <tr><td class="mono">GET</td><td class="mono">/v1/leads</td><td>لیست لیدها برای آژانس (فعلاً سراسری؛ تفکیک per-agency در فاز ۲) ✅ پیاده‌شده</td></tr>
             </tbody>
           </table>
         </div>

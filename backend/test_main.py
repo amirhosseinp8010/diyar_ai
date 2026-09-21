@@ -12,13 +12,16 @@ client = TestClient(app)
 
 @pytest.fixture(autouse=True)
 def isolate_property_store(tmp_path, monkeypatch):
-    """Import endpoints mutate + persist PROPERTIES — never touch the real seed file from tests."""
+    """Import/lead endpoints mutate + persist state — never touch the real files from tests."""
     snapshot = copy.deepcopy(main.PROPERTIES)
+    leads_snapshot = copy.deepcopy(main.LEADS)
     monkeypatch.setattr(main, "DATA_PATH", tmp_path / "properties.json")
+    monkeypatch.setattr(main, "LEADS_PATH", tmp_path / "leads.json")
     yield
     main.PROPERTIES[:] = snapshot
     main.PROPERTIES_BY_ID.clear()
     main.PROPERTIES_BY_ID.update({p["id"]: p for p in main.PROPERTIES})
+    main.LEADS[:] = leads_snapshot
 
 
 def test_health():
@@ -116,3 +119,44 @@ def test_import_csv():
     assert r.status_code == 200
     assert r.json()["total_properties"] == before + 1
     assert any(p["name"] == "ملک CSV" for p in main.PROPERTIES)
+
+
+def test_create_lead_without_property():
+    r = client.post("/v1/leads", json={"name": "سارا احمدی", "contact": "sara@example.com", "message": "علاقه‌مندم"})
+    assert r.status_code == 200
+    body = r.json()
+    assert body["status"] == "new"
+    assert body["property_id"] is None
+    assert body["property_name"] is None
+    assert body["created_at"]
+
+
+def test_create_lead_with_property_resolves_name():
+    r = client.post("/v1/leads", json={"name": "رضا", "contact": "+971501234567", "property_id": 1})
+    assert r.status_code == 200
+    body = r.json()
+    assert body["property_id"] == 1
+    assert body["property_name"] == main.PROPERTIES_BY_ID[1]["name"]
+
+
+def test_create_lead_with_unknown_property_404():
+    r = client.post("/v1/leads", json={"name": "رضا", "contact": "reza@example.com", "property_id": 9999})
+    assert r.status_code == 404
+
+
+def test_create_lead_rejects_blank_fields():
+    r = client.post("/v1/leads", json={"name": "  ", "contact": "reza@example.com"})
+    assert r.status_code == 422
+
+
+def test_leads_listing_requires_admin_and_is_newest_first():
+    client.post("/v1/leads", json={"name": "اول", "contact": "a@example.com"})
+    client.post("/v1/leads", json={"name": "دوم", "contact": "b@example.com"})
+
+    r = client.get("/v1/leads")
+    assert r.status_code == 401
+
+    r = client.get("/v1/leads", headers={"X-Admin-Token": main.ADMIN_TOKEN})
+    assert r.status_code == 200
+    names = [l["name"] for l in r.json()]
+    assert names[:2] == ["دوم", "اول"]

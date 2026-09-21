@@ -357,6 +357,22 @@
   .chart-box svg{width:100%;height:auto;display:block;}
   .visa-note{background:var(--teal-soft);color:var(--teal);border-radius:var(--radius-sm);padding:14px;font-size:13.5px;font-weight:600;}
   .visa-note.gold{background:var(--accent-soft);color:var(--accent-strong);}
+
+  .lead-form{display:flex;flex-direction:column;gap:8px;}
+  .lead-form input,.lead-form textarea{
+    border:1.5px solid var(--border-strong);background:var(--bg);color:var(--text);
+    border-radius:10px;padding:10px 13px;font-size:13.5px;font-family:inherit;width:100%;
+  }
+  .lead-form input:focus-visible,.lead-form textarea:focus-visible{outline:2px solid var(--teal);}
+  .lead-form textarea{resize:vertical;min-height:56px;}
+  .lead-submit{
+    background:var(--accent);color:#241804;border:none;border-radius:10px;
+    padding:10px 16px;font-size:13.5px;font-weight:700;cursor:pointer;align-self:flex-start;
+  }
+  .lead-submit:disabled{opacity:.6;cursor:default;}
+  .lead-status{font-size:12.5px;font-weight:600;min-height:16px;}
+  .lead-status.ok{color:var(--success);}
+  .lead-status.err{color:var(--warning);}
 </style>
 
 <div class="app" dir="rtl" lang="fa" id="appRoot">
@@ -672,6 +688,16 @@
       calcGold: { title:'ویزای طلایی ۱۰ ساله', desc:'با این بودجه مستقیماً واجد شرایط ویزای طلایی ۱۰ ساله‌ای — بدون نیاز به کفیل و قابل تمدید.' },
       calcResidency: { title:'ویزای اقامتی ۲ ساله (ملکی)', desc:'با این بودجه واجد شرایط ویزای اقامتی ۲ ساله از طریق سرمایه‌گذاری ملکی هستی؛ قابل تمدید تا زمانی که مالک ملک باشی.' },
       calcEntrepreneur: { title:'ویزای طلایی کارآفرینی ۵ ساله', desc:'با این بودجه هنوز به آستانه‌ی ویزای ملکی نرسیدی؛ مسیر جایگزین، ویزای طلاییِ کارآفرینی از طریق یه استارتاپِ تاییدشده توسط انکوباتوره.' },
+      leadTitle: 'درخواست اطلاعات از یه مشاور',
+      leadDesc: 'شماره یا ایمیلت رو بذار، یه مشاور واقعی درباره‌ی همین ملک باهات تماس می‌گیره.',
+      leadNamePh: 'اسمت',
+      leadContactPh: 'ایمیل یا شماره تماس',
+      leadMessagePh: 'سوال یا توضیح (اختیاری)',
+      leadSubmit: 'ارسال درخواست',
+      leadSending: 'در حال ارسال…',
+      leadSuccess: 'درخواستت ثبت شد ✅ یه مشاور به‌زودی باهات تماس می‌گیره.',
+      leadError: 'الان امکان ثبت نیست — چند لحظه دیگه دوباره امتحان کن.',
+      leadMissingFields: 'اسم و راه تماس رو پر کن.',
       systemPromptFn: function(lines){
         return 'تو «دستیار دیار» هستی: دستیار هوش مصنوعیِ پلتفرم دیار برای جست‌وجوی ملک و مشاوره‌ی مهاجرت/ویزا در دبی و خلیج فارس. به فارسیِ محاوره‌ای، دوستانه و کوتاه (حداکثر ۴-۵ جمله) پاسخ بده. فقط بر پایه‌ی داده‌های زیر صحبت کن؛ اگر چیزی رو نمی‌دونی صادقانه بگو.\n\nملک‌های نمونه‌ی موجود در دمو:\n' + lines +
           '\n\nقوانین ویزا (نمونه و تقریبی):\n- سرمایه‌گذاری ملکی از ۷۵۰,۰۰۰ درهم → ویزای اقامتی ۲ ساله\n- سرمایه‌گذاری ملکی از ۲,۰۰۰,۰۰۰ درهم → ویزای طلایی ۱۰ ساله (بدون کفیل)\n- تاییدِ پروژه توسط انکوباتور معتبر (in5/DTEC) با ارزش حداقل ۵۰۰,۰۰۰ درهم → ویزای طلایی کارآفرینی ۵ ساله\n\nهر جا مرتبط بود خیلی کوتاه و طبیعی (نه مثل دیسکلیمر رسمی) یادآوری کن که این‌ها نمونه‌ان و تصمیم نهایی نیاز به تایید مشاور مجاز داره. وقتی به‌درد می‌خوره، کاربر رو به کارت‌های ملک یا محاسبه‌گر پایین صفحه ارجاع بده.';
@@ -714,6 +740,16 @@
       calcGold: { title:'10-year Golden Visa', desc:'This budget directly qualifies for the 10-year Golden Visa — no sponsor needed, renewable.' },
       calcResidency: { title:'2-year residency visa (property)', desc:'This budget qualifies for a 2-year residency visa through property investment; renewable as long as you own the property.' },
       calcEntrepreneur: { title:'5-year Entrepreneur Golden Visa', desc:"This budget hasn't reached the property-visa threshold yet; the alternative route is the Entrepreneur Golden Visa through an incubator-endorsed startup." },
+      leadTitle: 'Request info from an advisor',
+      leadDesc: 'Leave your phone or email and a real advisor will reach out about this property.',
+      leadNamePh: 'Your name',
+      leadContactPh: 'Email or phone number',
+      leadMessagePh: 'Question or note (optional)',
+      leadSubmit: 'Send request',
+      leadSending: 'Sending…',
+      leadSuccess: 'Request received ✅ An advisor will reach out soon.',
+      leadError: "Couldn't submit right now — try again in a moment.",
+      leadMissingFields: 'Fill in your name and a way to reach you.',
       systemPromptFn: function(lines){
         return 'You are the "Diyar Assistant": an AI assistant for the Diyar platform, helping with property search and migration/visa advice in Dubai and the Gulf. Reply in friendly, concise English (max 4-5 sentences). Base answers only on the data below; if you don\'t know something, say so honestly.\n\nSample properties in this demo:\n' + lines +
           '\n\nVisa rules (sample, approximate):\n- Property investment from AED 750,000 → 2-year residency visa\n- Property investment from AED 2,000,000 → 10-year Golden Visa (no sponsor)\n- Project endorsed by an approved incubator (in5/DTEC) worth at least AED 500,000 → 5-year Entrepreneur Golden Visa\n\nWhen relevant, briefly and naturally (not like a formal disclaimer) mention these are samples and a final decision needs a licensed advisor. Point the user to the property cards or calculator below when useful.';
@@ -890,12 +926,64 @@
           '<h5>'+t.visaTitle+'</h5>'+
           '<div class="visa-note '+note.cls+'">'+note.text+'</div>'+
         '</div>'+
+        '<div class="modal-section">'+
+          '<h5>'+t.leadTitle+'</h5>'+
+          '<p style="font-size:12.5px;color:var(--text-muted);margin-bottom:10px;">'+t.leadDesc+'</p>'+
+          '<form class="lead-form" id="leadForm">'+
+            '<input type="text" id="leadName" placeholder="'+t.leadNamePh+'" autocomplete="name">'+
+            '<input type="text" id="leadContact" placeholder="'+t.leadContactPh+'" autocomplete="email">'+
+            '<textarea id="leadMessage" placeholder="'+t.leadMessagePh+'"></textarea>'+
+            '<button type="submit" class="lead-submit" id="leadSubmitBtn">'+t.leadSubmit+'</button>'+
+            '<div class="lead-status" id="leadStatus"></div>'+
+          '</form>'+
+        '</div>'+
       '</div>';
     backdrop.hidden = false;
     document.getElementById('modalCloseBtn').addEventListener('click', closeModal);
     backdrop.addEventListener('click', function(e){ if(e.target===backdrop) closeModal(); }, {once:true});
+    document.getElementById('leadForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      submitLead(p.id);
+    });
   }
   function closeModal(){ document.getElementById('modalBackdrop').hidden = true; }
+
+  function submitLead(propertyId){
+    var t = L[currentLang];
+    var name = document.getElementById('leadName').value.trim();
+    var contact = document.getElementById('leadContact').value.trim();
+    var message = document.getElementById('leadMessage').value.trim();
+    var statusEl = document.getElementById('leadStatus');
+    var btn = document.getElementById('leadSubmitBtn');
+
+    if (!name || !contact){
+      statusEl.className = 'lead-status err';
+      statusEl.textContent = t.leadMissingFields;
+      return;
+    }
+
+    btn.disabled = true;
+    statusEl.className = 'lead-status';
+    statusEl.textContent = t.leadSending;
+
+    fetch(API_BASE + '/v1/leads', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name: name, contact: contact, property_id: propertyId, message: message || null })
+    })
+      .then(function(res){ if(!res.ok) throw new Error('bad status'); return res.json(); })
+      .then(function(){
+        statusEl.className = 'lead-status ok';
+        statusEl.textContent = t.leadSuccess;
+        document.getElementById('leadForm').reset();
+        btn.disabled = true;
+      })
+      .catch(function(){
+        statusEl.className = 'lead-status err';
+        statusEl.textContent = t.leadError;
+        btn.disabled = false;
+      });
+  }
 
   // ---------- chat: real Claude via the `sample` capability, scripted fallback ----------
   var chatBody = document.getElementById('chatBody');

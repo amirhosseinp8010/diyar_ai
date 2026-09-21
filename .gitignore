@@ -3,3 +3,6 @@ __pycache__/
 *.pyc
 .DS_Store
 .env
+
+# real visitor leads (name/contact info) — never commit to a public repo
+backend/data/leads.json
